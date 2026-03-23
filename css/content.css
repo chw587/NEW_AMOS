@@ -167,7 +167,7 @@ table tbody tr:hover {
 }
 
 thead {
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 1;
     color: var(--text_3);
@@ -1718,7 +1718,9 @@ table .error {
 }
 
 /* tooltip */
-.dataTables_data { position: relative; }
+.dataTables_data {
+    position: relative;
+}
 
 .tooltip_box {
     display: none;
@@ -1735,7 +1737,7 @@ table .error {
     white-space: normal;
     box-shadow: var(--card-shadow);
     overflow: hidden;
-        font-weight: 500;
+    font-weight: 500;
 }
 
 .tooltip_title {
@@ -1744,7 +1746,7 @@ table .error {
     color: var(--wh);
 }
 
-.tooltip_title > span {
+.tooltip_title>span {
     font-size: var(--caption);
 }
 
@@ -1754,7 +1756,7 @@ table .error {
     color: var(--text_2);
 }
 
-.tooltip_desc > span {
+.tooltip_desc>span {
     padding: 1px 6px;
     border-radius: 4px;
     color: var(--wh);
@@ -1777,7 +1779,7 @@ table .error {
     gap: var(--gap_1);
 }
 
-.QC_Statistical_Report_table td > div {
+.QC_Statistical_Report_table td>div {
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -1788,7 +1790,7 @@ table .error {
     width: 25%;
 }
 
-.QC_Statistical_Report_content .elemenet_list > div {
+.QC_Statistical_Report_content .elemenet_list>div {
     display: flex;
     flex-wrap: wrap;
 }
@@ -1802,12 +1804,38 @@ table .error {
     min-width: 200px;
 }
 
-.QC_Statistical_Report_table td > div {
+.QC_Statistical_Report_table td>div {
     width: 60%;
-margin: 0 auto;
-border-radius: 8px;
-padding: 2px 4px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 2px 4px;
 }
+
+.QC_Statistical_Report_table td:last-child>div {
+    width: 100%;
+    gap: var(--gap_1);
+}
+
+.QC_Statistical_Report_table td>div>p {
+    display: flex;
+    gap: var(--gap_1);
+}
+
+.QC_Statistical_Report_table button {
+    height: 40px;
+    width: fit-content;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--body_2);
+    color: var(--wh);
+    cursor: pointer;
+}
+
+.Reference_Values_content {
+    gap: var(--gap_1);
+}
+
 
 
 /* ============================================================

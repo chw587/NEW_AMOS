@@ -1,0 +1,291 @@
+@charset "UTF-8";
+
+
+/* ============================================================
+   FONT
+   ============================================================ */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Thin.otf') format('opentype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-SemiBold.otf') format('opentype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-ExtraBold.otf') format('opentype');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Black.otf') format('opentype');
+    font-weight: 900;
+}
+
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+    /* Colors - Text */
+    --text_1: #111;
+    --text_2: #333;
+    --text_3: #757575;
+
+    /* Colors - Brand */
+    --wh: #fafafa;
+    --main: #134888;
+    --aside: #092241;
+
+    /* Colors - Status (text) */
+    --r_text: #CC0000;
+    --y_text: #CC8400;
+    --g_text: #06A04E;
+
+    /* Colors - Status (bg) */
+    --red: #FF3E3E;
+    --yellow: #FF8D28;
+    --green: #08C862;
+
+    /* Colors - UI */
+    --bg: #F0F0F0;
+    --line: #ddd;
+
+    /* Typography */
+    --title_1: clamp(16px, 2vw, 24px);
+    --body_0: clamp(16px, 2vw, 20px);
+    --body_1: clamp(14px, 1.2vw, 16px);
+    --body_2: clamp(12px, 1vw, 14px);
+    --caption: clamp(12px, 0.8vw, 12px);
+
+    /* Spacing */
+    --gap_0: 4px;
+    --gap_1: 8px;
+    --gap_2: 20px;
+
+    /* Shadow */
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ============================================================
+   RESET
+   ============================================================ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    flex: 1;
+}
+
+
+/* ============================================================
+   BASE
+   ============================================================ */
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 300;
+    font-size: var(--body_1);
+    background: var(--bg);
+    color: var(--text_1);
+    line-height: 1.4;
+}
+
+table th,
+table td {
+    height: 40px;
+    font-weight: normal;
+    text-align: center;
+    align-content: center;
+}
+
+input,
+select {
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+input:focus,
+select:focus {
+    border: 2px solid var(--main);
+}
+
+input {
+    width: 100%;
+    max-width: 100%;
+}
+
+button {
+    justify-content: start;
+    padding: 0 10px;
+    gap: var(--gap_0);
+}
+
+input {
+    padding: 0 16px;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switching History</title>
+
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+
+</head>
+
+<body>
+    <main class="Switching_History">
+        <div class="main_content">
+
+            <!-- 상태 알림 -->
+            <div class="status_alarm normal">
+                <div>
+                    <span class="material-symbols-outlined">check_circle</span>
+                    <p>There are no events currently occurring.</p>
+                </div>
+                <span class="material-symbols-outlined">close_small</span>
+            </div>
+
+            <div class="content">
+                <div class="header_title">
+                    <div>
+                        <div class="title">
+                            <div class="title_bar"></div>
+                            <span class="title_text">Switching History</span>
+                        </div>
+                        <span>/ Sensor Switching</span>
+                    </div>
+                </div>
+
+                <div class="page Switching_History_content">
+                    <div class="content_page_header">
+                        <div>
+                            <select name="rwy" id="rwy_select">
+                                <option value="rwy_1">RWY 1</option>
+                                <option value="rwy_2">RWY 2</option>
+                            </select>
+                            <select name="rwy_num" id="rwy_num">
+                                <option value="18">18</option>
+                                <option value="36">36</option>
+                            </select>
+                            <select name="select" id="elements_select">
+                                <option value="all">ALL</option>
+                                <option value="wind">Wind Direction & Speed</option>
+                                <option value="temp_humi">Temperature & Humidity</option>
+                                <option value="Pressure">Pressure</option>
+                                <option value="rvr">Runway Visual Range</option>
+                                <option value="weighing_rain">Weighing Rain Gauge</option>
+                                <option value="snow_depth">Snow Depth (Laser Multi-focus)</option>
+                                <option value="precip">Precipitation Detector</option>
+                                <option value="ceil">Ceilometer</option>
+                                <option value="ceil_power">Ceilometer Power (Power Line)</option>
+                                <option value="dcp_power">DCP Power (Power Line)</option>
+                                <option value="boltek">Boltek Lightning Sensor</option>
+                                <option value="biral">Biral Lightning Sensor</option>
+                                <option value="afls">afls</option>
+                                <option value="icing">Icing Detector</option>
+                                <option value="pws">Present Weather Sensor</option>
+                                <option value="tipping_rain">Tipping Bucket Rain Gauge</option>
+                            </select>
+
+                            <input type="date">
+                        </div>
+
+                        <div class="search_wrap">
+                            <div class="search">
+                                <input type="text" class="search_input" placeholder="Search">
+                                <span class="material-symbols-outlined search_icon">search</span>
+                            </div>
+
+                            <div>
+                                <div class="count">
+                                    총 <span class="count_num">10</span>건의 데이터
+                                </div>
+                                <div class="line_count">
+                                    <span>페이지당 줄수</span>
+                                    <select name="line_count" id="line_count_select">
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="card content_table" style="padding: 0;">
+                        <thead>
+                            <tr>
+                                <th>DATE & TIME</th>
+                                <th>RUNWAY</th>
+                                <th>DIRECTION</th>
+                                <th>AUTO/MANUAL</th>
+                                <th>SENSOR</th>
+                                <th>MODEL ID</th>
+                                <th>SWITCH</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+
+                    <div class="pagination">
+                        <button class="pg_back" type="button">Prev</button>
+
+                        <button class="pg_btn is_active" type="button" aria-current="page">1</button>
+                        <button class="pg_btn" type="button">2</button>
+                        <button class="pg_btn" type="button">3</button>
+
+                        <span class="pg_ellipsis">...</span>
+
+                        <button class="pg_btn" type="button">10</button>
+
+                        <button class="pg_next" type="button">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
+                <p>AWIMP v1.0.0</p>
+            </footer>
+        </div>
+    </main>
+</body>
+
+</html>

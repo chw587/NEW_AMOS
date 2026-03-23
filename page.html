@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMOS SW 서비스</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+    <!-- page.html head -->
+    <script src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <script src="./js/chart.js"></script>
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/page_compoment.js"></script>
+    <script src="./js/nav.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header_left">
+            <img src="./img/logo.svg" alt="AWIMP LOGO" class="logo">
+        </div>
+        <div class="header_right">
+            <div class="header_icons">
+                <div class="bell">
+                    <span class="material-symbols-outlined">notifications</span>
+                </div>
+                <div class="settings">
+                    <span class="material-symbols-outlined">settings</span>
+                </div>
+                <div class="now_time">
+                    <span>06:55</span><span>UTC</span>
+                </div>
+                <div class="quick_menu">
+                    <span class="material-symbols-outlined">dehaze</span>
+                </div>
+            </div>
+
+            <!-- 퀵메뉴 -->
+            <div class="quick_menu_list">
+                <span class="quick_menu_title">모니터링 바로가기</span>
+                <ul>
+                    <li><span class="material-symbols-outlined">cloud</span> <span>기상 실황</span></li>
+                    <li><span class="material-symbols-outlined">travel</span> <span>G/W 모니터링</span></li>
+                    <li><span class="material-symbols-outlined">desktop_mac</span> <span>T/D 모니터링</span></li>
+                    <li><span class="material-symbols-outlined">help</span> <span>도움말</span></li>
+                    <li><span class="material-symbols-outlined">handyman</span> <span>관리자 페이지</span></li>
+                </ul>
+            </div>
+
+            <!-- 알림 -->
+            <div class="noti_list">
+                <div class="noti_header">
+                    <span class="material-symbols-outlined">close_small</span>
+                    <span class="noti_list_title">알림</span>
+                </div>
+                <ul>
+                    <li class="success">
+                        <div class="noti_bar"></div>
+                        <div class="noti_content">
+                            <p><span class="noti_type">[INFO]</span> AUTO METAR generated</p>
+                            <span class="noti_date">2026-02-05 11:00</span>
+                        </div>
+                    </li>
+                    <li class="error">
+                        <div class="noti_bar"></div>
+                        <div class="noti_content">
+                            <p><span class="noti_type">[INFO]</span> AUTO METAR generated</p>
+                            <span class="noti_date">2026-02-05 11:00</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 설정 -->
+            <div class="setting_menu_list">
+                <span class="setting_title">SETTING</span>
+                <ul>
+                    <li><span class="material-symbols-outlined">cloud</span> <span>기상 실황</span></li>
+                    <li><span class="material-symbols-outlined">travel</span> <span>G/W 모니터링</span></li>
+                    <li><span class="material-symbols-outlined">desktop_mac</span> <span>T/D 모니터링</span></li>
+                    <li><span class="material-symbols-outlined">help</span> <span>도움말</span></li>
+                    <li><span class="material-symbols-outlined">handyman</span> <span>관리자 페이지</span></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="main_wrap">
+        <aside id="sidebar">
+
+            <!-- MANAGEMENT -->
+            <div class="section_title">
+                <span class="material-symbols-outlined">more_horiz</span>
+                <span>MANAGEMENT</span>
+            </div>
+            <nav class="nav_menu">
+                <div class="item_container">
+                    <div class="nav_item active">
+                        <div class="item_title">
+                            <span class="material-symbols-outlined">dashboard</span>
+                            <span>DASHBOARD</span>
+                        </div>
+                        <div class="arrow_btn"><span class="material-symbols-outlined">keyboard_arrow_down</span></div>
+                    </div>
+                </div>
+
+                <div class="item_container">
+                    <div class="nav_item">
+                        <div class="item_title">
+                            <span class="material-symbols-outlined">travel</span>
+                            <span>Airport Management</span>
+                        </div>
+                        <div class="arrow_btn"><span class="material-symbols-outlined">keyboard_arrow_down</span></div>
+                    </div>
+                    <div class="sub_menu">
+                        <a href="#" class="sub_item">Runway Specifications</a>
+                    </div>
+                </div>
+
+                <div class="item_container">
+                    <div class="nav_item">
+                        <div class="item_title">
+                            <span class="material-symbols-outlined">radar</span>
+                            <span>Sensor Management</span>
+                        </div>
+                        <div class="arrow_btn"><span class="material-symbols-outlined">keyboard_arrow_down</span></div>
+                    </div>
+                    <div class="sub_menu">
+                        <a href="#" class="sub_item">Sensor Infomation</a>
+                        <a href="#" class="sub_item">Installation Status</a>
+                    </div>
+                </div>
+
+                <div class="item_container">
+                    <div class="nav_item">
+                        <div class="item_title">
+                            <span class="material-symbols-outlined">rule_settings</span>
+                            <span>Sensor Switching</span>
+                        </div>
+                        <div class="arrow_btn"><span class="material-symbols-outlined">keyboard_arrow_down</span></div>
+                    </div>
+                    <div class="sub_menu">
+                        <a href="#" class="sub_item">Sensor Switch Configuration</a>
+                        <a href="#" class="sub_item">Switching History</a>
+                        <a href="#" class="sub_item">Data Reset</a>
+                    </div>
+                </div>
+
+                <div class="item_container">
+                    <div class="nav_item">
+                        <div class="item_title">
+                            <span class="material-symbols-outlined">diversity_3</span>
+                            <span>User Management</span>
+                        </div>
+                        <div class="arrow_btn"><span class="material-symbols-outlined">keyboard_arrow_down</span></div>
+                    </div>
+                </div>
+
+                <div class="item_container">
+                    <div class="nav_item">
+                        <div class="item_title">
+                            <span class="material-symbols-outlined">not_listed_location</span>
+                            <span>System Support</span>
+                        </div>
+                        <div class="arrow_btn"><span class="material-symbols-outlined">keyboard_arrow_down</span></div>
+                    </div>
+                    <div class="sub_menu">
+                        <a href="#" class="sub_item">G/W Monitoring</a>
+                        <a href="#" class="sub_item">T/D Monitoring</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- INQUIRY -->
+            <div class="section_title" style="margin-top: 32px;">
+                <span class="material-symbols-outlined">more_horiz</span>
+                <span>INQUIRY</span>
+            </div>
+            <nav class="nav_menu">
+                <div class="item_container">
+                    <div class="nav_item">
+                        <div class="item_title">
+                            <span class="material-symbols-outlined">folder_copy</span>
+                            <span>Data Inquiry</span>
+                        </div>
+                        <div class="arrow_btn"><span class="material-symbols-outlined">keyboard_arrow_down</span></div>
+                    </div>
+                    <div class="sub_menu">
+                        <a href="#" class="sub_item">Data Comparison & Inquiry</a>
+                    </div>
+                </div>
+
+                <div class="item_container">
+                    <div class="nav_item">
+                        <div class="item_title">
+                            <span class="material-symbols-outlined">assignment_turned_in</span>
+                            <span>Quality Management</span>
+                        </div>
+                        <div class="arrow_btn"><span class="material-symbols-outlined">keyboard_arrow_down</span></div>
+                    </div>
+                    <div class="sub_menu">
+                        <a href="#" class="sub_item">QC Performance Monitoring</a>
+                        <a href="#" class="sub_item">Data Collection Rate</a>
+                        <a href="#" class="sub_item">QC Statistical Report</a>
+                        <a href="#" class="sub_item">Reference Values</a>
+                    </div>
+                </div>
+
+                <div class="item_container">
+                    <div class="nav_item">
+                        <div class="item_title">
+                            <span class="material-symbols-outlined">desktop_windows</span>
+                            <span>System Monitoring</span>
+                        </div>
+                        <div class="arrow_btn"><span class="material-symbols-outlined">keyboard_arrow_down</span></div>
+                    </div>
+                    <div class="sub_menu">
+                        <a href="#" class="sub_item">AMOS & Sensor Monitoring</a>
+                        <a href="#" class="sub_item">Server Status</a>
+                        <a href="#" class="sub_item">Process Monitoring</a>
+                        <a href="#" class="sub_item">Log Monitoring</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <div id="content_area"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runway Specifications</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+    
+</head>
+
+<body>
+    <main class="Runway_Specifications">
+        <div class="main_content">
+
+            <!-- 상태 알림 -->
+            <div class="status_alarm normal">
+                <div>
+                    <span class="material-symbols-outlined">check_circle</span>
+                    <p>There are no events currently occurring.</p>
+                </div>
+                <span class="material-symbols-outlined">close_small</span>
+            </div>
+
+            <div class="content">
+                <div class="header_title">
+                    <div>
+                        <div class="title">
+                            <div class="title_bar"></div>
+                            <span class="title_text">Runway Specifications</span>
+                        </div>
+                        <span>/ Airport Management</span>
+                    </div>
+                </div>
+
+                <div class="card Runway_Specifications_section">
+                    <div class="rwy_title">
+                        <h3>Runway Classification</h3>
+                        <select name="runway_num" id="runway_num">
+                            <option value="num_1">1번 활주로</option>
+                            <option value="num_2">2번 활주로</option>
+                            <option value="num_pre">Runway pre</option>
+                        </select>
+                    </div>
+
+                    <div class="rwy_content">
+                        <div class="Runway_designator">
+                            <div class="left">
+                                <p>LEFT</p>
+                                <select>
+                                    <option>자동 전환</option>
+                                </select>
+                            </div>
+                            <div class="mid">
+                                <p>MID</p>
+                                <select>
+                                    <option>자동 전환</option>
+                                </select>
+                            </div>
+                            <div class="right">
+                                <p>RIGHT</p>
+                                <select>
+                                    <option>자동 전환</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="Runway_altitude">
+                            <div>
+                                <p>Barometer Installation Altitude (m)</p>
+                                <select>
+                                    <option>자동 전환</option>
+                                </select>
+                            </div>
+                            <div>
+                                <p>Runway Magnetic Variation (deg)</p>
+                                <select>
+                                    <option>자동 전환</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
+                <p>AWIMP v1.0.0</p>
+            </footer>
+        </div>
+    </main>
+</body>
+
+</html>

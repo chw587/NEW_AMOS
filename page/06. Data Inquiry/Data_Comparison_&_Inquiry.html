@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Comparison & Inquiry</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+</head>
+
+<body>
+    <main class="Data_Comparison_Inquiry">
+        <div class="main_content">
+
+            <!-- 상태 알림 -->
+            <div class="status_alarm normal">
+                <div>
+                    <span class="material-symbols-outlined">check_circle</span>
+                    <p>There are no events currently occurring.</p>
+                </div>
+                <span class="material-symbols-outlined">close_small</span>
+            </div>
+
+            <div class="content">
+
+                <!-- Header -->
+                <div class="header_title">
+                    <div>
+                        <div class="title">
+                            <div class="title_bar"></div>
+                            <span class="title_text">Data Comparison & Inquiry</span>
+                        </div>
+                        <span>/ Data Inquiry</span>
+                    </div>
+                    <!-- <div class="toggle_btn">
+                        <button class="active">Single View</button>
+                        <button>Comparison View</button>
+                    </div> -->
+                </div>
+
+                <!-- Content -->
+                <div class="page Data_Comparison_Inquiry_content">
+
+                    <!-- Filter -->
+                    <div class="filter_wrap">
+
+                        <!-- 데이터 선택 -->
+                        <div class="data_select_wrap">
+                            <select name="rwy" id="rwy_select">
+                                <option value="rwy_1">RWY 1</option>
+                                <option value="rwy_2">RWY 2</option>
+                            </select>
+                            <select name="rwy_num" id="rwy_num">
+                                <option value="18">18</option>
+                                <option value="36">36</option>
+                            </select>
+                            <select name="rwy_num2" id="rwy_num2">
+                                <option value="18">18</option>
+                                <option value="36">36</option>
+                            </select>
+                            <input type="date" style="max-width: 250px;">
+                        </div>
+
+                        <!-- 요소 선택 -->
+                        <div class="elemenet_wrap">
+                            <div class="elemenet_header">
+                                <span>요소</span>
+                                <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                            </div>
+                            <div class="elemenet_body">
+                                <div class="elemenet_list">
+                                    <label><input type="checkbox">풍향(평균)</label>
+                                    <label><input type="checkbox">풍향(최소)</label>
+                                    <label><input type="checkbox">풍향(최대)</label>
+                                    <label><input type="checkbox">풍속(평균)</label>
+                                    <label><input type="checkbox">풍속(최소)</label>
+                                    <label><input type="checkbox">풍속(최대)</label>
+                                    <label><input type="checkbox">풍속(GUST)</label>
+                                    <label><input type="checkbox">온도</label>
+                                    <label><input type="checkbox">이슬점</label>
+                                    <label><input type="checkbox">QNH_HPA</label>
+                                    <label><input type="checkbox">QNH_INHG</label>
+                                    <label><input type="checkbox">운고</label>
+                                    <label><input type="checkbox">가시거리</label>
+                                    <label><input type="checkbox">가시거리(중앙)</label>
+                                </div>
+                                <button class="search_btn">검색</button>
+                            </div>
+                        </div>
+
+                        <!-- 구분 -->
+                        <div class="division_wrap">
+                            <div class="division_item">
+                                <p class="division_label">구분선 1</p>
+                                <div class="division_control">
+                                    <label class="toggle_switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <label class="division_color">
+                                        <input type="color" value="#08C862" list="division_colors">
+                                    </label>
+                                    <div class="division_text">
+                                        <span>구분선 이름</span>
+                                        <div class="line"></div>
+                                        <span>구분값</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="division_item">
+                                <p class="division_label">구분선 2</p>
+                                <div class="division_control">
+                                    <label class="toggle_switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <label class="division_color">
+                                        <input type="color" value="#08C862">
+                                    </label>
+                                    <div class="division_text">
+                                        <span>구분선 이름</span>
+                                        <div class="line"></div>
+                                        <span>구분값</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="division_item">
+                                <p class="division_label">구분선 3</p>
+                                <div class="division_control">
+                                    <label class="toggle_switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <label class="division_color">
+                                        <input type="color" value="#08C862">
+                                    </label>
+                                    <div class="division_text">
+                                        <span>구분선 이름</span>
+                                        <div class="line"></div>
+                                        <span>구분값</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="division_item">
+                                <p class="division_label">구분선 4</p>
+                                <div class="division_control">
+                                    <label class="toggle_switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <label class="division_color">
+                                        <input type="color" value="#08C862">
+                                    </label>
+                                    <div class="division_text">
+                                        <span>구분선 이름</span>
+                                        <div class="line"></div>
+                                        <span>구분값</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="division_item">
+                                <p class="division_label">구분선 5</p>
+                                <div class="division_control">
+                                    <label class="toggle_switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <label class="division_color">
+                                        <input type="color" value="#08C862">
+                                    </label>
+                                    <div class="division_text">
+                                        <span>구분선 이름</span>
+                                        <div class="line"></div>
+                                        <span>구분값</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Value -->
+                    <div class="Data_Comparison_Inquiry_value">
+                        <div class="card graph">
+                            <div class="graph_header">
+                                <p>Query Result Data Chart</p>
+                                <span class="material-symbols-outlined">
+                                    download
+                                </span>
+                            </div>
+
+                           <div id="chart-container"></div>
+                        </div>
+                        <div class="table">
+                            <div class="content_page_header">
+                                <div class="search">
+                                    <input type="text" class="search_input" placeholder="Search">
+                                    <span class="material-symbols-outlined search_icon">search</span>
+                                </div>
+                                <div>
+                                    <!-- <div class="count">
+                                        총 <span class="count_num">10</span>건의 데이터
+                                    </div>
+                                    <div class="line_count">
+                                        <span>페이지당 줄수</span>
+                                        <select name="line_count" id="line_count_select">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30">30</option>
+                                        </select>
+                                    </div> -->
+                                    <button class="csv_btn">CSV</button>
+                                    <button class="excel_btn">Excel</button>
+                                </div>
+                            </div>
+                            <table class="card content_table no_data" style="padding: 0;">
+                                <thead>
+                                    <tr>
+                                        <th>TIME</th>
+                                        <th>ELEMENT</th>
+                                        <th>VALUE</th>
+                                        <th>RESULT</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table_body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer>
+                <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
+                <p>AWIMP v1.0.0</p>
+            </footer>
+
+        </div>
+    </main>
+</body>
+
+</html>

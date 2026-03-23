@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QC Statistical Report</title>
+</head>
+
+<body>
+    <main class="QC_Statistical_Report">
+        <div class="main_content">
+
+            <!-- 상태 알림 -->
+            <div class="status_alarm normal">
+                <div>
+                    <span class="material-symbols-outlined">check_circle</span>
+                    <p>There are no events currently occurring.</p>
+                </div>
+                <span class="material-symbols-outlined">close_small</span>
+            </div>
+
+            <div class="content">
+                <!-- Header -->
+                <div class="header_title">
+                    <div>
+                        <div class="title">
+                            <div class="title_bar"></div>
+                            <span class="title_text">QC Statistical Report</span>
+                        </div>
+                        <span>/ Quality Management</span>
+                    </div>
+
+                </div>
+
+                <!-- Content -->
+                <div class="page QC_Statistical_Report_content">
+                    <!-- Filter -->
+                    <div class="filter_wrap">
+
+                        <!-- 데이터 선택 -->
+                        <div class="data_select_wrap">
+                            <select name="rwy" id="rwy_select">
+                                <option value="rwy_1">RWY 1</option>
+                                <option value="rwy_2">RWY 2</option>
+                            </select>
+                            <select name="rwy_num" id="rwy_num">
+                                <option value="18">18</option>
+                                <option value="36">36</option>
+                            </select>
+                            <select name="rwy_num2" id="rwy_num2">
+                                <option value="18">18</option>
+                                <option value="36">36</option>
+                            </select>
+                            <input type="date" style="max-width: 250px;">
+                            <button class="help_btn">
+                                <span class="material-symbols-outlined">
+                                    help
+                                </span>
+                                HELP
+                            </button>
+                        </div>
+
+                        <!-- 요소 선택 -->
+                        <div class="elemenet_wrap">
+                            <div class="elemenet_header">
+                                <span>요소</span>
+                                <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                            </div>
+                            <div class="elemenet_body">
+                                <div class="elemenet_list">
+                                    <div class="wind_speed">
+                                        <!-- 풍속 -->
+                                        <label><input type="checkbox">풍속(3초평균)</label>
+                                        <label><input type="checkbox">풍속(3초최대)</label>
+                                        <label><input type="checkbox">풍속(순간)</label>
+                                        <label><input type="checkbox">풍속(1분평균)</label>
+                                        <label><input type="checkbox">풍속(1분최소)</label>
+                                        <label><input type="checkbox">풍속(1분최대)</label>
+                                        <label><input type="checkbox">풍속(2분평균)</label>
+                                        <label><input type="checkbox">풍속(2분최소)</label>
+                                        <label><input type="checkbox">풍속(2분최대)</label>
+                                        <label><input type="checkbox">풍속(10분평균)</label>
+                                        <label><input type="checkbox">풍속(10분최소)</label>
+                                        <label><input type="checkbox">풍속(10분최대)</label>
+                                        <label><input type="checkbox">측풍(2분평균)</label>
+                                        <label><input type="checkbox">측풍(10분평균)</label>
+                                        <label><input type="checkbox">정배풍(2분평균)</label>
+                                        <label><input type="checkbox">정배풍(10분평균)</label>
+                                        <label><input type="checkbox">돌풍(2분평균)</label>
+                                        <label><input type="checkbox">돌풍(10분평균)</label>
+                                    </div>
+
+                                    <div class="wind_way">
+                                        <!-- 풍향 -->
+                                        <label><input type="checkbox">풍향(3초평균)</label>
+                                        <label><input type="checkbox">풍향(순간)</label>
+                                        <label><input type="checkbox">풍향(1분평균)</label>
+                                        <label><input type="checkbox">풍향(1분최소)</label>
+                                        <label><input type="checkbox">풍향(1분최대)</label>
+                                        <label><input type="checkbox">풍향(2분평균)</label>
+                                        <label><input type="checkbox">풍향(2분최소)</label>
+                                        <label><input type="checkbox">풍향(2분최대)</label>
+                                        <label><input type="checkbox">풍향(10분평균)</label>
+                                        <label><input type="checkbox">풍향(10분최소)</label>
+                                        <label><input type="checkbox">풍향(10분최대)</label>
+                                        <label><input type="checkbox">풍향(2분변동)</label>
+                                        <label><input type="checkbox">풍향(10분변동)</label>
+                                    </div>
+
+                                    <div class="mor_rvr">
+                                        <!-- MOR / RVR -->
+                                        <label><input type="checkbox">MOR(좌측 1분평균)</label>
+                                        <label><input type="checkbox">MOR(좌측 10분평균)</label>
+                                        <label><input type="checkbox">RVR(좌측 1분평균)</label>
+                                        <label><input type="checkbox">RVR(좌측 10분평균)</label>
+                                        <label><input type="checkbox">수직 시정</label>
+                                    </div>
+
+                                    <div class="cloud_base">
+                                        <!-- 운고 / 운형 -->
+                                        <label><input type="checkbox">운고(1층)-좌측</label>
+                                        <label><input type="checkbox">운고(2층)-좌측</label>
+                                        <label><input type="checkbox">운고(3층)-좌측</label>
+                                        <label><input type="checkbox">운형(1층)-좌측</label>
+                                        <label><input type="checkbox">운형(2층)-좌측</label>
+                                        <label><input type="checkbox">운형(3층)-좌측</label>
+                                    </div>
+
+                                    <div class="weather">
+                                        <!-- 기상 -->
+                                        <label><input type="checkbox">기온</label>
+                                        <label><input type="checkbox">노점 온도</label>
+                                        <label><input type="checkbox">습도</label>
+                                        <label><input type="checkbox">QFE(hPa)</label>
+                                        <label><input type="checkbox">QNH(hPa)</label>
+                                        <label><input type="checkbox">QFE(inHg)</label>
+                                        <label><input type="checkbox">QFF(hPa)</label>
+                                        <label><input type="checkbox">강수 유무</label>
+                                        <label><input type="checkbox">강수량(1분)</label>
+                                        <label><input type="checkbox">강수량(10분)</label>
+                                        <label><input type="checkbox">강수량(30분)</label>
+                                        <label><input type="checkbox">강수량(1시간)</label>
+                                        <label><input type="checkbox">강수량(1일)</label>
+                                        <label><input type="checkbox">강수량(3시간)</label>
+                                        <label><input type="checkbox">강수량(12시간)</label>
+                                        <label><input type="checkbox">현지기압</label>
+                                    </div>
+
+                                    <div class="PWC">
+                                        <!-- 현천코드 -->
+                                        <label><input type="checkbox">현천코드-문자(좌측 순간)</label>
+                                        <label><input type="checkbox">현천코드-숫자(좌측 순간)</label>
+                                        <label><input type="checkbox">현천코드-문자(좌측 1분평균)</label>
+                                        <label><input type="checkbox">현천코드-숫자(좌측 1분평균)</label>
+                                    </div>
+
+                                    <div class="mor_rvr_min_max">
+                                        <!-- MOR / RVR 최소최대 -->
+                                        <label><input type="checkbox">MOR(10분최소)</label>
+                                        <label><input type="checkbox">MOR(10분최대)</label>
+                                        <label><input type="checkbox">RVR(10분최소)</label>
+                                        <label><input type="checkbox">RVR(10분최대)</label>
+                                    </div>
+
+                                </div>
+                                <button class="search_btn">검색</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page QC_Statistical_Report_table">
+                        <div class="content_page_header">
+
+                            <div class="search_wrap">
+                                <div class="search">
+                                    <input type="text" class="search_input" placeholder="Search">
+                                    <span class="material-symbols-outlined search_icon">search</span>
+                                </div>
+
+                                <div>
+                                    <div class="count">
+                                        Total <span class="count_num">10</span>item
+                                    </div>
+                                    <div class="line_count">
+                                        <span>Rows per page</span>
+                                        <select name="line_count" id="line_count_select">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30">30</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <table class="card content_table" style="padding: 0;">
+                            <thead>
+                                <tr>
+                                    <th>ELEMENT</th>
+                                    <th>CHECK TYPE</th>
+                                    <th>COLLECTION RATE</th>
+                                    <th>NORMAL RATE</th>
+                                    <th>ERROR RATE</th>
+                                    <th>DOUBT & MISSING RATE</th>
+                                    <th>MISSING RATE</th>
+                                    <th>PERIOD</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                        <div class="pagination">
+                            <button class="pg_back" type="button">Prev</button>
+
+                            <button class="pg_btn is_active" type="button" aria-current="page">1</button>
+                            <button class="pg_btn" type="button">2</button>
+                            <button class="pg_btn" type="button">3</button>
+
+                            <span class="pg_ellipsis">...</span>
+
+                            <button class="pg_btn" type="button">10</button>
+
+                            <button class="pg_next" type="button">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer>
+                <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
+                <p>AWIMP v1.0.0</p>
+            </footer>
+        </div>
+    </main>
+</body>
+
+</html>

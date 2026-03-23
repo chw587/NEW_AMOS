@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+</head>
+
+<body>
+    <main class="dashboard">
+        <div class="main_content">
+
+            <!-- 상태 알림 -->
+            <div class="status_alarm normal">
+                <div>
+                    <span class="material-symbols-outlined">check_circle</span>
+                    <p>There are no events currently occurring.</p>
+                </div>
+                <span class="material-symbols-outlined">close_small</span>
+            </div>
+
+            <div class="content">
+
+                <!-- ==================== DATA VALUE ==================== -->
+                <div class="data_value">
+
+                    <!-- Real-time -->
+                    <div class="real_time">
+                        <div>
+                            <div class="title">
+                                <div class="title_bar"></div>
+                                <span class="title_text">Real-time</span>
+                            </div>
+                            <div class="toggle_btn">
+                                <button class="active">RWY 1</button>
+                                <button>RWY 2</button>
+                            </div>
+                        </div>
+
+                        <div class="data_wrap">
+                            <div class="runway_num">
+                                <div>
+                                    <span>15L</span>
+                                    <span class="material-symbols-outlined">travel</span>
+                                </div>
+                                <div>
+                                    <span>33R</span>
+                                </div>
+                            </div>
+
+                            <div class="data_content rwy_1">
+                                <!-- MOR x3 -->
+                                <div class="card mor">
+                                    <div class="data_header">
+                                        <div class="status_title">
+                                            <div class="now_state success"></div>
+                                            <p>MOR</p>
+                                        </div>
+                                        <span>QC</span>
+                                    </div>
+                                    <div class="rwy_data rwy_value">9200</div>
+                                </div>
+                                <div class="card mor">
+                                    <div class="data_header">
+                                        <div class="status_title">
+                                            <div class="now_state success"></div>
+                                            <p>MOR</p>
+                                        </div>
+                                        <span>QC</span>
+                                    </div>
+                                    <div class="rwy_data rwy_value">9200</div>
+                                </div>
+                                <div class="card mor">
+                                    <div class="data_header">
+                                        <div class="status_title">
+                                            <div class="now_state success"></div>
+                                            <p>MOR</p>
+                                        </div>
+                                        <span>QC</span>
+                                    </div>
+                                    <div class="rwy_data rwy_value">9200</div>
+                                </div>
+
+                                <!-- WIND -->
+                                <div class="card wind">
+                                    <div class="data_header">
+                                        <div class="status_title">
+                                            <div class="now_state success"></div>
+                                            <p>WIND</p>
+                                        </div>
+                                        <span>QC</span>
+                                    </div>
+                                    <div class="wind_data">
+                                        <div>
+                                            <div class="unit">WD(deg)</div>
+                                            <div class="wd_value rwy_value">280</div>
+                                        </div>
+                                        <div>
+                                            <div class="unit">WS(kt)</div>
+                                            <div class="w_value rwy_value">11</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- TEMP / HUMI -->
+                                <div class="card temp_humi">
+                                    <div class="temp_data">
+                                        <div class="status_title">
+                                            <div class="now_state success"></div>
+                                            <p>TEMP</p>
+                                        </div>
+                                        <div class="temp_value rwy_value">0.2</div>
+                                    </div>
+                                    <div class="humi_data">
+                                        <div class="status_title">
+                                            <div class="now_state success"></div>
+                                            <p>HUMI</p>
+                                        </div>
+                                        <div class="humi_value rwy_value">69.1</div>
+                                    </div>
+                                </div>
+
+                                <!-- WIND -->
+                                <div class="card wind">
+                                    <div class="data_header">
+                                        <div class="status_title">
+                                            <div class="now_state success"></div>
+                                            <p>WIND</p>
+                                        </div>
+                                        <span>QC</span>
+                                    </div>
+                                    <div class="wind_data">
+                                        <div>
+                                            <div class="unit">WD(deg)</div>
+                                            <div class="wd_value rwy_value">280</div>
+                                        </div>
+                                        <div>
+                                            <div class="unit">WS(kt)</div>
+                                            <div class="ws_value rwy_value">11</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CLOUD x2 -->
+                                <div class="card cloud">
+                                    <div class="data_header">
+                                        <div class="status_title">
+                                            <div class="now_state success"></div>
+                                            <p>CLOUD</p>
+                                        </div>
+                                        <span>QC</span>
+                                    </div>
+                                    <div class="cloud_data">
+                                        <div>
+                                            <div>
+                                                <div class="unit">1</div>
+                                                <div class="ws_value rwy_value">NCD</div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <div class="unit">2</div>
+                                                <div class="ws_value rwy_value">NCD</div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <div class="unit">3</div>
+                                                <div class="ws_value rwy_value">NCD</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- QNH / RAIN -->
+                                <div class="card rain">
+                                    <div class="qnh_data">
+                                        <div class="status_title">
+                                            <div class="now_state success"></div>
+                                            <p>QNH</p>
+                                        </div>
+                                        <div class="qnh_value rwy_value">1026</div>
+                                    </div>
+                                    <div class="rain_data">
+                                        <div class="status_title">
+                                            <div class="now_state success"></div>
+                                            <p>RAIN</p>
+                                        </div>
+                                        <div class="rain_value rwy_value">2</div>
+                                    </div>
+                                </div>
+
+                                <!-- CLOUD -->
+                                <div class="card cloud">
+                                    <div class="data_header">
+                                        <div class="status_title">
+                                            <div class="now_state success"></div>
+                                            <p>CLOUD</p>
+                                        </div>
+                                        <span>QC</span>
+                                    </div>
+                                    <div class="cloud_data">
+                                        <div>
+                                            <div>
+                                                <div class="unit">1</div>
+                                                <div class="ws_value rwy_value">NCD</div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <div class="unit">2</div>
+                                                <div class="ws_value rwy_value">NCD</div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <div class="unit">3</div>
+                                                <div class="ws_value rwy_value">NCD</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data By Element -->
+                    <div class="data_by_element">
+                        <div class="title">
+                            <div class="title_bar"></div>
+                            <span class="title_text">Data By Element</span>
+                        </div>
+                        <div class="graph_content">
+                            <div class="card">
+                                <div class="graph_title">
+                                    <p>WD</p>
+                                </div>
+                                <div class="line_chart" id="chart_1"></div>
+                            </div>
+                            <div class="card">
+                                <div class="graph_title">
+                                    <p>WS</p>
+                                </div>
+                                <div class="line_chart" id="chart_2"></div>
+                            </div>
+                            <div class="card">
+                                <div class="graph_title">
+                                    <p>MOR</p>
+                                </div>
+                                <div class="line_chart" id="chart_3"></div>
+                            </div>
+                            <div class="card">
+                                <div class="graph_title">
+                                    <p>TEMP/HUMI</p>
+                                </div>
+                                <div class="bar_chart" id="chart_4"></div>
+                            </div>
+                            <div class="card">
+                                <div class="graph_title">
+                                    <p>QNH</p>
+                                </div>
+                                <div class="line_chart" id="chart_5"></div>
+                            </div>
+                            <div class="card">
+                                <div class="graph_title">
+                                    <p>RAIN</p>
+                                </div>
+                                <div class="bar_chart" id="chart_6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== QC ==================== -->
+                <div class="qc_wrap">
+
+                    <!-- QC Status -->
+                    <div class="qc_stauts">
+                        <div class="title">
+                            <div class="title_bar"></div>
+                            <span class="title_text">QC Status</span>
+                        </div>
+                        <div class="qc_content">
+                            <div class="qc_data">
+                                <div class="card total">
+                                    <h2>1440</h2>
+                                    <p>Total</p>
+                                </div>
+                                <div class="card normal">
+                                    <h2>1440</h2>
+                                    <p>Normal</p>
+                                </div>
+                                <div class="card doubt">
+                                    <h2>1440</h2>
+                                    <p>Doubt</p>
+                                </div>
+                                <div class="card error">
+                                    <h2>1440</h2>
+                                    <p>Error</p>
+                                </div>
+                                <div class="card missing">
+                                    <h2>1440</h2>
+                                    <p>Missing</p>
+                                </div>
+                            </div>
+
+                            <div class="card qc_count">
+                                <p class="sub_title">FREQUENCY BY ELEMENT</p>
+                                <div class="qc_count_wrap">
+                                    <div class="item">
+                                        <div class="item_wrap">
+                                            <div class="label">Visib</div>
+                                            <div class="contain_bar">
+                                                <div class="count_bar visib_bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="value">2 <span class="unit">ITEM</span></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item_wrap">
+                                            <div class="label">Temp</div>
+                                            <div class="contain_bar">
+                                                <div class="count_bar temp_bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="value">1 <span class="unit">ITEM</span></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item_wrap">
+                                            <div class="label">Humi</div>
+                                            <div class="contain_bar">
+                                                <div class="count_bar humi_bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="value">1 <span class="unit">ITEM</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card qc_event">
+                                <p class="sub_title">RECENT QC EVENTS</p>
+                                <table class="table recent_qc">
+                                    <thead>
+                                        <tr>
+                                            <th>TIME</th>
+                                            <th>ELEMENT</th>
+                                            <th>VALUE</th>
+                                            <th>RESULT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>09:51</td>
+                                            <td>Temp</td>
+                                            <td>0.5</td>
+                                            <td class="success">Normal</td>
+                                        </tr>
+                                        <tr>
+                                            <td>09:51</td>
+                                            <td>Temp</td>
+                                            <td>-999</td>
+                                            <td class="error">Error</td>
+                                        </tr>
+                                        <tr>
+                                            <td>09:51</td>
+                                            <td>Temp</td>
+                                            <td>0.5</td>
+                                            <td class="success">Normal</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="message">
+                        <div class="title">
+                            <div class="title_bar"></div>
+                            <span class="title_text">Message</span>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="card lastest_message">
+                                <p class="sub_title">LASTEST MESSAGE RESULT</p>
+                                <div class="lastest_message_content">
+                                    <span>METAR</span><span>RKSI</span><span>250500Z</span>
+                                    <span>31005KT</span><span>280V340</span><span>CAVOK</span>
+                                    <span>10/M05</span><span>Q1023</span><span>NOSIG=</span>
+                                </div>
+                                <div class="message_status">
+                                    <div class="amis">AMIS</div>
+                                    <div class="aftn">AFTN</div>
+                                </div>
+                            </div>
+
+                            <div class="card recent_qc_event">
+                                <p class="sub_title">RECENT QC EVENTS</p>
+                                <table class="table recent_qc">
+                                    <thead>
+                                        <tr>
+                                            <th>TIME</th>
+                                            <th>TYPE</th>
+                                            <th>AMIS</th>
+                                            <th>AFTN</th>
+                                            <th>DETAIL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>09:51</td>
+                                            <td>METAR</td>
+                                            <td class="success">Success</td>
+                                            <td class="success">Success</td>
+                                            <td><span>METAR</span><span>RKSI</span><span>250500Z</span><span>31005KT</span><span>280V340</span><span>CAVOK</span><span>10/M05</span><span>Q1023</span><span>NOSIG=</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>09:51</td>
+                                            <td>METAR</td>
+                                            <td class="success">Success</td>
+                                            <td class="success">Success</td>
+                                            <td><span>METAR</span><span>RKSI</span><span>250500Z</span><span>31005KT</span><span>280V340</span><span>CAVOK</span><span>10/M05</span><span>Q1023</span><span>NOSIG=</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>09:51</td>
+                                            <td>Temp</td>
+                                            <td class="success">Success</td>
+                                            <td class="warning">Delay</td>
+                                            <td><span>METAR</span><span>RKSI</span><span>250500Z</span><span>31005KT</span><span>280V340</span><span>CAVOK</span><span>10/M05</span><span>Q1023</span><span>NOSIG=</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
+                <p>AWIMP v1.0.0</p>
+            </footer>
+        </div>
+    </main>
+
+    <!-- 전문 전체보기 -->
+
+
+</body>
+
+</html>

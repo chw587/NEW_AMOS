@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QC Performance Monitoring</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+</head>
+
+<body>
+    <main class="QC_PM">
+        <div class="main_content">
+
+            <!-- 상태 알림 -->
+            <div class="status_alarm normal">
+                <div>
+                    <span class="material-symbols-outlined">check_circle</span>
+                    <p>There are no events currently occurring.</p>
+                </div>
+                <span class="material-symbols-outlined">close_small</span>
+            </div>
+
+            <div class="content">
+                <!-- Header -->
+                <div class="header_title">
+                    <div>
+                        <div class="title">
+                            <div class="title_bar"></div>
+                            <span class="title_text">QC Performance Monitoring</span>
+                        </div>
+                        <span>/ Quality Management</span>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="page QC_PM_content">
+
+                    <!-- Filter -->
+                    <div class="filter_wrap">
+
+                        <!-- 데이터 선택 -->
+                        <div class="data_select_wrap">
+                            <select name="rwy" id="rwy_select">
+                                <option value="rwy_1">RWY 1</option>
+                                <option value="rwy_2">예비 AMOS</option>
+                            </select>
+                            <select name="rwy_num" id="rwy_num">
+                                <option value="18">18</option>
+                                <option value="36">36</option>
+                            </select>
+                            <select class="custom-select" name="algoType" id="input-algo-type">
+                                <option value="1">물리한계 검사</option>
+                                <option value="2">단계 검사</option>
+                                <option value="3">지속성 검사</option>
+                                <option value="4">내적일치성 검사</option>
+                                <option value="5">기후범위 검사</option>
+                            </select>
+                            <input type="date" style="max-width: 250px;">
+                            <button class="submin_btn">
+                                SEARCH
+                            </button>
+                            <button class="help_btn">
+                                <span class="material-symbols-outlined">
+                                    help
+                                </span>
+                                HELP
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="content_page_header search_wrap">
+                        <div class="search">
+                            <input type="text" class="search_input" placeholder="Search">
+                            <span class="material-symbols-outlined search_icon">search</span>
+                        </div>
+                        <div>
+                            <div class="count">
+                                총 <span class="count_num">10</span>건의 데이터
+                            </div>
+                            <div class="line_count">
+                                <span>페이지당 줄수</span>
+                                <select name="line_count" id="line_count_select">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                </select>
+                            </div>
+                            <button class="csv_btn">CSV</button>
+                            <button class="excel_btn">Excel</button>
+                        </div>
+                    </div>
+                    <div class="content_table_wrap">
+                        <table class="card content_table" style="padding: 0;">
+                            <thead>
+                                <tr>
+                                    <th>NO</th>
+                                    <th>DATE</th>
+                                    <th>RWY NUM</th>
+                                    <th>DIRECTION</th>
+                                    <th>WIND SPEED (INSTANT)</th>
+                                    <th>WIND SPEED (3S AVG)</th>
+                                    <th>WIND SPEED (3S MAX)</th>
+                                    <th>WIND SPEED (1M AVG)</th>
+                                    <th>WIND SPEED (1M MIN)</th>
+                                    <th>WIND SPEED (1M MAX)</th>
+                                    <th>WIND SPEED (2M AVG)</th>
+                                    <th>WIND SPEED (2M MIN)</th>
+                                    <th>WIND SPEED (2M MAX)</th>
+                                    <th>WIND SPEED (10M AVG)</th>
+                                    <th>WIND SPEED (10M MIN)</th>
+                                    <th>WIND SPEED (10M MAX)</th>
+                                    <th>WIND DIR (INSTANT)</th>
+                                    <th>WIND DIR (3S AVG)</th>
+                                    <th>WIND DIR (1M AVG)</th>
+                                    <th>WIND DIR (1M MIN)</th>
+                                    <th>WIND DIR (1M MAX)</th>
+                                    <th>WIND DIR (2M AVG)</th>
+                                    <th>WIND DIR (2M MIN)</th>
+                                    <th>WIND DIR (2M MAX)</th>
+                                    <th>WIND DIR (10M AVG)</th>
+                                    <th>WIND DIR (10M MIN)</th>
+                                    <th>WIND DIR (10M MAX)</th>
+                                    <th>WIND DIR (2M VAR)</th>
+                                    <th>WIND DIR (10M VAR)</th>
+                                    <th>CROSSWIND (2M AVG)</th>
+                                    <th>CROSSWIND (10M AVG)</th>
+                                    <th>HEADWIND (2M AVG)</th>
+                                    <th>HEADWIND (10M AVG)</th>
+                                    <th>GUST (2M AVG)</th>
+                                    <th>GUST (10M AVG)</th>
+                                    <th>MOR (LEFT 1M AVG)</th>
+                                    <th>MOR (LEFT 10M AVG)</th>
+                                    <th>MOR (10M MIN)</th>
+                                    <th>MOR (10M MAX)</th>
+                                    <th>RVR (LEFT 1M AVG)</th>
+                                    <th>RVR (LEFT 10M AVG)</th>
+                                    <th>RVR (10M MIN)</th>
+                                    <th>RVR (10M MAX)</th>
+                                    <th>PWC-TEXT (LEFT INSTANT)</th>
+                                    <th>PWC-TEXT (LEFT 1MIN AVG)</th>
+                                    <th>PWC-NUM (LEFT INSTANT)</th>
+                                    <th>PWC-NUM (LEFT 1M AVG)</th>
+                                    <th>VERTICAL VISIBILITY</th>
+                                    <th>CLOUD BASE (L1-LEFT)</th>
+                                    <th>CLOUD BASE (L2-LEFT)</th>
+                                    <th>CLOUD BASE (L3-LEFT)</th>
+                                    <th>CLOUD TYPE (L1-LEFT)</th>
+                                    <th>CLOUD TYPE (L2-LEFT)</th>
+                                    <th>CLOUD TYPE (L3-LEFT)</th>
+                                    <th>TEMPERATURE</th>
+                                    <th>DEW POINT</th>
+                                    <th>HUMIDITY</th>
+                                    <th>STATION PRESSURE</th>
+                                    <th>QFE (hPa)</th>
+                                    <th>QNH (hPa)</th>
+                                    <th>QFE (inHg)</th>
+                                    <th>QFF (hPa)</th>
+                                    <th>PRECIPITATION</th>
+                                    <th>RAINFALL (1M)</th>
+                                    <th>RAINFALL (10M)</th>
+                                    <th>RAINFALL (30M)</th>
+                                    <th>RAINFALL (1H)</th>
+                                    <th>RAINFALL (3H)</th>
+                                    <th>RAINFALL (12H)</th>
+                                    <th>RAINFALL (1D)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table_body"  class="no_override">
+                                <tr>
+                                    <td>-</td>
+                                    <td>202060852</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination">
+                        <button class="pg_back" type="button">Prev</button>
+
+                        <button class="pg_btn is_active" type="button" aria-current="page">1</button>
+                        <button class="pg_btn" type="button">2</button>
+                        <button class="pg_btn" type="button">3</button>
+
+                        <span class="pg_ellipsis">...</span>
+
+                        <button class="pg_btn" type="button">10</button>
+
+                        <button class="pg_next" type="button">Next</button>
+                    </div>
+                </div>
+
+                <footer>
+                    <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
+                    <p>AWIMP v1.0.0</p>
+                </footer>
+            </div>
+    </main>
+</body>
+
+</html>

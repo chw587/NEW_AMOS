@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Reset</title>
+
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+</head>
+
+<body>
+    <main class="Data_Reset">
+        <div class="main_content">
+
+            <!-- 상태 알림 -->
+            <div class="status_alarm normal">
+                <div>
+                    <span class="material-symbols-outlined">check_circle</span>
+                    <p>There are no events currently occurring.</p>
+                </div>
+                <span class="material-symbols-outlined">close_small</span>
+            </div>
+
+            <div class="content">
+                <div class="header_title">
+                    <div>
+                        <div class="title">
+                            <div class="title_bar"></div>
+                            <span class="title_text">Data Reset</span>
+                        </div>
+                        <span>/ Sensor Switching</span>
+                    </div>
+                </div>
+
+                <div class="card Data_Reset_content">
+                    <div class="rwy_title">
+                        <h3>Data Reset</h3>
+                    </div>
+
+                    <div class="rwy_content reset_content">
+                        <div class="snow">
+                            <div class="snow_value_wrap">
+                                <div>
+                                    <p>SNOW</p>
+                                    <select>
+                                        <option>select runway</option>
+                                        <option>Runway 1</option>
+                                        <option>Runway 2</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>SNOWFALL AMT</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <div>
+                                    <p>1MIN SNOWFALL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <div>
+                                    <p>NEW SNOWFALL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <div>
+                                    <p>1H SNOWFALL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <div>
+                                    <p>3H SNOWFALL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <div>
+                                    <p>DAILY SNOWFALL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <div>
+                                    <p>SENSOR INIT VAL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <button class="submin_btn">APPLY</button>
+                            </div>
+                        </div>
+
+                        <div class="snow">
+                            <div class="snow_value_wrap">
+                                <div>
+                                    <p>RAIN</p>
+                                    <select>
+                                        <option>select runway</option>
+                                        <option>Runway 1</option>
+                                        <option>Runway 2</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>1MIN RAINFALL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <div>
+                                    <p>10MIN RAINFALL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <div>
+                                    <p>30MIN RAINFALL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <div>
+                                    <p>1H RAINFALL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <div>
+                                    <p>3H RAINFALL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <div>
+                                    <p>12H RAINFALL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <div>
+                                    <p>DAILY RAINFALL</p>
+                                    <input type="number" step="0.1" placeholder="0">
+                                </div>
+                                <button class="submin_btn">APPLY</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
+                <p>AWIMP v1.0.0</p>
+            </footer>
+        </div>
+    </main>
+</body>
+
+</html>

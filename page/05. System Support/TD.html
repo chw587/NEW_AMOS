@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T/D Monitoring</title>
+
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+</head>
+
+<body>
+    <main class="TD_Monitoring">
+        <div class="main_content">
+
+            <!-- 상태 알림 -->
+            <div class="status_alarm normal">
+                <div>
+                    <span class="material-symbols-outlined">check_circle</span>
+                    <p>There are no events currently occurring.</p>
+                </div>
+                <span class="material-symbols-outlined">close_small</span>
+            </div>
+
+            <div class="content">
+                <div class="header_title">
+                    <div>
+                        <div class="title">
+                            <div class="title_bar"></div>
+                            <span class="title_text">T/D Monitoring</span>
+                        </div>
+                        <span>/ System Support</span>
+                    </div>
+                </div>
+
+                <div class="page TD_Monitoring_content">
+                    <div class="content_page_header search_wrap">
+                        <div class="search">
+                            <input type="text" class="search_input" placeholder="Search">
+                            <span class="material-symbols-outlined search_icon">search</span>
+                        </div>
+
+                        <div>
+                            <div class="count">
+                                Total <span class="count_num">10</span>item
+                            </div>
+                            <div class="line_count">
+                                <span>Rows per page</span>
+                                <select name="line_count" id="line_count_select">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="card content_table" style="padding: 0;">
+                        <thead>
+                            <tr>
+                                <th>VISIBLE</th>
+                                <th>HELP TYPE</th>
+                                <th>HELP TITLE</th>
+                                <th>CREATED DATE</th>
+                                <th>MODIFIED DATE</th>
+                                <th>FEATURES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="toggle_switch" s>
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </div>
+                                </td>
+                                <td class="user_role"><span>최고관리자</span></td>
+                                <td>AMOS 모니터링 메뉴얼 - G/W</td>
+                                <td>2022-09-26 <span>00:00:00.0</span></td>
+                                <td>2022-09-26 <span>00:00:00.0</span></td>
+                                <td>
+                                    <span style="margin-top: 8px;" class="material-symbols-outlined">
+                                        Lists
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="gw_footer">
+                        <div class="pagination">
+                            <button class="pg_back" type="button">Prev</button>
+
+                            <button class="pg_btn is_active" type="button" aria-current="page">1</button>
+                            <button class="pg_btn" type="button">2</button>
+                            <button class="pg_btn" type="button">3</button>
+
+                            <span class="pg_ellipsis">...</span>
+
+                            <button class="pg_btn" type="button">10</button>
+
+                            <button class="pg_next" type="button">Next</button>
+                        </div>
+                        <button class="submin_btn">
+                            <span class="material-symbols-outlined">
+                                list_alt_add
+                            </span>
+                            Register help
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer>
+                <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
+                <p>AWIMP v1.0.0</p>
+            </footer>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection Rate</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+</head>
+
+<body>
+    <main class="QC_PM">
+        <div class="main_content">
+
+            <!-- 상태 알림 -->
+            <div class="status_alarm normal">
+                <div>
+                    <span class="material-symbols-outlined">check_circle</span>
+                    <p>There are no events currently occurring.</p>
+                </div>
+                <span class="material-symbols-outlined">close_small</span>
+            </div>
+
+            <div class="content">
+                <!-- Header -->
+                <div class="header_title">
+                    <div>
+                        <div class="title">
+                            <div class="title_bar"></div>
+                            <span class="title_text">Data Collection Rate</span>
+                        </div>
+                        <span>/ Quality Management</span>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="page date_collection_rate_content">
+                    <!-- Filter -->
+                    <div class="filter_wrap">
+
+                        <!-- 데이터 선택 -->
+                        <div class="data_select_wrap">
+                            <select name="rwy" id="rwy_select">
+                                <option value="rwy_1">RWY 1</option>
+                                <option value="rwy_2">예비 AMOS</option>
+                            </select>
+                            <select name="rwy_num" id="rwy_num">
+                                <option value="18">18</option>
+                                <option value="36">36</option>
+                            </select>
+                            <select class="custom-select" name="columnName" id="input-column-name">
+                                <option data-name="풍향(3초평균)" value="M_WD_3SEC_AVG">풍향(3초평균)</option>
+                                <option data-name="풍속(3초평균)" value="M_WS_3SEC_AVG">풍속(3초평균)</option>
+                                <option data-name="풍속(3초최대)" value="M_WS_3SEC_MAX">풍속(3초최대)</option>
+                                <option data-name="풍속(순간)" value="M_WS">풍속(순간)</option>
+                                <option data-name="풍속(1분평균)" value="M_WS1M_AVG">풍속(1분평균)</option>
+                                <option data-name="풍속(1분최소)" value="M_WS1M_MIN">풍속(1분최소)</option>
+                                <option data-name="풍속(1분최대)" value="M_WS1M_MAX">풍속(1분최대)</option>
+                                <option data-name="풍속(2분평균)" value="M_WS2M_AVG">풍속(2분평균)</option>
+                                <option data-name="풍속(2분최소)" value="M_WS2M_MIN">풍속(2분최소)</option>
+                                <option data-name="풍속(2분최대)" value="M_WS2M_MAX">풍속(2분최대)</option>
+                                <option data-name="풍속(10분평균)" value="M_WS10M_AVG">풍속(10분평균)</option>
+                                <option data-name="풍속(10분최소)" value="M_WS10M_MIN">풍속(10분최소)</option>
+                                <option data-name="풍속(10분최대)" value="M_WS10M_MAX">풍속(10분최대)</option>
+                                <option data-name="풍향(순간)" value="M_WD">풍향(순간)</option>
+                                <option data-name="풍향(1분평균)" value="M_WD1M_AVG">풍향(1분평균)</option>
+                                <option data-name="풍향(1분최소)" value="M_WD1M_MIN">풍향(1분최소)</option>
+                                <option data-name="풍향(1분최대)" value="M_WD1M_MAX">풍향(1분최대)</option>
+                                <option data-name="풍향(2분평균)" value="M_WD2M_AVG">풍향(2분평균)</option>
+                                <option data-name="풍향(2분최소)" value="M_WD2M_MIN">풍향(2분최소)</option>
+                                <option data-name="풍향(2분최대)" value="M_WD2M_MAX">풍향(2분최대)</option>
+                                <option data-name="풍향(10분평균)" value="M_WD10M_AVG">풍향(10분평균)</option>
+                                <option data-name="풍향(10분최소)" value="M_WD10M_MIN">풍향(10분최소)</option>
+                                <option data-name="풍향(10분최대)" value="M_WD10M_MAX">풍향(10분최대)</option>
+                                <option data-name="풍향(2분변동)" value="M_WD2M_VW">풍향(2분변동)</option>
+                                <option data-name="풍향(10분변동)" value="M_WD10M_VW">풍향(10분변동)</option>
+                                <option data-name="측풍(2분평균)" value="M_WCROSS_2M">측풍(2분평균)</option>
+                                <option data-name="측풍(10분평균)" value="M_WCROSS_10M">측풍(10분평균)</option>
+                                <option data-name="정배풍(2분평균)" value="M_WHEAD_2M">정배풍(2분평균)</option>
+                                <option data-name="정배풍(10분평균)" value="M_WHEAD_10M">정배풍(10분평균)</option>
+                                <option data-name="돌풍(2분평균)" value="M_GUST_2M">돌풍(2분평균)</option>
+                                <option data-name="돌풍(10분평균)" value="M_GUST_10M">돌풍(10분평균)</option>
+                                <option data-name="MOR(좌측 1분평균)" value="MOR1M_LEFT">MOR(좌측 1분평균)</option>
+                                <option data-name="MOR(좌측 10분평균)" value="MOR10M_LEFT">MOR(좌측 10분평균)</option>
+                                <option data-name="RVR(좌측 1분평균)" value="RVR1M_LEFT">RVR(좌측 1분평균)</option>
+                                <option data-name="RVR(좌측 10분평균)" value="RVR10M_LEFT">RVR(좌측 10분평균)</option>
+                                <option data-name="현천코드-문자(좌측 순간)" value="SKY_4678_LEFT">현천코드-문자(좌측 순간)</option>
+                                <option data-name="현천코드-숫자(좌측 순간)" value="SKY_4680_LEFT">현천코드-숫자(좌측 순간)</option>
+                                <option data-name="수직 시정" value="VIS">수직 시정</option>
+                                <option data-name="운고(1층)-좌측" value="CB1_LEFT">운고(1층)-좌측</option>
+                                <option data-name="운고(2층)-좌측" value="CB2_LEFT">운고(2층)-좌측</option>
+                                <option data-name="운고(3층)-좌측" value="CB3_LEFT">운고(3층)-좌측</option>
+                                <option data-name="운형(1층)-좌측" value="CB1_LEFT_TYPE">운형(1층)-좌측</option>
+                                <option data-name="운형(2층)-좌측" value="CB2_LEFT_TYPE">운형(2층)-좌측</option>
+                                <option data-name="운형(3층)-좌측" value="CB3_LEFT_TYPE">운형(3층)-좌측</option>
+                                <option data-name="기온" value="TEMP">기온</option>
+                                <option data-name="노점 온도" value="DEWPOINT">노점 온도</option>
+                                <option data-name="습도" value="HUMI">습도</option>
+                                <option data-name="QFE(hPa)" value="M_QFE">QFE(hPa)</option>
+                                <option data-name="QNH(hPa)" value="M_QNH_HPA">QNH(hPa)</option>
+                                <option data-name="QFE(inHg)" value="M_QNH_INHG">QFE(inHg)</option>
+                                <option data-name="QFF(hPa)" value="M_QFF">QFF(hPa)</option>
+                                <option data-name="강수 유무" value="RAIN_DETECT">강수 유무</option>
+                                <option data-name="강수량(1분)" value="RAIN_1M">강수량(1분)</option>
+                                <option data-name="강수량(10분)" value="RAIN_10M">강수량(10분)</option>
+                                <option data-name="강수량(30분)" value="RAIN_30M">강수량(30분)</option>
+                                <option data-name="강수량(1시간)" value="RAIN_1H">강수량(1시간)</option>
+                                <option data-name="강수량(1일)" value="RAIN_24H">강수량(1일)</option>
+                                <option data-name="강수량(3시간)" value="RAIN_3H">강수량(3시간)</option>
+                                <option data-name="강수량(12시간)" value="RAIN_12H">강수량(12시간)</option>
+                                <option data-name="현천코드-문자(좌측 1분평균)" value="SKY_4678_1M_LEFT">현천코드-문자(좌측 1분평균)</option>
+                                <option data-name="현천코드-숫자(좌측 1분평균)" value="SKY_4680_1M_LEFT">현천코드-숫자(좌측 1분평균)</option>
+                                <option data-name="현지기압" value="PRESS">현지기압</option>
+                                <option data-name="MOR(10분최소)" value="MOR10M_MIN">MOR(10분최소)</option>
+                                <option data-name="MOR(10분최대)" value="MOR10M_MAX">MOR(10분최대)</option>
+                                <option data-name="RVR(10분최소)" value="RVR10M_MIN">RVR(10분최소)</option>
+                                <option data-name="RVR(10분최대)" value="RVR10M_MAX">RVR(10분최대)</option>
+                            </select>
+                            <input type="date" style="max-width: 250px;">
+                            <button class="submin_btn">
+                                SEARCH
+                            </button>
+                            <button class="help_btn">
+                                <span class="material-symbols-outlined">
+                                    help
+                                </span>
+                                HELP
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="data_table_wrap">
+                        <div class="dataTables_info">
+                            <div class="data_count_wrap">
+                                <div class="expect_count">
+                                    <span>예상 전체 자료수</span>
+                                    <span>:</span>
+                                    <span>918</span>
+                                </div>
+
+                                <div class="total_count">
+                                    <span>전체 자료수</span>
+                                    <span>:</span>
+                                    <span>0</span>
+                                </div>
+
+                                <div class="omission_count">
+                                    <span>누락 자료수</span>
+                                    <span>:</span>
+                                    <span>918</span>
+                                </div>
+                            </div>
+
+                            <div class="date_setting">
+                                <div class="start_date">
+                                    <span>2026</span>
+                                    -
+                                    <span>03</span>
+                                    -
+                                    <span>20</span>
+                                </div>
+                                <span>~</span>
+                                <div class="end_date">
+                                    <span>2026</span>
+                                    -
+                                    <span>03</span>
+                                    -
+                                    <span>20</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dataTables_info_divison">
+                            <div class="dataTables_data total_data">
+                                <p>
+                                    자료 수집률
+                                    <span class="tooltip_box">
+                                        <span class="tooltip_title">자료 수집률 <br><span>(전체 수집 자료 / 예측 수집 자료)</span></span>
+                                        <span class="tooltip_desc">
+                                            설정된 조회 기간에 따른 수집주기 기준 예측 전체 자료수 대비 수집된 실제 전체 자료수 비율
+                                        </span>
+                                    </span>
+                                </p>
+                                <div>
+                                    <h3>0.00%</h3>
+                                    <span>(0 / 918)</span>
+                                </div>
+                            </div>
+                            <div class="dataTables_data success_data active">
+                                <p>
+                                    자료 수집률
+                                    <span class="tooltip_wrap">
+                                        <span class="tooltip_box">
+                                            <span class="tooltip_title">정상 자료율 <br><span>(정상 자료수 / 수집 자료)</span></span>
+                                            <span class="tooltip_desc">
+                                                전체 수집 자료에 대한 <span>정상</span> 자료수 비율
+                                            </span>
+                                        </span>
+                                    </span>
+                                </p>
+                                <div>
+                                    <h3>0.00%</h3>
+                                    <span>(0 / 0)</span>
+                                </div>
+                            </div>
+                            <div class="dataTables_data error_data">
+                                <p>
+                                    자료 수집률
+                                    <span class="tooltip_wrap">
+                                        <span class="tooltip_box">
+                                            <span class="tooltip_title">오류 자료율 <br><span>(오류 자료수 / 수집 자료)</span></span>
+                                            <span class="tooltip_desc">
+                                                전체 수집 자료에 대한 <span>오류</span> 자료수 비율
+                                            </span>
+                                        </span>
+                                    </span>
+                                </p>
+                                <div>
+                                    <h3>0.00%</h3>
+                                    <span>(0 / 0)</span>
+                                </div>
+                            </div>
+                            <div class="dataTables_data warning_data">
+                                <p>
+                                    의심 · 기준값 누락률
+                                    <span class="tooltip_wrap">
+                                        <span class="tooltip_box">
+                                            <span class="tooltip_title">
+                                                의심 · 기준값 누락율 <br><span>(의심 + 기준값 누락 자료수 / 수집 자료)</span></span>
+                                            <span class="tooltip_desc">
+                                                전체 수집 자료에 대한 <span>의심</span>, <span>기준값 누락</span> 자료수 비율
+                                            </span>
+                                        </span>
+                                    </span>
+                                </p>
+                                <div>
+                                    <h3>0.00%</h3>
+                                    <span>(0 / 0)</span>
+                                </div>
+                            </div>
+                            <div class="dataTables_data missing_data">
+                                <p>
+                                    결측 자료율
+                                    <span class="tooltip_wrap">
+                                        <span class="tooltip_box">
+                                            <span class="tooltip_title">결측 수집률 <br><span>(결측수 / 수집자료)</span></span>
+                                            <span class="tooltip_desc">
+                                                전체 수집 자료에 대한 자료 <span>결측</span> 비율
+                                            </span>
+                                        </span>
+                                </p>
+                                <div>
+                                    <h3>0.00%</h3>
+                                    <span>(0 / 0)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content_page_header search_wrap">
+                        <div class="search">
+                            <input type="text" class="search_input" placeholder="Search">
+                            <span class="material-symbols-outlined search_icon">search</span>
+                        </div>
+                        <div>
+                            <div class="count">
+                                총 <span class="count_num">10</span>건의 데이터
+                            </div>
+                            <div class="line_count">
+                                <span>페이지당 줄수</span>
+                                <select name="line_count" id="line_count_select">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                </select>
+                            </div>
+                            <button class="csv_btn">CSV</button>
+                            <button class="excel_btn">Excel</button>
+                        </div>
+                    </div>
+
+                    <table class="card content_table" style="padding: 0;">
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>DATE</th>
+                                <th>RWY NUM</th>
+                                <th>WAY</th>
+                                <th>WIND DIR (3S AVG)</th>
+                                <th>Model</th>
+                                <th>Main/Backup</th>
+                                <th>IP</th>
+                                <th>S/N</th>
+                                <th>Last Updated</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td><button>1390-PK-143</button></td>
+                                <td>주 센서 (MAIN)</td>
+                                <td>-</td>
+                                <td>11101</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td><button>1390-PK-143</button></td>
+                                <td>주 센서 (MAIN)</td>
+                                <td>-</td>
+                                <td>11101</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td><button>1390-PK-143</button></td>
+                                <td>주 센서 (MAIN)</td>
+                                <td>-</td>
+                                <td>11101</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td><button>1390-PK-143</button></td>
+                                <td>주 센서 (MAIN)</td>
+                                <td>-</td>
+                                <td>11101</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td><button>1390-PK-143</button></td>
+                                <td>주 센서 (MAIN)</td>
+                                <td>-</td>
+                                <td>11101</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td><button>1390-PK-143</button></td>
+                                <td>주 센서 (MAIN)</td>
+                                <td>-</td>
+                                <td>11101</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td><button>1390-PK-143</button></td>
+                                <td>주 센서 (MAIN)</td>
+                                <td>-</td>
+                                <td>11101</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td><button>1390-PK-143</button></td>
+                                <td>주 센서 (MAIN)</td>
+                                <td>-</td>
+                                <td>11101</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td><button>1390-PK-143</button></td>
+                                <td>주 센서 (MAIN)</td>
+                                <td>-</td>
+                                <td>11101</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td><button>1390-PK-143</button></td>
+                                <td>주 센서 (MAIN)</td>
+                                <td>-</td>
+                                <td>11101</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="pagination">
+                        <button class="pg_back" type="button">Prev</button>
+
+                        <button class="pg_btn is_active" type="button" aria-current="page">1</button>
+                        <button class="pg_btn" type="button">2</button>
+                        <button class="pg_btn" type="button">3</button>
+
+                        <span class="pg_ellipsis">...</span>
+
+                        <button class="pg_btn" type="button">10</button>
+
+                        <button class="pg_next" type="button">Next</button>
+                    </div>
+                </div>
+
+                <footer>
+                    <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
+                    <p>AWIMP v1.0.0</p>
+                </footer>
+            </div>
+    </main>
+</body>
+
+</html>

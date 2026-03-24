@@ -1,11 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMOS & Sensor Monitoring</title>
 </head>
+
 <body>
-    <main class="AMOS_Sensor_Monitoring"></main>
+    <main class="AMOS_Sensor_Monitoring">
+        <div class="main_content">
+
+            <!-- 상태 알림 -->
+            <div class="status_alarm normal">
+                <div>
+                    <span class="material-symbols-outlined">check_circle</span>
+                    <p>There are no events currently occurring.</p>
+                </div>
+                <span class="material-symbols-outlined">close_small</span>
+            </div>
+
+            <div class="content">
+                <div class="header_title">
+                    <div>
+                        <div class="title">
+                            <div class="title_bar"></div>
+                            <span class="title_text">AMOS & Sensor Monitoring</span>
+                        </div>
+                        <span>/ System Monitoring</span>
+                    </div>
+                </div>
+
+                <div class="page AMOS_Sensor_Monitoring_content">
+                    <div class="server_wrap">
+                        <div class="card">
+                            <h3>Standby Server</h3>
+
+                            <div class="status_grid">
+                                <div class="card status_item">
+                                    <div class="icon_box icon_host">
+                                        <span class="material-symbols-outlined">
+                                            person
+                                        </span>
+                                    </div>
+                                    <div class="info_content">
+                                        <span class="info-label">호스트명</span>
+                                        <span class="info-value">-</span>
+                                    </div>
+                                </div>
+                                <div class="card status_item">
+                                    <div class="icon_box icon_update">
+                                        <i class="fa-solid fa-arrows-rotate"></i>
+                                    </div>
+                                    <div class="info_content">
+                                        <span class="info_abel">UPDATE</span>
+                                        <span class="info_value">2024-03-24 14:30:05</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main_status">
+                                <p>Main application status</p>
+                                <table class="card">
+                                    <thead>
+                                        <tr>
+                                            <th>APP</th>
+                                            <th>PID</th>
+                                            <th>메모리(MB)</th>
+                                            <th>CPU(%)</th>
+                                            <th>재시작 횟수</th>
+                                            <th>상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="empty-cell">-</td>
+                                            <td class="empty-cell">-</td>
+                                            <td class="empty-cell">-</td>
+                                            <td class="empty-cell">-</td>
+                                            <td class="empty-cell">-</td>
+                                            <td class="empty-cell">-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Standby Server</h3>
+
+                            <div class="status_grid">
+                                <div class="status_item">
+                                    <div class="icon_box icon_host">
+                                        <span class="material-symbols-outlined">
+                                            person
+                                        </span>
+                                    </div>
+                                    <div class="info_content">
+                                        <span class="info-label">호스트명</span>
+                                        <span class="info-value">SERVER-PROD-01</span>
+                                    </div>
+                                </div>
+                                <div class="status_item">
+                                    <div class="icon_box icon_update">
+                                        <i class="fa-solid fa-arrows-rotate"></i>
+                                    </div>
+                                    <div class="info_content">
+                                        <span class="info_abel">UPDATE</span>
+                                        <span class="info_value">2024-03-24 14:30:05</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main_status">
+                                <p>Main application status</p>
+                                <table class="card">
+                                    <thead>
+                                        <tr>
+                                            <th>APP</th>
+                                            <th>PID</th>
+                                            <th>메모리(MB)</th>
+                                            <th>CPU(%)</th>
+                                            <th>재시작 횟수</th>
+                                            <th>상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="empty-cell">-</td>
+                                            <td class="empty-cell">-</td>
+                                            <td class="empty-cell">-</td>
+                                            <td class="empty-cell">-</td>
+                                            <td class="empty-cell">-</td>
+                                            <td class="empty-cell">-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card rwy_server_wrap">
+                        <div class="toggle_btn">
+                            <button class="active">Single View</button>
+                            <button>Comparison View</button>
+                        </div>
+                        <div class="server_wrap_content">
+                            <table class="card 18_server">
+                                <thead>
+                                    <tr>
+                                        <th>18</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>풍향·풍속</td>
+                                        <td>주 센서 (MAIN)</td>
+                                        <td><span class="success_data">SUCCESS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>풍향·풍속</td>
+                                        <td>예비 센서 (SUB)</td>
+                                        <td><span>SUCCESS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>기압</td>
+                                        <td>주 센서 (MAIN)</td>
+                                        <td><span>SUCCESS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>기압</td>
+                                        <td>예비 센서 (SUB)</td>
+                                        <td><span>SUCCESS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>활주로 가시거리</td>
+                                        <td>주 센서 (MAIN)</td>
+                                        <td><span>SUCCESS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>활주로 가시거리</td>
+                                        <td>백업 센서</td>
+                                        <td><span>SUCCESS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>활주로 가시거리</td>
+                                        <td>백업 센서</td>
+                                        <td><span>SUCCESS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>운고계</td>
+                                        <td>주 센서 (MAIN)</td>
+                                        <td><span>SUCCESS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>운고계</td>
+                                        <td>예비 센서 (SUB)</td>
+                                        <td><span>SUCCESS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>현천</td>
+                                        <td>주 센서 (MAIN)</td>
+                                        <td><span>SUCCESS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>현천</td>
+                                        <td>예비 센서 (SUB)</td>
+                                        <td><span>SUCCESS</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="card mid_server">
+                                <thead>
+                                    <tr>
+                                        <th>MID</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                            <table class="card 36_server">
+                                <thead>
+                                    <tr>
+                                        <th>36</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>df</td>
+                                        <td>df</td>
+                                        <td>df</td>
+                                    </tr>
+                                    <tr>
+                                        <td>df</td>
+                                        <td>df</td>
+                                        <td>df</td>
+                                    </tr>
+                                    <tr>
+                                        <td>df</td>
+                                        <td>df</td>
+                                        <td>df</td>
+                                    </tr>
+                                    <tr>
+                                        <td>df</td>
+                                        <td>df</td>
+                                        <td>df</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
+                <p>AWIMP v1.0.0</p>
+            </footer>
+        </div>
+    </main>
 </body>
+
 </html>

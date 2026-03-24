@@ -243,7 +243,7 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: 'Pretendard', sans-serif;
-    font-weight: 300;
+    /* font-weight: 300; */
     font-size: var(--body_1);
     background: var(--bg);
     color: var(--text_1);

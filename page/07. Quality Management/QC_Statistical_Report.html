@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QC Statistical Report</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
 
 <body>
@@ -64,107 +69,107 @@
                         <!-- 요소 선택 -->
                         <div class="elemenet_wrap">
                             <div class="elemenet_header">
-                                <span>요소</span>
+                                <span>Element</span>
                                 <span class="material-symbols-outlined">keyboard_arrow_down</span>
                             </div>
                             <div class="elemenet_body">
                                 <div class="elemenet_list">
                                     <div class="wind_speed">
-                                        <!-- 풍속 -->
-                                        <label><input type="checkbox">풍속(3초평균)</label>
-                                        <label><input type="checkbox">풍속(3초최대)</label>
-                                        <label><input type="checkbox">풍속(순간)</label>
-                                        <label><input type="checkbox">풍속(1분평균)</label>
-                                        <label><input type="checkbox">풍속(1분최소)</label>
-                                        <label><input type="checkbox">풍속(1분최대)</label>
-                                        <label><input type="checkbox">풍속(2분평균)</label>
-                                        <label><input type="checkbox">풍속(2분최소)</label>
-                                        <label><input type="checkbox">풍속(2분최대)</label>
-                                        <label><input type="checkbox">풍속(10분평균)</label>
-                                        <label><input type="checkbox">풍속(10분최소)</label>
-                                        <label><input type="checkbox">풍속(10분최대)</label>
-                                        <label><input type="checkbox">측풍(2분평균)</label>
-                                        <label><input type="checkbox">측풍(10분평균)</label>
-                                        <label><input type="checkbox">정배풍(2분평균)</label>
-                                        <label><input type="checkbox">정배풍(10분평균)</label>
-                                        <label><input type="checkbox">돌풍(2분평균)</label>
-                                        <label><input type="checkbox">돌풍(10분평균)</label>
+                                        <!-- Wind Speed -->
+                                        <label><input type="checkbox">WIND SPEED (3S AVG)</label>
+                                        <label><input type="checkbox">WIND SPEED (3S MAX)</label>
+                                        <label><input type="checkbox">WIND SPEED (INSTANT)</label>
+                                        <label><input type="checkbox">WIND SPEED (1M AVG)</label>
+                                        <label><input type="checkbox">WIND SPEED (1M MIN)</label>
+                                        <label><input type="checkbox">WIND SPEED (1M MAX)</label>
+                                        <label><input type="checkbox">WIND SPEED (2M AVG)</label>
+                                        <label><input type="checkbox">WIND SPEED (2M MIN)</label>
+                                        <label><input type="checkbox">WIND SPEED (2M MAX)</label>
+                                        <label><input type="checkbox">WIND SPEED (10M AVG)</label>
+                                        <label><input type="checkbox">WIND SPEED (10M MIN)</label>
+                                        <label><input type="checkbox">WIND SPEED (10M MAX)</label>
+                                        <label><input type="checkbox">CROSSWIND (2M AVG)</label>
+                                        <label><input type="checkbox">CROSSWIND (10M AVG)</label>
+                                        <label><input type="checkbox">HEADWIND (2M AVG)</label>
+                                        <label><input type="checkbox">HEADWIND (10M AVG)</label>
+                                        <label><input type="checkbox">GUST (2M AVG)</label>
+                                        <label><input type="checkbox">GUST (10M AVG)</label>
                                     </div>
 
                                     <div class="wind_way">
-                                        <!-- 풍향 -->
-                                        <label><input type="checkbox">풍향(3초평균)</label>
-                                        <label><input type="checkbox">풍향(순간)</label>
-                                        <label><input type="checkbox">풍향(1분평균)</label>
-                                        <label><input type="checkbox">풍향(1분최소)</label>
-                                        <label><input type="checkbox">풍향(1분최대)</label>
-                                        <label><input type="checkbox">풍향(2분평균)</label>
-                                        <label><input type="checkbox">풍향(2분최소)</label>
-                                        <label><input type="checkbox">풍향(2분최대)</label>
-                                        <label><input type="checkbox">풍향(10분평균)</label>
-                                        <label><input type="checkbox">풍향(10분최소)</label>
-                                        <label><input type="checkbox">풍향(10분최대)</label>
-                                        <label><input type="checkbox">풍향(2분변동)</label>
-                                        <label><input type="checkbox">풍향(10분변동)</label>
+                                        <!-- Wind Direction -->
+                                        <label><input type="checkbox">WIND DIR (3S AVG)</label>
+                                        <label><input type="checkbox">WIND DIR (INSTANT)</label>
+                                        <label><input type="checkbox">WIND DIR (1M AVG)</label>
+                                        <label><input type="checkbox">WIND DIR (1M MIN)</label>
+                                        <label><input type="checkbox">WIND DIR (1M MAX)</label>
+                                        <label><input type="checkbox">WIND DIR (2M AVG)</label>
+                                        <label><input type="checkbox">WIND DIR (2M MIN)</label>
+                                        <label><input type="checkbox">WIND DIR (2M MAX)</label>
+                                        <label><input type="checkbox">WIND DIR (10M AVG)</label>
+                                        <label><input type="checkbox">WIND DIR (10M MIN)</label>
+                                        <label><input type="checkbox">WIND DIR (10M MAX)</label>
+                                        <label><input type="checkbox">WIND DIR (2M VAR)</label>
+                                        <label><input type="checkbox">WIND DIR (10M VAR)</label>
                                     </div>
 
                                     <div class="mor_rvr">
                                         <!-- MOR / RVR -->
-                                        <label><input type="checkbox">MOR(좌측 1분평균)</label>
-                                        <label><input type="checkbox">MOR(좌측 10분평균)</label>
-                                        <label><input type="checkbox">RVR(좌측 1분평균)</label>
-                                        <label><input type="checkbox">RVR(좌측 10분평균)</label>
-                                        <label><input type="checkbox">수직 시정</label>
+                                        <label><input type="checkbox">MOR (LEFT 1M AVG)</label>
+                                        <label><input type="checkbox">MOR (LEFT 10M AVG)</label>
+                                        <label><input type="checkbox">RVR (LEFT 1M AVG)</label>
+                                        <label><input type="checkbox">RVR (LEFT 10M AVG)</label>
+                                        <label><input type="checkbox">VERTICAL VISIBILITY</label>
                                     </div>
 
                                     <div class="cloud_base">
-                                        <!-- 운고 / 운형 -->
-                                        <label><input type="checkbox">운고(1층)-좌측</label>
-                                        <label><input type="checkbox">운고(2층)-좌측</label>
-                                        <label><input type="checkbox">운고(3층)-좌측</label>
-                                        <label><input type="checkbox">운형(1층)-좌측</label>
-                                        <label><input type="checkbox">운형(2층)-좌측</label>
-                                        <label><input type="checkbox">운형(3층)-좌측</label>
+                                        <!-- Cloud Base / Type -->
+                                        <label><input type="checkbox">CLOUD BASE (L1-LEFT)</label>
+                                        <label><input type="checkbox">CLOUD BASE (L2-LEFT)</label>
+                                        <label><input type="checkbox">CLOUD BASE (L3-LEFT)</label>
+                                        <label><input type="checkbox">CLOUD TYPE (L1-LEFT)</label>
+                                        <label><input type="checkbox">CLOUD TYPE (L2-LEFT)</label>
+                                        <label><input type="checkbox">CLOUD TYPE (L3-LEFT)</label>
                                     </div>
 
                                     <div class="weather">
-                                        <!-- 기상 -->
-                                        <label><input type="checkbox">기온</label>
-                                        <label><input type="checkbox">노점 온도</label>
-                                        <label><input type="checkbox">습도</label>
-                                        <label><input type="checkbox">QFE(hPa)</label>
-                                        <label><input type="checkbox">QNH(hPa)</label>
-                                        <label><input type="checkbox">QFE(inHg)</label>
-                                        <label><input type="checkbox">QFF(hPa)</label>
-                                        <label><input type="checkbox">강수 유무</label>
-                                        <label><input type="checkbox">강수량(1분)</label>
-                                        <label><input type="checkbox">강수량(10분)</label>
-                                        <label><input type="checkbox">강수량(30분)</label>
-                                        <label><input type="checkbox">강수량(1시간)</label>
-                                        <label><input type="checkbox">강수량(1일)</label>
-                                        <label><input type="checkbox">강수량(3시간)</label>
-                                        <label><input type="checkbox">강수량(12시간)</label>
-                                        <label><input type="checkbox">현지기압</label>
+                                        <!-- Weather -->
+                                        <label><input type="checkbox">TEMPERATURE</label>
+                                        <label><input type="checkbox">DEW POINT</label>
+                                        <label><input type="checkbox">HUMIDITY</label>
+                                        <label><input type="checkbox">QFE (hPa)</label>
+                                        <label><input type="checkbox">QNH (hPa)</label>
+                                        <label><input type="checkbox">QFE (inHg)</label>
+                                        <label><input type="checkbox">QFF (hPa)</label>
+                                        <label><input type="checkbox">PRECIPITATION</label>
+                                        <label><input type="checkbox">RAINFALL (1M)</label>
+                                        <label><input type="checkbox">RAINFALL (10M)</label>
+                                        <label><input type="checkbox">RAINFALL (30M)</label>
+                                        <label><input type="checkbox">RAINFALL (1H)</label>
+                                        <label><input type="checkbox">RAINFALL (1D)</label>
+                                        <label><input type="checkbox">RAINFALL (3H)</label>
+                                        <label><input type="checkbox">RAINFALL (12H)</label>
+                                        <label><input type="checkbox">STATION PRESSURE</label>
                                     </div>
 
                                     <div class="PWC">
-                                        <!-- 현천코드 -->
-                                        <label><input type="checkbox">현천코드-문자(좌측 순간)</label>
-                                        <label><input type="checkbox">현천코드-숫자(좌측 순간)</label>
-                                        <label><input type="checkbox">현천코드-문자(좌측 1분평균)</label>
-                                        <label><input type="checkbox">현천코드-숫자(좌측 1분평균)</label>
+                                        <!-- Present Weather Code -->
+                                        <label><input type="checkbox">PWC-TEXT (LEFT INSTANT)</label>
+                                        <label><input type="checkbox">PWC-NUM (LEFT INSTANT)</label>
+                                        <label><input type="checkbox">PWC-TEXT (LEFT 1M AVG)</label>
+                                        <label><input type="checkbox">PWC-NUM (LEFT 1M AVG)</label>
                                     </div>
 
                                     <div class="mor_rvr_min_max">
-                                        <!-- MOR / RVR 최소최대 -->
-                                        <label><input type="checkbox">MOR(10분최소)</label>
-                                        <label><input type="checkbox">MOR(10분최대)</label>
-                                        <label><input type="checkbox">RVR(10분최소)</label>
-                                        <label><input type="checkbox">RVR(10분최대)</label>
+                                        <!-- MOR / RVR Min & Max -->
+                                        <label><input type="checkbox">MOR (10M MIN)</label>
+                                        <label><input type="checkbox">MOR (10M MAX)</label>
+                                        <label><input type="checkbox">RVR (10M MIN)</label>
+                                        <label><input type="checkbox">RVR (10M MAX)</label>
                                     </div>
 
                                 </div>
-                                <button class="search_btn">검색</button>
+                                <button class="search_btn">search</button>
                             </div>
                         </div>
                     </div>

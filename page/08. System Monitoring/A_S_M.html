@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMOS & Sensor Monitoring</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
 
 <body>
@@ -44,16 +49,16 @@
                                         </span>
                                     </div>
                                     <div class="info_content">
-                                        <span class="info-label">호스트명</span>
-                                        <span class="info-value">-</span>
+                                        <span class="info_label">Host Name</span>
+                                        <span class="info_value">-</span>
                                     </div>
                                 </div>
                                 <div class="card status_item">
-                                    <div class="icon_box icon_update">
-                                        <i class="fa-solid fa-arrows-rotate"></i>
+                                    <div class="icon_box icon_update" onclick="handleUpdate(this)">
+                                        <span class="material-symbols-outlined">refresh</span>
                                     </div>
                                     <div class="info_content">
-                                        <span class="info_abel">UPDATE</span>
+                                        <span class="info_label">UPDATE</span>
                                         <span class="info_value">2024-03-24 14:30:05</span>
                                     </div>
                                 </div>
@@ -66,10 +71,10 @@
                                         <tr>
                                             <th>APP</th>
                                             <th>PID</th>
-                                            <th>메모리(MB)</th>
+                                            <th>Megabyte(MB)</th>
                                             <th>CPU(%)</th>
-                                            <th>재시작 횟수</th>
-                                            <th>상태</th>
+                                            <th>Restarts Number</th>
+                                            <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -96,16 +101,16 @@
                                         </span>
                                     </div>
                                     <div class="info_content">
-                                        <span class="info-label">호스트명</span>
-                                        <span class="info-value">SERVER-PROD-01</span>
+                                        <span class="info_label">Host Name</span>
+                                        <span class="info_value">-</span>
                                     </div>
                                 </div>
-                                <div class="status_item">
-                                    <div class="icon_box icon_update">
-                                        <i class="fa-solid fa-arrows-rotate"></i>
+                                <div class="card status_item">
+                                    <div class="icon_box icon_update" onclick="handleUpdate(this)">
+                                        <span class="material-symbols-outlined">refresh</span>
                                     </div>
                                     <div class="info_content">
-                                        <span class="info_abel">UPDATE</span>
+                                        <span class="info_label">UPDATE</span>
                                         <span class="info_value">2024-03-24 14:30:05</span>
                                     </div>
                                 </div>
@@ -118,10 +123,10 @@
                                         <tr>
                                             <th>APP</th>
                                             <th>PID</th>
-                                            <th>메모리(MB)</th>
+                                            <th>Megabyte(MB)</th>
                                             <th>CPU(%)</th>
-                                            <th>재시작 횟수</th>
-                                            <th>상태</th>
+                                            <th>Restarts Number</th>
+                                            <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>

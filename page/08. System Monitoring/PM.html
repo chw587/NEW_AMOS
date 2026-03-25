@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Process Monitoring</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
 
 <body>
@@ -31,7 +36,89 @@
                     </div>
                 </div>
 
-                <div class="page Process_Monitoring_content"></div>
+                <div class="page Process_Monitoring_content">
+                    <div>
+                        <div class="toggle_btn">
+                            <button class="active">RWY 1</button>
+                            <button>예비 AMOS</button>
+                        </div>
+                        <button class="reset_btn">
+                            <span class="material-symbols-outlined">
+                                history
+                            </span>
+                            <span>프로세스 초기화</span>
+                        </button>
+                    </div>
+
+                    <table class="card content_table" style="padding: 0;">
+                        <thead>
+                            <tr>
+                                <th>PID</th>
+                                <th>방향</th>
+                                <th>수집 자료</th>
+                                <th>모듈 분류</th>
+                                <th>실행감지 일자</th>
+                                <th>액션</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1Runway</td>
+                                <td>18</td>
+                                <td>웨덱스</td>
+                                <td>강수유무</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="pagination">
+                        <button class="pg_back" type="button">Prev</button>
+
+                        <button class="pg_btn is_active" type="button" aria-current="page">1</button>
+                        <button class="pg_btn" type="button">2</button>
+                        <button class="pg_btn" type="button">3</button>
+
+                        <span class="pg_ellipsis">...</span>
+
+                        <button class="pg_btn" type="button">10</button>
+
+                        <button class="pg_next" type="button">Next</button>
+                    </div>
+                </div>
             </div>
 
             <footer>

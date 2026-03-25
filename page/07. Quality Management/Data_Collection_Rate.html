@@ -47,79 +47,92 @@
                         <div class="data_select_wrap">
                             <select name="rwy" id="rwy_select">
                                 <option value="rwy_1">RWY 1</option>
-                                <option value="rwy_2">예비 AMOS</option>
+                                <option value="rwy_2">Pre AMOS</option>
                             </select>
                             <select name="rwy_num" id="rwy_num">
                                 <option value="18">18</option>
                                 <option value="36">36</option>
                             </select>
                             <select class="custom-select" name="columnName" id="input-column-name">
-                                <option data-name="풍향(3초평균)" value="M_WD_3SEC_AVG">풍향(3초평균)</option>
-                                <option data-name="풍속(3초평균)" value="M_WS_3SEC_AVG">풍속(3초평균)</option>
-                                <option data-name="풍속(3초최대)" value="M_WS_3SEC_MAX">풍속(3초최대)</option>
-                                <option data-name="풍속(순간)" value="M_WS">풍속(순간)</option>
-                                <option data-name="풍속(1분평균)" value="M_WS1M_AVG">풍속(1분평균)</option>
-                                <option data-name="풍속(1분최소)" value="M_WS1M_MIN">풍속(1분최소)</option>
-                                <option data-name="풍속(1분최대)" value="M_WS1M_MAX">풍속(1분최대)</option>
-                                <option data-name="풍속(2분평균)" value="M_WS2M_AVG">풍속(2분평균)</option>
-                                <option data-name="풍속(2분최소)" value="M_WS2M_MIN">풍속(2분최소)</option>
-                                <option data-name="풍속(2분최대)" value="M_WS2M_MAX">풍속(2분최대)</option>
-                                <option data-name="풍속(10분평균)" value="M_WS10M_AVG">풍속(10분평균)</option>
-                                <option data-name="풍속(10분최소)" value="M_WS10M_MIN">풍속(10분최소)</option>
-                                <option data-name="풍속(10분최대)" value="M_WS10M_MAX">풍속(10분최대)</option>
-                                <option data-name="풍향(순간)" value="M_WD">풍향(순간)</option>
-                                <option data-name="풍향(1분평균)" value="M_WD1M_AVG">풍향(1분평균)</option>
-                                <option data-name="풍향(1분최소)" value="M_WD1M_MIN">풍향(1분최소)</option>
-                                <option data-name="풍향(1분최대)" value="M_WD1M_MAX">풍향(1분최대)</option>
-                                <option data-name="풍향(2분평균)" value="M_WD2M_AVG">풍향(2분평균)</option>
-                                <option data-name="풍향(2분최소)" value="M_WD2M_MIN">풍향(2분최소)</option>
-                                <option data-name="풍향(2분최대)" value="M_WD2M_MAX">풍향(2분최대)</option>
-                                <option data-name="풍향(10분평균)" value="M_WD10M_AVG">풍향(10분평균)</option>
-                                <option data-name="풍향(10분최소)" value="M_WD10M_MIN">풍향(10분최소)</option>
-                                <option data-name="풍향(10분최대)" value="M_WD10M_MAX">풍향(10분최대)</option>
-                                <option data-name="풍향(2분변동)" value="M_WD2M_VW">풍향(2분변동)</option>
-                                <option data-name="풍향(10분변동)" value="M_WD10M_VW">풍향(10분변동)</option>
-                                <option data-name="측풍(2분평균)" value="M_WCROSS_2M">측풍(2분평균)</option>
-                                <option data-name="측풍(10분평균)" value="M_WCROSS_10M">측풍(10분평균)</option>
-                                <option data-name="정배풍(2분평균)" value="M_WHEAD_2M">정배풍(2분평균)</option>
-                                <option data-name="정배풍(10분평균)" value="M_WHEAD_10M">정배풍(10분평균)</option>
-                                <option data-name="돌풍(2분평균)" value="M_GUST_2M">돌풍(2분평균)</option>
-                                <option data-name="돌풍(10분평균)" value="M_GUST_10M">돌풍(10분평균)</option>
-                                <option data-name="MOR(좌측 1분평균)" value="MOR1M_LEFT">MOR(좌측 1분평균)</option>
-                                <option data-name="MOR(좌측 10분평균)" value="MOR10M_LEFT">MOR(좌측 10분평균)</option>
-                                <option data-name="RVR(좌측 1분평균)" value="RVR1M_LEFT">RVR(좌측 1분평균)</option>
-                                <option data-name="RVR(좌측 10분평균)" value="RVR10M_LEFT">RVR(좌측 10분평균)</option>
-                                <option data-name="현천코드-문자(좌측 순간)" value="SKY_4678_LEFT">현천코드-문자(좌측 순간)</option>
-                                <option data-name="현천코드-숫자(좌측 순간)" value="SKY_4680_LEFT">현천코드-숫자(좌측 순간)</option>
-                                <option data-name="수직 시정" value="VIS">수직 시정</option>
-                                <option data-name="운고(1층)-좌측" value="CB1_LEFT">운고(1층)-좌측</option>
-                                <option data-name="운고(2층)-좌측" value="CB2_LEFT">운고(2층)-좌측</option>
-                                <option data-name="운고(3층)-좌측" value="CB3_LEFT">운고(3층)-좌측</option>
-                                <option data-name="운형(1층)-좌측" value="CB1_LEFT_TYPE">운형(1층)-좌측</option>
-                                <option data-name="운형(2층)-좌측" value="CB2_LEFT_TYPE">운형(2층)-좌측</option>
-                                <option data-name="운형(3층)-좌측" value="CB3_LEFT_TYPE">운형(3층)-좌측</option>
-                                <option data-name="기온" value="TEMP">기온</option>
-                                <option data-name="노점 온도" value="DEWPOINT">노점 온도</option>
-                                <option data-name="습도" value="HUMI">습도</option>
-                                <option data-name="QFE(hPa)" value="M_QFE">QFE(hPa)</option>
-                                <option data-name="QNH(hPa)" value="M_QNH_HPA">QNH(hPa)</option>
-                                <option data-name="QFE(inHg)" value="M_QNH_INHG">QFE(inHg)</option>
-                                <option data-name="QFF(hPa)" value="M_QFF">QFF(hPa)</option>
-                                <option data-name="강수 유무" value="RAIN_DETECT">강수 유무</option>
-                                <option data-name="강수량(1분)" value="RAIN_1M">강수량(1분)</option>
-                                <option data-name="강수량(10분)" value="RAIN_10M">강수량(10분)</option>
-                                <option data-name="강수량(30분)" value="RAIN_30M">강수량(30분)</option>
-                                <option data-name="강수량(1시간)" value="RAIN_1H">강수량(1시간)</option>
-                                <option data-name="강수량(1일)" value="RAIN_24H">강수량(1일)</option>
-                                <option data-name="강수량(3시간)" value="RAIN_3H">강수량(3시간)</option>
-                                <option data-name="강수량(12시간)" value="RAIN_12H">강수량(12시간)</option>
-                                <option data-name="현천코드-문자(좌측 1분평균)" value="SKY_4678_1M_LEFT">현천코드-문자(좌측 1분평균)</option>
-                                <option data-name="현천코드-숫자(좌측 1분평균)" value="SKY_4680_1M_LEFT">현천코드-숫자(좌측 1분평균)</option>
-                                <option data-name="현지기압" value="PRESS">현지기압</option>
-                                <option data-name="MOR(10분최소)" value="MOR10M_MIN">MOR(10분최소)</option>
-                                <option data-name="MOR(10분최대)" value="MOR10M_MAX">MOR(10분최대)</option>
-                                <option data-name="RVR(10분최소)" value="RVR10M_MIN">RVR(10분최소)</option>
-                                <option data-name="RVR(10분최대)" value="RVR10M_MAX">RVR(10분최대)</option>
+                                <option data-name="WIND DIR (3S AVG)" value="M_WD_3SEC_AVG">WIND DIR (3S AVG)</option>
+                                <option data-name="WIND SPEED (3S AVG)" value="M_WS_3SEC_AVG">WIND SPEED (3S AVG)
+                                </option>
+                                <option data-name="WIND SPEED (3S MAX)" value="M_WS_3SEC_MAX">WIND SPEED (3S MAX)
+                                </option>
+                                <option data-name="WIND SPEED (INSTANT)" value="M_WS">WIND SPEED (INSTANT)</option>
+                                <option data-name="WIND SPEED (1M AVG)" value="M_WS1M_AVG">WIND SPEED (1M AVG)</option>
+                                <option data-name="WIND SPEED (1M MIN)" value="M_WS1M_MIN">WIND SPEED (1M MIN)</option>
+                                <option data-name="WIND SPEED (1M MAX)" value="M_WS1M_MAX">WIND SPEED (1M MAX)</option>
+                                <option data-name="WIND SPEED (2M AVG)" value="M_WS2M_AVG">WIND SPEED (2M AVG)</option>
+                                <option data-name="WIND SPEED (2M MIN)" value="M_WS2M_MIN">WIND SPEED (2M MIN)</option>
+                                <option data-name="WIND SPEED (2M MAX)" value="M_WS2M_MAX">WIND SPEED (2M MAX)</option>
+                                <option data-name="WIND SPEED (10M AVG)" value="M_WS10M_AVG">WIND SPEED (10M AVG)
+                                </option>
+                                <option data-name="WIND SPEED (10M MIN)" value="M_WS10M_MIN">WIND SPEED (10M MIN)
+                                </option>
+                                <option data-name="WIND SPEED (10M MAX)" value="M_WS10M_MAX">WIND SPEED (10M MAX)
+                                </option>
+                                <option data-name="WIND DIR (INSTANT)" value="M_WD">WIND DIR (INSTANT)</option>
+                                <option data-name="WIND DIR (1M AVG)" value="M_WD1M_AVG">WIND DIR (1M AVG)</option>
+                                <option data-name="WIND DIR (1M MIN)" value="M_WD1M_MIN">WIND DIR (1M MIN)</option>
+                                <option data-name="WIND DIR (1M MAX)" value="M_WD1M_MAX">WIND DIR (1M MAX)</option>
+                                <option data-name="WIND DIR (2M AVG)" value="M_WD2M_AVG">WIND DIR (2M AVG)</option>
+                                <option data-name="WIND DIR (2M MIN)" value="M_WD2M_MIN">WIND DIR (2M MIN)</option>
+                                <option data-name="WIND DIR (2M MAX)" value="M_WD2M_MAX">WIND DIR (2M MAX)</option>
+                                <option data-name="WIND DIR (10M AVG)" value="M_WD10M_AVG">WIND DIR (10M AVG)</option>
+                                <option data-name="WIND DIR (10M MIN)" value="M_WD10M_MIN">WIND DIR (10M MIN)</option>
+                                <option data-name="WIND DIR (10M MAX)" value="M_WD10M_MAX">WIND DIR (10M MAX)</option>
+                                <option data-name="WIND DIR (2M VAR)" value="M_WD2M_VW">WIND DIR (2M VAR)</option>
+                                <option data-name="WIND DIR (10M VAR)" value="M_WD10M_VW">WIND DIR (10M VAR)</option>
+                                <option data-name="CROSSWIND (2M AVG)" value="M_WCROSS_2M">CROSSWIND (2M AVG)</option>
+                                <option data-name="CROSSWIND (10M AVG)" value="M_WCROSS_10M">CROSSWIND (10M AVG)
+                                </option>
+                                <option data-name="HEADWIND (2M AVG)" value="M_WHEAD_2M">HEADWIND (2M AVG)</option>
+                                <option data-name="HEADWIND (10M AVG)" value="M_WHEAD_10M">HEADWIND (10M AVG)</option>
+                                <option data-name="GUST (2M AVG)" value="M_GUST_2M">GUST (2M AVG)</option>
+                                <option data-name="GUST (10M AVG)" value="M_GUST_10M">GUST (10M AVG)</option>
+                                <option data-name="MOR (LEFT 1M AVG)" value="MOR1M_LEFT">MOR (LEFT 1M AVG)</option>
+                                <option data-name="MOR (LEFT 10M AVG)" value="MOR10M_LEFT">MOR (LEFT 10M AVG)</option>
+                                <option data-name="RVR (LEFT 1M AVG)" value="RVR1M_LEFT">RVR (LEFT 1M AVG)</option>
+                                <option data-name="RVR (LEFT 10M AVG)" value="RVR10M_LEFT">RVR (LEFT 10M AVG)</option>
+                                <option data-name="PWC-TEXT (LEFT INSTANT)" value="SKY_4678_LEFT">PWC-TEXT (LEFT
+                                    INSTANT)</option>
+                                <option data-name="PWC-NUM (LEFT INSTANT)" value="SKY_4680_LEFT">PWC-NUM (LEFT INSTANT)
+                                </option>
+                                <option data-name="VERTICAL VISIBILITY" value="VIS">VERTICAL VISIBILITY</option>
+                                <option data-name="CLOUD BASE (L1-LEFT)" value="CB1_LEFT">CLOUD BASE (L1-LEFT)</option>
+                                <option data-name="CLOUD BASE (L2-LEFT)" value="CB2_LEFT">CLOUD BASE (L2-LEFT)</option>
+                                <option data-name="CLOUD BASE (L3-LEFT)" value="CB3_LEFT">CLOUD BASE (L3-LEFT)</option>
+                                <option data-name="CLOUD TYPE (L1-LEFT)" value="CB1_LEFT_TYPE">CLOUD TYPE (L1-LEFT)
+                                </option>
+                                <option data-name="CLOUD TYPE (L2-LEFT)" value="CB2_LEFT_TYPE">CLOUD TYPE (L2-LEFT)
+                                </option>
+                                <option data-name="CLOUD TYPE (L3-LEFT)" value="CB3_LEFT_TYPE">CLOUD TYPE (L3-LEFT)
+                                </option>
+                                <option data-name="TEMPERATURE" value="TEMP">TEMPERATURE</option>
+                                <option data-name="DEW POINT" value="DEWPOINT">DEW POINT</option>
+                                <option data-name="HUMIDITY" value="HUMI">HUMIDITY</option>
+                                <option data-name="QFE (hPa)" value="M_QFE">QFE (hPa)</option>
+                                <option data-name="QNH (hPa)" value="M_QNH_HPA">QNH (hPa)</option>
+                                <option data-name="QFE (inHg)" value="M_QNH_INHG">QFE (inHg)</option>
+                                <option data-name="QFF (hPa)" value="M_QFF">QFF (hPa)</option>
+                                <option data-name="PRECIPITATION" value="RAIN_DETECT">PRECIPITATION</option>
+                                <option data-name="RAINFALL (1M)" value="RAIN_1M">RAINFALL (1M)</option>
+                                <option data-name="RAINFALL (10M)" value="RAIN_10M">RAINFALL (10M)</option>
+                                <option data-name="RAINFALL (30M)" value="RAIN_30M">RAINFALL (30M)</option>
+                                <option data-name="RAINFALL (1H)" value="RAIN_1H">RAINFALL (1H)</option>
+                                <option data-name="RAINFALL (1D)" value="RAIN_24H">RAINFALL (1D)</option>
+                                <option data-name="RAINFALL (3H)" value="RAIN_3H">RAINFALL (3H)</option>
+                                <option data-name="RAINFALL (12H)" value="RAIN_12H">RAINFALL (12H)</option>
+                                <option data-name="PWC-TEXT (LEFT 1M AVG)" value="SKY_4678_1M_LEFT">PWC-TEXT (LEFT 1M
+                                    AVG)</option>
+                                <option data-name="PWC-NUM (LEFT 1M AVG)" value="SKY_4680_1M_LEFT">PWC-NUM (LEFT 1M AVG)
+                                </option>
+                                <option data-name="STATION PRESSURE" value="PRESS">STATION PRESSURE</option>
+                                <option data-name="MOR (10M MIN)" value="MOR10M_MIN">MOR (10M MIN)</option>
+                                <option data-name="MOR (10M MAX)" value="MOR10M_MAX">MOR (10M MAX)</option>
+                                <option data-name="RVR (10M MIN)" value="RVR10M_MIN">RVR (10M MIN)</option>
+                                <option data-name="RVR (10M MAX)" value="RVR10M_MAX">RVR (10M MAX)</option>
                             </select>
                             <input type="date" style="max-width: 250px;">
                             <button class="submin_btn">
@@ -138,19 +151,19 @@
                         <div class="dataTables_info">
                             <div class="data_count_wrap">
                                 <div class="expect_count">
-                                    <span>예상 전체 자료수</span>
+                                    <span>Estimated Total Data</span>
                                     <span>:</span>
                                     <span>918</span>
                                 </div>
 
                                 <div class="total_count">
-                                    <span>전체 자료수</span>
+                                    <span>Total Data</span>
                                     <span>:</span>
                                     <span>0</span>
                                 </div>
 
                                 <div class="omission_count">
-                                    <span>누락 자료수</span>
+                                    <span>Missing Data</span>
                                     <span>:</span>
                                     <span>918</span>
                                 </div>
@@ -158,19 +171,11 @@
 
                             <div class="date_setting">
                                 <div class="start_date">
-                                    <span>2026</span>
-                                    -
-                                    <span>03</span>
-                                    -
-                                    <span>20</span>
+                                    2026-03-23
                                 </div>
                                 <span>~</span>
                                 <div class="end_date">
-                                    <span>2026</span>
-                                    -
-                                    <span>03</span>
-                                    -
-                                    <span>20</span>
+                                    2026-03-23
                                 </div>
                             </div>
                         </div>
@@ -178,11 +183,13 @@
                         <div class="dataTables_info_divison">
                             <div class="dataTables_data total_data">
                                 <p>
-                                    자료 수집률
+                                    Collection Rate
                                     <span class="tooltip_box">
-                                        <span class="tooltip_title">자료 수집률 <br><span>(전체 수집 자료 / 예측 수집 자료)</span></span>
+                                        <span class="tooltip_title">Collection Rate <br><span>(Total Collected /
+                                                Expected)</span></span>
                                         <span class="tooltip_desc">
-                                            설정된 조회 기간에 따른 수집주기 기준 예측 전체 자료수 대비 수집된 실제 전체 자료수 비율
+                                            Ratio of actual collected data to expected data based on collection cycle
+                                            for the set query period
                                         </span>
                                     </span>
                                 </p>
@@ -193,12 +200,13 @@
                             </div>
                             <div class="dataTables_data success_data active">
                                 <p>
-                                    자료 수집률
+                                    Normal Rate
                                     <span class="tooltip_wrap">
                                         <span class="tooltip_box">
-                                            <span class="tooltip_title">정상 자료율 <br><span>(정상 자료수 / 수집 자료)</span></span>
+                                            <span class="tooltip_title">Normal Rate <br><span>(Normal /
+                                                    Collected)</span></span>
                                             <span class="tooltip_desc">
-                                                전체 수집 자료에 대한 <span>정상</span> 자료수 비율
+                                                Ratio of <span>normal</span> data to total collected data
                                             </span>
                                         </span>
                                     </span>
@@ -210,12 +218,13 @@
                             </div>
                             <div class="dataTables_data error_data">
                                 <p>
-                                    자료 수집률
+                                    Error Rate
                                     <span class="tooltip_wrap">
                                         <span class="tooltip_box">
-                                            <span class="tooltip_title">오류 자료율 <br><span>(오류 자료수 / 수집 자료)</span></span>
+                                            <span class="tooltip_title">Error Rate <br><span>(Error /
+                                                    Collected)</span></span>
                                             <span class="tooltip_desc">
-                                                전체 수집 자료에 대한 <span>오류</span> 자료수 비율
+                                                Ratio of <span>error</span> data to total collected data
                                             </span>
                                         </span>
                                     </span>
@@ -227,13 +236,15 @@
                             </div>
                             <div class="dataTables_data warning_data">
                                 <p>
-                                    의심 · 기준값 누락률
+                                    Doubtful & Missing Rate
                                     <span class="tooltip_wrap">
                                         <span class="tooltip_box">
                                             <span class="tooltip_title">
-                                                의심 · 기준값 누락율 <br><span>(의심 + 기준값 누락 자료수 / 수집 자료)</span></span>
+                                                Doubtful & Ref. Missing Rate <br><span>(Doubtful + Ref. Missing /
+                                                    Collected)</span></span>
                                             <span class="tooltip_desc">
-                                                전체 수집 자료에 대한 <span>의심</span>, <span>기준값 누락</span> 자료수 비율
+                                                Ratio of <span>doubtful</span> and <span>reference missing</span> data
+                                                to total collected data
                                             </span>
                                         </span>
                                     </span>
@@ -245,12 +256,13 @@
                             </div>
                             <div class="dataTables_data missing_data">
                                 <p>
-                                    결측 자료율
+                                    Missing Rate
                                     <span class="tooltip_wrap">
                                         <span class="tooltip_box">
-                                            <span class="tooltip_title">결측 수집률 <br><span>(결측수 / 수집자료)</span></span>
+                                            <span class="tooltip_title">Missing Rate <br><span>(Missing /
+                                                    Collected)</span></span>
                                             <span class="tooltip_desc">
-                                                전체 수집 자료에 대한 자료 <span>결측</span> 비율
+                                                Ratio of <span>missing</span> data to total collected data
                                             </span>
                                         </span>
                                 </p>
@@ -269,10 +281,10 @@
                         </div>
                         <div>
                             <div class="count">
-                                총 <span class="count_num">10</span>건의 데이터
+                                Total <span class="count_num">10</span>item
                             </div>
                             <div class="line_count">
-                                <span>페이지당 줄수</span>
+                                <span>Rows per page</span>
                                 <select name="line_count" id="line_count_select">
                                     <option value="10">10</option>
                                     <option value="20">20</option>

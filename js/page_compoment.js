@@ -208,3 +208,19 @@ function initQCStatisticalReport() {
             applyTableColors(tbody);
         });
 }
+
+
+/* ============================================================
+   08. SYSTEM MONITORING
+   ============================================================ */
+function handleUpdate(iconBox) {
+    if (iconBox.classList.contains('loading')) return;
+
+    iconBox.classList.add('loading');
+
+    setTimeout(() => {
+        iconBox.classList.remove('loading');
+        const timeEl = iconBox.closest('.status_item').querySelector('.info_value');
+        timeEl.textContent = new Date().toLocaleString();
+    }, 1000);
+}

@@ -35,11 +35,6 @@
                         </div>
                         <span>/ Sensor Management</span>
                     </div>
-
-                    <button class="add_btn">
-                        <span class="material-symbols-outlined">add</span>
-                        ADD
-                    </button>
                 </div>
 
                 <div class="page Sensor_Infomation_table">
@@ -161,22 +156,28 @@
                                 <td><button>1390-PK-143</button></td>
                                 <td>-</td>
                             </tr>
-                            
+
                         </tbody>
                     </table>
 
-                    <div class="pagination">
-                        <button class="pg_back" type="button">Prev</button>
+                    <div class="footer_wrap">
+                        <div class="pagination">
+                            <button class="pg_back" type="button">Prev</button>
 
-                        <button class="pg_btn is_active" type="button" aria-current="page">1</button>
-                        <button class="pg_btn" type="button">2</button>
-                        <button class="pg_btn" type="button">3</button>
+                            <button class="pg_btn is_active" type="button" aria-current="page">1</button>
+                            <button class="pg_btn" type="button">2</button>
+                            <button class="pg_btn" type="button">3</button>
 
-                        <span class="pg_ellipsis">...</span>
+                            <span class="pg_ellipsis">...</span>
 
-                        <button class="pg_btn" type="button">10</button>
+                            <button class="pg_btn" type="button">10</button>
 
-                        <button class="pg_next" type="button">Next</button>
+                            <button class="pg_next" type="button">Next</button>
+                        </div>
+                        <button class="add_btn">
+                            <span class="material-symbols-outlined">add</span>
+                            ADD
+                        </button>
                     </div>
                 </div>
             </div>
@@ -185,6 +186,96 @@
                 <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
                 <p>AWIMP v1.0.0</p>
             </footer>
+        </div>
+
+        <div class="add_modal">
+            <div class="card modal_wrap">
+                <div class="modal_title">
+                    <h3>Register New Sensor</h3>
+                    <span class="material-symbols-outlined close">
+                        close
+                    </span>
+                </div>
+
+                <div class="modal_content">
+                    <div class="modal_item Manufacturer">
+                        <p>Manufacturer</p>
+                        <input type="text" placeholder="Please enter the Manufacturer">
+                    </div>
+                    <div class="modal_item model_ip">
+                        <p>Model ID</p>
+                        <input type="text" placeholder="Please enter the Model ID">
+                    </div>
+                    <div class="modal_item observation_element">
+                        <p>Oservation Elemen</p>
+                        <input type="text" placeholder="Main AMOS">
+                    </div>
+                    <div class="modal_item write_wrap">
+                        <p>Detailed Description</p>
+                        <div class="editor_wrap">
+                            <div class="editor_toolbar">
+                                <!-- <div class="toolbar_group">
+                                    <button type="button" onclick="execCmd('justifyLeft')"
+                                        class="material-symbols-outlined">format_align_left</button>
+                                    <button type="button" onclick="execCmd('justifyCenter')"
+                                        class="material-symbols-outlined">format_align_center</button>
+                                    <button type="button" onclick="execCmd('justifyRight')"
+                                        class="material-symbols-outlined">format_align_right</button>
+                                    <button type="button" onclick="execCmd('justifyFull')"
+                                        class="material-symbols-outlined">format_align_justify</button>
+                                    <button type="button" onclick="execCmd('insertOrderedList')"
+                                        class="material-symbols-outlined">format_list_numbered</button>
+                                    <button type="button" onclick="execCmd('insertUnorderedList')"
+                                        class="material-symbols-outlined">format_list_bulleted</button>
+                                </div>
+                                <div class="toolbar_divider"></div>
+                                <div class="toolbar_group">
+                                    <button type="button" onclick="execCmd('bold')"
+                                        class="material-symbols-outlined">format_bold</button>
+                                    <button type="button" onclick="execCmd('italic')"
+                                        class="material-symbols-outlined">format_italic</button>
+                                    <button type="button" onclick="execCmd('underline')"
+                                        class="material-symbols-outlined">format_underlined</button>
+                                    <button type="button" onclick="execCmd('strikeThrough')"
+                                        class="material-symbols-outlined">strikethrough_s</button>
+                                </div> -->
+                                <div class="toolbar_divider"></div>
+                                <div class="toolbar_group">
+                                    <select onchange="execCmd('formatBlock', this.value); this.value=''">
+                                        <option value="">문단</option>
+                                        <option value="p">본문</option>
+                                        <option value="h1">제목 1</option>
+                                        <option value="h2">제목 2</option>
+                                        <option value="h3">제목 3</option>
+                                    </select>
+                                    <select onchange="execCmd('fontSize', this.value); this.value=''">
+                                        <option value="">크기</option>
+                                        <option value="1">10px</option>
+                                        <option value="2">13px</option>
+                                        <option value="3">16px</option>
+                                        <option value="4">18px</option>
+                                        <option value="5">24px</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="editor_body" contenteditable="true" data-placeholder="정보를 입력해주세요"></div>
+                        </div>
+                    </div>
+                    <div class="modal_item file_load">
+                        <p>Image & File</p>
+                        <label class="file_drop_zone">
+                            <input type="file" multiple accept="image/*,.pdf,.doc,.docx,.xls,.xlsx">
+                            <span class="material-symbols-outlined">cloud_upload</span>
+                            <span>Drag or click to upload files</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="modal_footer">
+                    <button>save</button>
+                    <button class="close">close</button>
+                </div>
+            </div>
         </div>
     </main>
 </body>

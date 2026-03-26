@@ -1,7 +1,59 @@
 /* ============================================================
+   02. Sensor Management
+   ============================================================ */
+// 공통 모달 초기화 함수
+function initModal() {
+    const modal = document.querySelector('.add_modal');
+    const modalWrap = document.querySelector('.modal_wrap');
+
+    document.querySelector('.add_btn')
+        ?.addEventListener('click', () => modal.classList.add('active'));
+
+    document.querySelectorAll('.close')
+        .forEach(el => el.addEventListener('click', () => modal.classList.remove('active')));
+
+    modal?.addEventListener('click', (e) => {
+        if (!modalWrap.contains(e.target)) modal.classList.remove('active');
+    });
+
+    document.querySelector('.modal_footer button:first-child')
+        ?.addEventListener('click', () => {
+            alert('등록되었습니다');
+            modal.classList.remove('active');
+        });
+}
+
+function initSensorInfo() { initModal(); }
+function initInstallation() { initModal(); }
+
+
+
+/* ============================================================
    06. DATA INQUIRY
    ============================================================ */
 function initDataInquiry() {
+
+    // Single / Comparison 뷰 토글
+    const viewBtns = document.querySelectorAll('.Data_Comparison_Inquiry .toggle_btn button');
+    const singleView = document.querySelector('.Data_Comparison_Inquiry_content.single_view');
+    const comparisonView = document.querySelector('.Data_Comparison_Inquiry_content.comparison_view');
+
+    if (comparisonView) comparisonView.style.display = 'none';
+
+    viewBtns.forEach((btn, idx) => {
+        btn.addEventListener('click', () => {
+            viewBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            if (idx === 0) {
+                singleView.style.display = 'flex';
+                comparisonView.style.display = 'none';
+            } else {
+                singleView.style.display = 'none';
+                comparisonView.style.display = 'flex';
+            }
+        });
+    });
 
     // 요소 선택 토글
     document.querySelector('.elemenet_header')

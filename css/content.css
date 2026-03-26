@@ -82,6 +82,198 @@ main,
 }
 
 
+/* modal */
+.add_modal {
+   display: none;
+   position: fixed;
+   top: 70px;
+   width: 100vw;
+   height: 100vh;
+   z-index: 999;
+   background-color: rgb(0, 0, 0, 0.5);
+}
+
+.add_modal.active {
+    display: flex;
+}
+
+.add_modal .modal_wrap {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-65%, -55%);
+   width: 40%;
+   /* height: 80%; */
+   padding: 0;
+   overflow: hidden;
+}
+
+.modal_title {
+   display: flex;
+   justify-content: space-between;
+   background: color-mix(in srgb, var(--line), transparent 80%);
+   border-bottom: 1px solid var(--line);
+   padding: 20px 20PX 10px;
+}
+
+.modal_title .close {
+   cursor: pointer;
+   margin-bottom: 5px;
+}
+
+.modal_content {
+   display: flex;
+   flex-direction: column;
+   gap: var(--gap_1);
+   flex-grow: 1;
+   padding: 20px;
+}
+
+.modal_item {
+   display: flex;
+   flex-direction: column;
+   gap: var(--gap_0);
+}
+
+.modal_item p {
+   font-size: var(--caption);
+}
+
+.modal_item input:focus {
+   border: 2px solid var(--main);
+}
+
+.modal_footer {
+   display: flex;
+   justify-content: end;
+   gap: var(--gap_1);
+   border-top: 1px solid var(--line);
+   padding: 10px 20px 20px;
+}
+
+.modal_footer button:hover {
+   transform: translateY(-1px) !important;
+}
+
+.modal_footer button.close {
+   background: linear-gradient(180deg, color-mix(in srgb, var(--line), white 40%) 0%, var(--line) 100%);
+   ;
+   color: var(--text_2) !important;
+   border: 1px solid var(--line) !important;
+}
+
+.modal_footer button.close:hover {
+   background: linear-gradient(180deg, rgba(19, 72, 136, 0.8) 0%, var(--main) 100%) !important;
+   color: var(--wh) !important;
+}
+
+.file_drop_zone {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: var(--gap_1);
+   width: 100%;
+   min-height: 120px;
+   border: 2px dashed var(--line);
+   border-radius: 12px;
+   cursor: pointer;
+   transition: all 0.2s;
+   color: var(--text_3);
+   font-size: var(--body_2);
+}
+
+.file_drop_zone:hover {
+   border-color: var(--main);
+   background: color-mix(in srgb, var(--main), transparent 95%);
+   color: var(--main);
+}
+
+.file_drop_zone input[type="file"] {
+   display: none;
+}
+
+.file_drop_zone .material-symbols-outlined {
+   font-size: 40px;
+}
+
+/* edit */
+.editor_wrap {
+   border: 1px solid var(--line);
+   border-radius: 12px;
+   overflow: hidden;
+}
+
+.editor_toolbar {
+   display: flex;
+   align-items: center;
+   gap: var(--gap_1);
+   padding: 6px 10px;
+   border-bottom: 1px solid var(--line);
+   background: color-mix(in srgb, var(--line), transparent 80%);
+   flex-wrap: wrap;
+}
+
+.toolbar_group {
+   display: flex;
+   align-items: center;
+   gap: 2px;
+}
+
+.toolbar_group button {
+   all: unset !important;
+   width: 28px !important;
+   height: 28px !important;
+   min-width: unset !important;
+   display: inline-flex !important;
+   align-items: center !important;
+   justify-content: center !important;
+   border-radius: 6px !important;
+   font-size: 18px !important;
+   color: var(--text_2) !important;
+   cursor: pointer !important;
+}
+
+.toolbar_group button:hover {
+   background: color-mix(in srgb, var(--line), transparent 50%) !important;
+   color: var(--text_1) !important;
+}
+
+.toolbar_group select {
+   height: 28px;
+   padding: 0 6px;
+   border: 1px solid var(--line);
+   border-radius: 6px;
+   font-size: var(--body_2);
+   color: var(--text_2);
+   background: var(--wh);
+   cursor: pointer;
+   min-width: unset;
+}
+
+.toolbar_divider {
+   width: 1px;
+   height: 20px;
+   background: var(--line);
+   margin: 0 4px;
+}
+
+.editor_body {
+   min-height: 160px;
+   padding: 12px 16px;
+   font-size: var(--body_2);
+   color: var(--text_1);
+   outline: none;
+   line-height: 1.6;
+}
+
+.editor_body:empty::before {
+   content: attr(data-placeholder);
+   color: var(--text_3);
+   pointer-events: none;
+}
+
+
 /* ============================================================
    COMMON - STATUS ALARM
    ============================================================ */
@@ -221,6 +413,7 @@ table .error {
 
 /* 1단계: 공통 기본 스타일 */
 .header_title .add_btn,
+.footer_wrap .add_btn,
 .submin_btn,
 .help_btn,
 .search_btn,
@@ -228,7 +421,9 @@ table .error {
 .excel_btn,
 .reset_btn,
 .filter_wrap button,
-.Server_Status button {
+.Server_Status button,
+.gis_btn,
+.modal_footer button {
    display: inline-flex !important;
    align-items: center !important;
    justify-content: center !important;
@@ -247,13 +442,16 @@ table .error {
 
 /* 2단계: main 계열 배경 */
 .header_title .add_btn,
+.footer_wrap .add_btn,
 .submin_btn,
 .filter_wrap button,
-.Server_Status button {
+.Server_Status button,
+.modal_footer button:first-child {
    background: linear-gradient(180deg, rgba(19, 72, 136, 0.8) 0%, var(--main) 100%) !important;
 }
 
 .header_title .add_btn:hover,
+.footer_wrap .add_btn:hover,
 .submin_btn:hover,
 .filter_wrap button:hover,
 .Server_Status button:hover {
@@ -273,6 +471,7 @@ table .error {
 
 .search_btn {
    width: 110px;
+   font-weight: 500;
    background: linear-gradient(180deg, color-mix(in srgb, var(--main), white 20%) 0%, var(--main) 100%) !important;
 }
 
@@ -308,6 +507,19 @@ table .error {
    transform: translateY(-1px) !important;
 }
 
+.gis_btn {
+   background: linear-gradient(180deg,
+         color-mix(in srgb, var(--main), var(--green) 40%) 0%,
+         color-mix(in srgb, var(--main), var(--green) 20%) 100%) !important;
+}
+
+.gis_btn:hover {
+   background: linear-gradient(180deg,
+         color-mix(in srgb, color-mix(in srgb, var(--main), var(--green) 40%) 85%, black) 0%,
+         color-mix(in srgb, color-mix(in srgb, var(--main), var(--green) 20%) 70%, black) 100%) !important;
+   transform: translateY(-1px) !important;
+}
+
 /* active / focus */
 .header_title .add_btn:active,
 .submin_btn:active,
@@ -315,7 +527,8 @@ table .error {
 .search_btn:active,
 .csv_btn:active,
 .excel_btn:active,
-.reset_btn:active {
+.reset_btn:active,
+.gis_btn:active {
    transform: scale(0.95) !important;
 }
 
@@ -326,11 +539,11 @@ table .error {
 
 .submin_btn {
    width: 150px;
-   font-weight: 700;
+   font-weight: 500;
 }
 
 .help_btn {
-   font-weight: 700;
+   font-weight: 500;
 }
 
 
@@ -824,6 +1037,10 @@ table .error {
 /* ============================================================
    DASHBOARD
    ============================================================ */
+.dashboard .rwy_2 {
+   display: none;
+}
+
 .dashboard table {
    display: block;
    width: 90%;
@@ -1468,7 +1685,7 @@ table .error {
    cursor: pointer;
 }
 
-.gw_footer {
+.footer_wrap {
    display: flex;
    flex-direction: row-reverse;
    justify-content: space-between;
@@ -1485,6 +1702,10 @@ table .error {
 /* ============================================================
    06. DATA INQUIRY - Data_Comparison_&_Inquiry.html
    ============================================================ */
+.Data_Comparison_Inquiry_content.comparison_view {
+   display: none;
+}
+
 .Data_Comparison_Inquiry_content {
    width: 100%;
    height: 100%;
@@ -1984,13 +2205,19 @@ table .error {
 }
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
+   from {
+      transform: rotate(0deg);
+   }
+
+   to {
+      transform: rotate(360deg);
+   }
 }
 
 .icon_update.loading .material-symbols-outlined {
-    display: inline-block;  /* transform 적용되려면 필수 */
-    animation: spin 1s linear infinite;
+   display: inline-block;
+   /* transform 적용되려면 필수 */
+   animation: spin 1s linear infinite;
 }
 
 .info_content {
@@ -2012,6 +2239,11 @@ table .error {
    font-weight: 500;
 }
 
+.btn_header {
+   display: flex;
+   justify-content: space-between;
+}
+
 /* PM.html */
 .Process_Monitoring_content>div:first-child {
    display: flex;
@@ -2023,17 +2255,17 @@ table .error {
 
 /* Log_m.html */
 #content_area:has(.Log_Monitoring) {
-    overflow-y: hidden;
-    display: flex;
-    flex-direction: column;
+   overflow-y: hidden;
+   display: flex;
+   flex-direction: column;
 }
 
 #content_area:has(.Log_Monitoring) main,
 #content_area:has(.Log_Monitoring) .main_content,
 #content_area:has(.Log_Monitoring) .content {
-    flex: 1;
-    min-height: 0;
-    overflow: hidden;
+   flex: 1;
+   min-height: 0;
+   overflow: hidden;
 }
 
 .Log_Monitoring_content .search_wrap {
@@ -2046,33 +2278,34 @@ table .error {
 }
 
 .Log_Monitoring_content {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap_1);
-    flex-grow: 1;
-    min-height: 0;
+   display: flex;
+   flex-direction: column;
+   gap: var(--gap_1);
+   flex-grow: 1;
+   min-height: 0;
 }
 
 .log_monitoring_wrap {
-    flex-grow: 1;
-    min-height: 0;
-    overflow: hidden;
-    padding: 0;
+   flex-grow: 1;
+   min-height: 0;
+   overflow: hidden;
+   padding: 0;
 }
 
 .log_list {
-    height: 100%;
-    overflow-y: auto;
-    padding: 10px;
-    box-sizing: border-box;
-    list-style: none;
-    margin: 0;
+   height: 100%;
+   overflow-y: auto;
+   padding: 10px;
+   box-sizing: border-box;
+   list-style: none;
+   margin: 0;
+   font-weight: 300;
 }
 
 .log_item {
    display: flex;
    gap: var(--gap_0);
-    font-size: var(--body_2);
+   font-size: var(--body_2);
 }
 
 .log_item .log_num {

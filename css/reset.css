@@ -278,14 +278,11 @@ select:focus {
 input {
     width: 100%;
     max-width: 100%;
+    padding: 0 16px;
 }
 
 button {
     justify-content: start;
     padding: 0 10px;
     gap: var(--gap_0);
-}
-
-input {
-    padding: 0 16px;
 }

@@ -169,6 +169,10 @@ select:focus {
     border: 2px solid var(--main);
 }
 
+.logout .material-symbols-outlined {
+    font-size: 22px;
+}
+
 
 /* ============================================================
    NOTIFICATION

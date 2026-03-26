@@ -36,6 +36,25 @@ function initDashboard() {
         }
     });
 
+    // RWY 토글
+    const rwyBtns = document.querySelectorAll('.real_time .toggle_btn button');
+    const rwyWraps = document.querySelectorAll('.real_time .data_wrap');
+
+    // 초기 상태 - rwy_2 숨김
+    document.querySelector('.data_wrap.rwy_2')?.style.setProperty('display', 'none');
+
+    rwyBtns.forEach((btn, idx) => {
+        btn.addEventListener('click', () => {
+            // 버튼 active 토글
+            rwyBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // wrap 표시/숨김
+            rwyWraps.forEach(wrap => wrap.style.display = 'none');
+            rwyWraps[idx].style.display = 'flex';
+        });
+    });
+
     // 차트 초기화
     initDashboardCharts();
 }

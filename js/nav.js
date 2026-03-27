@@ -75,7 +75,7 @@ const pageMap = {
 
   // 08. System Monitoring
   'AMOS & Sensor Monitoring': './page/08. System Monitoring/A_S_M.html',
-  'Log Monitoring': './page/08. System Monitoring/LSog_m.html',
+  'Log Monitoring': './page/08. System Monitoring/Log_m.html',
   'Process Monitoring': './page/08. System Monitoring/PM.html',
   'Server Status': './page/08. System Monitoring/Server_Status.html',
 };

@@ -127,7 +127,7 @@ main,
 }
 
 .help_modal .modal_wrap .modal_content {
-   display: flex;
+   display: block;
    flex-direction: column;
    gap: var(--gap_2);
    overflow-y: auto;
@@ -137,10 +137,12 @@ main,
 }
 
 .help_modal .modal_wrap .modal_content>div {
-   height: 1000px;
-   background-color: pink;
+   margin-bottom: 20px;
 }
 
+.help_modal .modal_wrap .modal_content>div:last-child {
+   margin: 0;
+}
 
 .modal_title {
    display: flex;
@@ -307,6 +309,145 @@ main,
 }
 
 
+/* help_modal */
+.qc_header h2 {
+   font-weight: bold;
+   margin: 0;
+   color: var(--text_1);
+}
+
+.qc_conditions .subtitle {
+   font-size: var(--caption);
+   color: var(--text_3);
+   margin: 0 0 16px 0;
+}
+
+.qc_conditions table {
+   width: 100%;
+   border-collapse: collapse;
+   font-size: var(--caption);
+   table-layout: fixed;
+}
+
+.qc_conditions thead tr,
+.qc_conditions tbody:not(.no_override) tr {
+      display: table-row;
+   width: 100%;
+   table-layout: fixed;
+}
+
+.qc_conditions tbody:not(.no_override) {
+    display: contents;
+}
+
+.qc_conditions th,
+.qc_conditions td {
+   border: 1px solid var(--line) !important;
+   padding: 8px 10px;
+   text-align: center;
+   vertical-align: middle;
+   color: var(--text_2);
+   word-break: keep-all;
+}
+
+.qc_conditions thead tr th {
+   background-color: var(--main);
+   color: var(--wh);
+   font-size: var(--caption);
+   font-weight: 600;
+}
+
+.qc_conditions thead tr:first-child th.group_header {
+   border-bottom: 1px solid color-mix(in srgb, var(--main), white 40%);
+}
+
+/* 물리한계검사 헤더 아이콘 영역 */
+.qc_conditions .th_icon_wrap {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2px;
+}
+
+.qc_conditions .th_icon_wrap .icon_row {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+}
+
+.qc_conditions .th_icon_wrap .material-symbols-outlined {
+   font-size: 16px;
+   color: var(--wh);
+   opacity: 0.9;
+}
+
+.qc_conditions .th_icon_wrap span.th_label {
+   font-size: var(--caption);
+   font-weight: 600;
+   color: var(--wh);
+}
+
+.qc_conditions tbody tr:nth-child(odd) td {
+   background-color: #ffffff;
+}
+
+.qc_conditions tbody tr:nth-child(even) td {
+   background-color: color-mix(in srgb, var(--main), transparent 95%);
+}
+
+.qc_conditions tbody tr:hover td {
+   background: color-mix(in srgb, var(--line), transparent 60%);
+}
+
+.qc_conditions td.note {
+   text-align: left;
+   font-size: var(--caption);
+   line-height: 1.6;
+}
+
+.qc_conditions col.col_element {
+   width: 13%;
+}
+
+.qc_conditions col.col_physical {
+   width: 10%;
+}
+
+.qc_conditions col.col_step {
+   width: 6%;
+}
+
+.qc_conditions col.col_persist {
+   width: 8%;
+}
+
+.qc_conditions col.col_climate {
+   width: 9%;
+}
+
+.qc_conditions col.col_internal {
+   width: 22%;
+}
+
+.badge {
+   display: inline-block;
+   padding: 1px 7px;
+   border-radius: 4px;
+   font-size: 11px;
+   font-weight: bold;
+   color: #fff;
+   margin-left: 2px;
+}
+
+.badge_green {
+   background-color: var(--green);
+}
+
+.badge_red {
+   background-color: var(--red);
+}
+
+
 /* ============================================================
    COMMON - STATUS ALARM
    ============================================================ */
@@ -389,7 +530,6 @@ thead {
    color: var(--text_3);
 }
 
-/* 희원 - no_override 클래스 없는 tbody만 block 처리 */
 tbody:not(.no_override) {
    display: block;
    overflow-y: auto;
@@ -397,7 +537,6 @@ tbody:not(.no_override) {
    max-height: calc(100% - 30px);
 }
 
-/* 희원 - no_override 클래스 없는 tr만 table 처리 */
 thead tr,
 tbody:not(.no_override) tr {
    display: table;

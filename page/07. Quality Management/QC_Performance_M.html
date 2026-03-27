@@ -292,9 +292,155 @@
                     </div>
 
                     <div class="modal_content">
-                        <div class="qc_conditions"></div>
-                        <div class="Climate_range_standard"></div>
-                        <div class="Algorithm_by_classification"></div>
+                        <div class="card qc_conditions">
+                            <div class="qc_header">
+                                <h2>기상관측데이터 품질관리검사 조건</h2>
+                            </div>
+                            <p class="subtitle">2019. 3. 29. 기상청고시 제2019- 3호 '기상관측자료의 품질등급 기준 및 절차'</p>
+
+                            <table>
+                                <colgroup>
+                                    <col class="col_element">
+                                    <col class="col_physical">
+                                    <col class="col_step">
+                                    <col class="col_step">
+                                    <col class="col_step">
+                                    <col class="col_step">
+                                    <col class="col_persist">
+                                    <col class="col_persist">
+                                    <col class="col_climate">
+                                    <col class="col_internal">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">관측요소 (단위)</th>
+                                        <th rowspan="2">
+                                            <div class="th_icon_wrap">
+                                                <div class="icon_row">
+                                                    <span class="material-symbols-outlined">edit_note</span>
+                                                    <span class="material-symbols-outlined">translate</span>
+                                                </div>
+                                                <span class="th_label">물리한계검사</span>
+                                            </div>
+                                        </th>
+                                        <th colspan="4" class="group_header">단계검사</th>
+                                        <th colspan="2" class="group_header">지속성검사</th>
+                                        <th rowspan="2">기후범위검사</th>
+                                        <th rowspan="2">내적일치성검사</th>
+                                    </tr>
+                                    <tr>
+                                        <th>1분</th>
+                                        <th>5분</th>
+                                        <th>10분</th>
+                                        <th>60분</th>
+                                        <th>지속시간</th>
+                                        <th>최소변화량</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>기온 (°C)</td>
+                                        <td>-45 ~ 45</td>
+                                        <td>3</td>
+                                        <td>3</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>180분</td>
+                                        <td>0</td>
+                                        <td>월별 적용</td>
+                                        <td>_</td>
+                                    </tr>
+                                    <tr>
+                                        <td>일누적강수량 (mm)</td>
+                                        <td>0 ~ 1,500</td>
+                                        <td>10</td>
+                                        <td>50</td>
+                                        <td>100</td>
+                                        <td>500</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                    </tr>
+                                    <tr>
+                                        <td>강수유무</td>
+                                        <td>0, 10</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                    </tr>
+                                    <tr>
+                                        <td>풍향 (°)</td>
+                                        <td>0 ~ 360</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>240분</td>
+                                        <td>0</td>
+                                        <td>_</td>
+                                        <td class="note">1분 최대 순간 풍속이 1분 풍속보다 작으면<br>최대 순간 풍속과 1분 풍속 모두 <span
+                                                class="badge badge_red">오류</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>기압 (hPa)</td>
+                                        <td>800 ~ 1,120</td>
+                                        <td>5</td>
+                                        <td>5</td>
+                                        <td>5</td>
+                                        <td>5</td>
+                                        <td>180분</td>
+                                        <td>0</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                    </tr>
+                                    <tr>
+                                        <td>상대습도 (%)</td>
+                                        <td>1 ~ 100</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>20</td>
+                                        <td>60</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                    </tr>
+                                    <tr>
+                                        <td>일누적일사 (MJ/㎡)</td>
+                                        <td>0 ~ 45</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td class="note">일사가 0일 때 일조가 0이면 <span class="badge badge_green">정상</span>, 그렇지
+                                            않으면 <span class="badge badge_red">오류</span> 처리</td>
+                                    </tr>
+                                    <tr>
+                                        <td>일누적일조 (sec)</td>
+                                        <td>0 ~ 54,000</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card Climate_range_standard"></div>
+                        <div class="card Algorithm_by_classification"></div>
                     </div>
 
                     <div class="modal_footer">

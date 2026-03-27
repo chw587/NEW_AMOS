@@ -83,30 +83,64 @@ main,
 
 
 /* modal */
-.add_modal {
+.add_modal,
+.help_modal {
    display: none;
    position: fixed;
-   top: 70px;
-   width: 100vw;
-   height: 100vh;
+   inset: 0;
+   /* top/left/right/bottom: 0 */
+   background-color: rgba(0, 0, 0, 0.5);
    z-index: 999;
-   background-color: rgb(0, 0, 0, 0.5);
+   align-items: center;
+   justify-content: center;
 }
 
-.add_modal.active {
-    display: flex;
+.add_modal.active,
+.help_modal.active {
+   display: flex;
 }
 
 .add_modal .modal_wrap {
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-65%, -55%);
-   width: 40%;
-   /* height: 80%; */
+   transform: translate(-50%, -46%);
    padding: 0;
    overflow: hidden;
 }
+
+.add_modal .modal_wrap {
+   width: 30%;
+}
+
+.help_modal .modal_wrap {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -46%);
+   width: 60%;
+   height: 90%;
+   padding: 0;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+
+.help_modal .modal_wrap .modal_content {
+   display: flex;
+   flex-direction: column;
+   gap: var(--gap_2);
+   overflow-y: auto;
+   flex: 1;
+   min-height: 0;
+   padding: 20px;
+}
+
+.help_modal .modal_wrap .modal_content>div {
+   height: 1000px;
+   background-color: pink;
+}
+
 
 .modal_title {
    display: flex;
@@ -124,7 +158,7 @@ main,
 .modal_content {
    display: flex;
    flex-direction: column;
-   gap: var(--gap_1);
+   gap: calc(var(--gap_1)*2);
    flex-grow: 1;
    padding: 20px;
 }
@@ -156,8 +190,7 @@ main,
 }
 
 .modal_footer button.close {
-   background: linear-gradient(180deg, color-mix(in srgb, var(--line), white 40%) 0%, var(--line) 100%);
-   ;
+   background: linear-gradient(180deg, color-mix(in srgb, var(--line), white 40%) 0%, var(--line) 100%) !important;
    color: var(--text_2) !important;
    border: 1px solid var(--line) !important;
 }
@@ -446,7 +479,7 @@ table .error {
 .submin_btn,
 .filter_wrap button,
 .Server_Status button,
-.modal_footer button:first-child {
+.modal_footer .save {
    background: linear-gradient(180deg, rgba(19, 72, 136, 0.8) 0%, var(--main) 100%) !important;
 }
 
@@ -1725,6 +1758,10 @@ table .error {
    gap: var(--gap_1);
 }
 
+.data_select_wrap input {
+   max-width: 250px;
+}
+
 .Data_Comparison_Inquiry_value {
    width: 100%;
    flex-grow: 1;
@@ -1847,6 +1884,88 @@ table .error {
    width: 1px;
    height: 14px;
    background-color: var(--line);
+}
+
+/* Comparison View 필터 상단 */
+.top_filter_wrap {
+   display: flex;
+   gap: var(--gap_2);
+   align-items: stretch;
+}
+
+.comparison_time_wrap {
+   width: auto;
+   display: flex;
+   flex-direction: column;
+   gap: var(--gap_1);
+   flex-shrink: 0;
+}
+
+.comparison_time_wrap select {
+   width: 100%;
+}
+
+.comparison_time_wrap input {
+   width: 200px;
+}
+
+.comparison_data_wrap {
+   display: flex;
+   align-items: center;
+   gap: var(--gap_1);
+   flex-grow: 1;
+}
+
+.comparison_item {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: var(--gap_1);
+   padding: 12px 16px;
+   border-radius: 12px;
+   border: 1px solid var(--line);
+   background: var(--wh);
+   box-shadow: var(--card-shadow);
+}
+
+.comparison_item.base_data {
+   border-top: 3px solid var(--red);
+}
+
+.comparison_item.compare_data {
+   border-top: 3px solid var(--g_text);
+}
+
+.comparison_item_header {
+   display: flex;
+   align-items: center;
+   gap: var(--gap_1);
+   font-size: var(--body_2);
+   font-weight: 600;
+   color: var(--text_2);
+}
+
+.comparison_item_header .material-symbols-outlined {
+   font-size: 18px;
+   color: var(--text_3);
+}
+
+.comparison_item_body {
+   display: flex;
+   gap: var(--gap_1);
+}
+
+.comparison_item_body select {
+   flex: 1;
+}
+
+.comparison_divider {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0;
+   color: var(--text_3);
+   font-size: 24px;
 }
 
 
@@ -2060,27 +2179,27 @@ table .error {
 /* td 컬러 공통 */
 .content_table td.total_data div {
    color: color-mix(in hsl, var(--main), hsl(210, 100%, 40%) 80%);
-   font-weight: 700;
+
 }
 
 .content_table td.success_data div {
    color: color-mix(in hsl, var(--green), hsl(145, 100%, 40%) 80%);
-   font-weight: 700;
+
 }
 
 .content_table td.error_data div {
    color: color-mix(in hsl, var(--red), hsl(0, 100%, 40%) 80%);
-   font-weight: 700;
+
 }
 
 .content_table td.warning_data div {
    color: color-mix(in hsl, var(--yellow), hsl(30, 100%, 40%) 80%);
-   font-weight: 700;
+
 }
 
 .content_table td.missing_data div {
    color: color-mix(in hsl, var(--text_2), hsl(0, 0%, 40%) 80%);
-   font-weight: 700;
+
 }
 
 

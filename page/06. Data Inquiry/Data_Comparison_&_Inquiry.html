@@ -45,7 +45,6 @@
 
                 <!-- Content -->
                 <div class="page Data_Comparison_Inquiry_content single_view">
-                    
 
                     <!-- Filter -->
                     <div class="filter_wrap">
@@ -88,7 +87,7 @@
                                     <label><input type="checkbox">QNH_INHG</label>
                                     <label><input type="checkbox">CLOUD BASE</label>
                                     <label><input type="checkbox">VISIBILITY</label>
-                                    <label><input type="checkbox">VISIBILITY (MID)</label>S
+                                    <label><input type="checkbox">VISIBILITY (MID)</label>
                                 </div>
                                 <button class="search_btn">search</button>
                             </div>
@@ -203,17 +202,6 @@
                                     <span class="material-symbols-outlined search_icon">search</span>
                                 </div>
                                 <div>
-                                    <!-- <div class="count">
-                                        총 <span class="count_num">10</span>건의 데이터
-                                    </div>
-                                    <div class="line_count">
-                                        <span>페이지당 줄수</span>
-                                        <select name="line_count" id="line_count_select">
-                                            <option value="10">10</option>
-                                            <option value="20">20</option>
-                                            <option value="30">30</option>
-                                        </select>
-                                    </div> -->
                                     <button class="csv_btn">CSV</button>
                                     <button class="excel_btn">Excel</button>
                                 </div>
@@ -234,7 +222,209 @@
 
                 </div>
 
-                <div class="page Data_Comparison_Inquiry_content comparison_view"></div>
+                <div class="page Data_Comparison_Inquiry_content comparison_view">
+
+                    <div class="filter_wrap">
+                        <div class="top_filter_wrap">
+                            <div class="comparison_time_wrap">
+                                <!-- 희원 - value 추가 (JS intervalElementMap 키값과 일치해야 함) -->
+                                <select>
+                                    <option value="10초">10초</option>
+                                    <option value="1분">1분</option>
+                                </select>
+                                <div class="datetime_wrap">
+                                    <input type="datetime-local">
+                                    <span style="color: var(--text_3); font-size: var(--body_2);">~</span>
+                                    <input type="datetime-local">
+                                </div>
+
+                            </div>
+                            <div class="comparison_data_wrap">
+                                <div class="comparison_item base_data">
+                                    <div class="comparison_item_header">
+                                        <span class="material-symbols-outlined">database</span>
+                                        <span>Base Data</span>
+                                        <div class="now_state error"></div>
+                                    </div>
+                                    <div class="comparison_item_body">
+                                        <select>
+                                            <option>RWY 1</option>
+                                            <option>RWY 2</option>
+                                        </select>
+                                        <select>
+                                            <option>18</option>
+                                            <option>36</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="comparison_divider">
+                                    <span class="material-symbols-outlined">compare_arrows</span>
+                                </div>
+
+                                <div class="comparison_item compare_data">
+                                    <div class="comparison_item_header">
+                                        <span class="material-symbols-outlined">database</span>
+                                        <span>Compare Data</span>
+                                        <div class="now_state success"></div>
+                                    </div>
+                                    <div class="comparison_item_body">
+                                        <select>
+                                            <option>RWY 1</option>
+                                            <option>RWY 2</option>
+                                        </select>
+                                        <select>
+                                            <option>18</option>
+                                            <option>36</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 요소 선택 -->
+                        <div class="elemenet_wrap">
+                            <div class="elemenet_header">
+                                <span>Element</span>
+                                <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                            </div>
+                            <div class="elemenet_body">
+                                <!-- 희원 - 초기 내용 비움. JS에서 intervalSelect 값에 따라 동적 렌더링 -->
+                                <div class="elemenet_list"></div>
+                                <button class="search_btn">search</button>
+                            </div>
+                        </div>
+
+                        <!-- 구분 -->
+                        <div class="division_wrap">
+                            <div class="division_item">
+                                <p class="division_label">Divider 1</p>
+                                <div class="division_control">
+                                    <label class="toggle_switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <label class="division_color">
+                                        <input type="color" value="#08C862" list="division_colors">
+                                    </label>
+                                    <div class="division_text">
+                                        <span>Divider name</span>
+                                        <div class="line"></div>
+                                        <span>value</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="division_item">
+                                <p class="division_label">Divider 2</p>
+                                <div class="division_control">
+                                    <label class="toggle_switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <label class="division_color">
+                                        <input type="color" value="#08C862">
+                                    </label>
+                                    <div class="division_text">
+                                        <span>Divider name</span>
+                                        <div class="line"></div>
+                                        <span>value</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="division_item">
+                                <p class="division_label">Divider 3</p>
+                                <div class="division_control">
+                                    <label class="toggle_switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <label class="division_color">
+                                        <input type="color" value="#08C862">
+                                    </label>
+                                    <div class="division_text">
+                                        <span>Divider name</span>
+                                        <div class="line"></div>
+                                        <span>value</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="division_item">
+                                <p class="division_label">Divider 4</p>
+                                <div class="division_control">
+                                    <label class="toggle_switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <label class="division_color">
+                                        <input type="color" value="#08C862">
+                                    </label>
+                                    <div class="division_text">
+                                        <span>Divider name</span>
+                                        <div class="line"></div>
+                                        <span>value</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="division_item">
+                                <p class="division_label">Divider 5</p>
+                                <div class="division_control">
+                                    <label class="toggle_switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <label class="division_color">
+                                        <input type="color" value="#08C862">
+                                    </label>
+                                    <div class="division_text">
+                                        <span>Divider name</span>
+                                        <div class="line"></div>
+                                        <span>value</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Value -->
+                    <div class="Data_Comparison_Inquiry_value">
+                        <div class="card graph">
+                            <div class="graph_header">
+                                <p>Query Result Data Chart</p>
+                                <span class="material-symbols-outlined">
+                                    download
+                                </span>
+                            </div>
+
+                            <!-- 희원 - id를 chart-container-comparison으로 변경 (single_view와 중복 방지) -->
+                            <div id="chart-container-comparison"></div>
+                        </div>
+                        <div class="table">
+                            <div class="content_page_header">
+                                <div class="search">
+                                    <input type="text" class="search_input" placeholder="Search">
+                                    <span class="material-symbols-outlined search_icon">search</span>
+                                </div>
+                                <div>
+                                    <button class="csv_btn">CSV</button>
+                                    <button class="excel_btn">Excel</button>
+                                </div>
+                            </div>
+                            <table class="card content_table no_data" style="padding: 0;">
+                                <thead>
+                                    <tr>
+                                        <th>TIME</th>
+                                        <th>ELEMENT</th>
+                                        <th>VALUE</th>
+                                        <th>RESULT</th>
+                                    </tr>
+                                </thead>
+                                <!-- 희원 - id를 table_body_comparison으로 변경 (single_view와 중복 방지) -->
+                                <tbody id="table_body_comparison"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <footer>

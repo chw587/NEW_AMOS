@@ -75,7 +75,7 @@ const pageMap = {
 
   // 08. System Monitoring
   'AMOS & Sensor Monitoring': './page/08. System Monitoring/A_S_M.html',
-  'Log Monitoring': './page/08. System Monitoring/Log_m.html',
+  'Log Monitoring': './page/08. System Monitoring/LSog_m.html',
   'Process Monitoring': './page/08. System Monitoring/PM.html',
   'Server Status': './page/08. System Monitoring/Server_Status.html',
 };
@@ -87,9 +87,13 @@ const pageInitMap = {
   './page/02. Sensor Management/Sensor_Infomation.html': () => typeof initSensorInfo === 'function' && initSensorInfo(),
   './page/02. Sensor Management/Installation_Status.html': () => typeof initInstallation === 'function' && initInstallation(),
   './page/03. Sensor Switching/Sensor_Switch_Configuration.html': () => typeof initSensorSwitch === 'function' && initSensorSwitch(),
+  './page/04. User Management/User_Management.html': () => typeof initUserManagement === 'function' && initUserManagement(),
+  './page/05. System Support/GW.html': () => typeof initGW === 'function' && initGW(),
+  './page/05. System Support/TD.html': () => typeof initTD === 'function' && initTD(),
   './page/07. Quality Management/Data_Collection_Rate.html': () => typeof initDataCollectionRate === 'function' && initDataCollectionRate(),
   './page/07. Quality Management/QC_Performance_M.html': () => typeof initQCPerformanceMonitoring === 'function' && initQCPerformanceMonitoring(),
   './page/07. Quality Management/QC_Statistical_Report.html': () => typeof initQCStatisticalReport === 'function' && initQCStatisticalReport(),
+  './page/08. System Monitoring/A_S_M.html': () => typeof initAMOS === 'function' && initAMOS(),
 };
 
 async function loadPage(url) {

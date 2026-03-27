@@ -53,9 +53,12 @@
                                 <option value="18">18</option>
                                 <option value="36">36</option>
                             </select>
-                            <select name="rwy_num2" id="rwy_num2">
-                                <option value="18">18</option>
-                                <option value="36">36</option>
+                            <select class="custom-select" name="algoType" id="input-algo-type">
+                                <option value="1">물리한계 검사</option>
+                                <option value="2">단계 검사</option>
+                                <option value="3">지속성 검사</option>
+                                <option value="4">내적일치성 검사</option>
+                                <option value="5">기후범위 검사</option>
                             </select>
                             <input type="date" style="max-width: 250px;">
                             <button class="help_btn">
@@ -245,6 +248,27 @@
                 <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
                 <p>AWIMP v1.0.0</p>
             </footer>
+        </div>
+
+        <div class="help_modal">
+            <div class="card modal_wrap">
+                <div class="modal_title">
+                    <h3>Quality Control Inspection (QC) Help</h3>
+                    <span class="material-symbols-outlined close">
+                        close
+                    </span>
+                </div>
+
+                <div class="modal_content">
+                    <div class="qc_conditions"></div>
+                    <div class="Climate_range_standard"></div>
+                    <div class="Algorithm_by_classification"></div>
+                </div>
+
+                <div class="modal_footer">
+                    <button class="close">close</button>
+                </div>
+            </div>
         </div>
     </main>
 </body>

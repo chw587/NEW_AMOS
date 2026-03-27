@@ -131,18 +131,53 @@
         <div class="add_modal">
             <div class="card modal_wrap">
                 <div class="modal_title">
-                    <h3>세 사용자 정보 입력</h3>
+                    <h3>Enter new user information</h3>
                     <span class="material-symbols-outlined close">
                         close
                     </span>
                 </div>
 
                 <div class="modal_content">
-                    
+                    <div class="modal_item user_role">
+                        <p>Manufacturer</p>
+                        <select class="custom-select" name="roleType" id="input-new-user-role-type">
+                            <option value="ROLE_USER">일반 사용자</option>
+                            <option value="ROLE_MANAGER">관리자</option>
+                            <option value="ROLE_MACHINE">장비 관리자</option>
+                            <option value="ROLE_ADMIN">최고 관리자</option>
+                        </select>
+                    </div>
+
+                    <div class="modal_item Base Airport">
+                        <p>Base Airport</p>
+                        <select class="custom-select" name="icaoCode" id="input-new-user-icao-code" disabled="">
+                            <option value="RKPU">RKPU</option>
+                        </select>
+                    </div>
+                    <div class="modal_item Institution_Department">
+                        <p>Institution & Department</p>
+                        <input type="text" placeholder="Please enter Institution or Department">
+                    </div>
+                    <div class="modal_item user_name">
+                        <p>User Name</p>
+                        <input type="text" placeholder="Please enter User Name">
+                    </div>
+                    <div class="modal_item user_id">
+                        <p>ID (Within 30 characters / Cannot be edited)</p>
+                        <input type="text" placeholder="Please enter User ID">
+                    </div>
+                    <div class="modal_item user_password">
+                        <p>Password</p>
+                        <input type="text" placeholder="Please enter user Password">
+                    </div>
+                    <div class="modal_item password_check">
+                        <p>Password Check</p>
+                        <input type="text" placeholder="Please Re-enter your user password">
+                    </div>
                 </div>
 
                 <div class="modal_footer">
-                    <button>register</button>
+                    <button class="save">register</button>
                     <button class="close">close</button>
                 </div>
             </div>

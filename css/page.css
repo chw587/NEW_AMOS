@@ -354,6 +354,7 @@ aside {
     flex-direction: column;
     padding: 20px 10px;
     background: var(--aside);
+    overflow-y: auto;
     z-index: 100;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -361,7 +362,7 @@ aside {
 aside:hover,
 aside.pinned {
     width: 300px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
 aside::-webkit-scrollbar {

@@ -55,6 +55,8 @@ main,
 .main_content {
    display: flex;
    flex-direction: column;
+   /* 희원-260330 */
+   overflow-y: auto;
 }
 
 .content {
@@ -118,7 +120,7 @@ main,
    top: 50%;
    left: 50%;
    transform: translate(-50%, -46%);
-   width: 60%;
+   width: 80%;
    height: 90%;
    padding: 0;
    overflow: hidden;
@@ -316,32 +318,41 @@ main,
    color: var(--text_1);
 }
 
-.qc_conditions .subtitle {
+.qc_conditions .subtitle,
+.Algorithm_by_classification .subtitle {
    font-size: var(--caption);
    color: var(--text_3);
-   margin: 0 0 16px 0;
 }
 
-.qc_conditions table {
+.qc_conditions table,
+.Climate_range_standard table,
+.Algorithm_by_classification table {
    width: 100%;
    border-collapse: collapse;
    font-size: var(--caption);
    table-layout: fixed;
+   margin-top: 16px;
 }
 
 .qc_conditions thead tr,
 .qc_conditions tbody:not(.no_override) tr {
-      display: table-row;
+   display: table-row;
    width: 100%;
    table-layout: fixed;
 }
 
-.qc_conditions tbody:not(.no_override) {
-    display: contents;
+.qc_conditions tbody:not(.no_override),
+.Climate_range_standard tbody:not(.no_override),
+.Algorithm_by_classification tbody:not(.no_override) {
+   display: contents;
 }
 
 .qc_conditions th,
-.qc_conditions td {
+.qc_conditions td,
+.Climate_range_standard th,
+.Climate_range_standard td,
+.Algorithm_by_classification th,
+.Algorithm_by_classification td {
    border: 1px solid var(--line) !important;
    padding: 8px 10px;
    text-align: center;
@@ -350,52 +361,38 @@ main,
    word-break: keep-all;
 }
 
-.qc_conditions thead tr th {
+.Climate_range_standard td,
+.Algorithm_by_classification td {
+   border-top: none !important;
+}
+
+.qc_conditions thead tr th,
+.Climate_range_standard thead tr th,
+.Algorithm_by_classification thead tr th {
    background-color: var(--main);
    color: var(--wh);
    font-size: var(--caption);
    font-weight: 600;
 }
 
-.qc_conditions thead tr:first-child th.group_header {
+.qc_conditions thead tr:first-child th.group_header,
+.Climate_range_standard thead tr:first-child th.group_header,
+.Algorithm_by_classification thead tr:first-child th.group_header {
    border-bottom: 1px solid color-mix(in srgb, var(--main), white 40%);
 }
 
-/* 물리한계검사 헤더 아이콘 영역 */
-.qc_conditions .th_icon_wrap {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: 2px;
-}
-
-.qc_conditions .th_icon_wrap .icon_row {
-   display: flex;
-   align-items: center;
-   gap: 4px;
-}
-
-.qc_conditions .th_icon_wrap .material-symbols-outlined {
-   font-size: 16px;
-   color: var(--wh);
-   opacity: 0.9;
-}
-
-.qc_conditions .th_icon_wrap span.th_label {
-   font-size: var(--caption);
-   font-weight: 600;
-   color: var(--wh);
-}
-
-.qc_conditions tbody tr:nth-child(odd) td {
+.qc_conditions tbody tr:nth-child(odd) td,
+.Algorithm_by_classification tbody tr:nth-child(odd) td {
    background-color: #ffffff;
 }
 
-.qc_conditions tbody tr:nth-child(even) td {
+.qc_conditions tbody tr:nth-child(even) td,
+.Algorithm_by_classification tbody tr:nth-child(even) td {
    background-color: color-mix(in srgb, var(--main), transparent 95%);
 }
 
-.qc_conditions tbody tr:hover td {
+.qc_conditions tbody tr:hover td,
+.Algorithm_by_classification tbody tr:hover td {
    background: color-mix(in srgb, var(--line), transparent 60%);
 }
 
@@ -429,11 +426,21 @@ main,
    width: 22%;
 }
 
+.Algorithm_by_classification table th:first-child,
+.Algorithm_by_classification table td:first-child {
+   width: 15%;
+}
+
+.Algorithm_by_classification table th:nth-child(2),
+.Algorithm_by_classification table td:nth-child(2) {
+   width: 25%;
+}
+
 .badge {
    display: inline-block;
    padding: 1px 7px;
    border-radius: 4px;
-   font-size: 11px;
+   font-size: var(--caption);
    font-weight: bold;
    color: #fff;
    margin-left: 2px;
@@ -445,6 +452,18 @@ main,
 
 .badge_red {
    background-color: var(--red);
+}
+
+.badge_yellow {
+   background-color: var(--yellow);
+}
+
+.badge_main {
+   background-color: var(--main);
+}
+
+.badge_black {
+   background-color: var(--text_1);
 }
 
 
@@ -1846,6 +1865,29 @@ table .error {
    border-left: 5px solid var(--main) !important;
 }
 
+.User_Management_content .help_icon {
+   position: relative;
+   margin-top: 5px;
+}
+
+.User_Management_content .help_icon_list {
+   position: absolute;
+   display: none;
+   padding: 0;
+   border-radius: 8px;
+   z-index: 10;
+}
+
+.User_Management_content .help_icon_list .material-symbols-outlined {
+   font-size: 16px;
+}
+
+.User_Management_content .help_icon_list li {
+   display: flex;
+   gap: var(--gap_0);
+   align-items: center;
+   padding: 5px 10px;
+}
 
 /* ============================================================
    05. SYSTEM SUPPORT
@@ -1870,6 +1912,39 @@ table .error {
    width: 10%;
 }
 
+.GW_Monitoring_content .help_icon,
+.TD_Monitoring_content .help_icon {
+   position: relative;
+   margin-top: 5px;
+}
+
+.GW_Monitoring_content .help_icon_list,
+.TD_Monitoring_content .help_icon_list {
+   position: absolute;
+   display: none;
+   right: 5%;
+   bottom: 65%;
+   transform: translate(-50%, 60%);
+   padding: 0;
+   border-radius: 8px;
+}
+
+.GW_Monitoring_content .help_icon_list .material-symbols-outlined,
+.TD_Monitoring_content .help_icon_list .material-symbols-outlined {
+   font-size: 16px;
+}
+
+.GW_Monitoring_content .help_icon_list li,
+.TD_Monitoring_content .help_icon_list li {
+   display: flex;
+   gap: var(--gap_0);
+   align-items: center;
+   padding: 5px 10px;
+}
+
+.help_icon_list li:hover {
+   background: color-mix(in srgb, var(--line), transparent 70%);
+}
 
 /* ============================================================
    06. DATA INQUIRY - Data_Comparison_&_Inquiry.html
@@ -2500,6 +2575,15 @@ table .error {
 .btn_header {
    display: flex;
    justify-content: space-between;
+}
+
+.server_wrap_content table .success_data {
+   border: none;
+   padding: 4px 16px;
+   border-radius: 8px;
+   background-color: var(--green);
+   font-size: var(--caption);
+   color: var(--wh);
 }
 
 /* PM.html */

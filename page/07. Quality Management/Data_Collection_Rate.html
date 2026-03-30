@@ -466,9 +466,243 @@
                     </div>
 
                     <div class="modal_content">
-                        <div class="card qc_conditions"></div>
-                        <div class="card Climate_range_standard"></div>
-                        <div class="card Algorithm_by_classification"></div>
+                        <div class="card qc_conditions">
+                            <div class="qc_header">
+                                <h2>기상관측데이터 품질관리검사 조건</h2>
+                            </div>
+                            <p class="subtitle">2019. 3. 29. 기상청고시 제2019- 3호 '기상관측자료의 품질등급 기준 및 절차'</p>
+
+                            <table>
+                                <colgroup>
+                                    <col class="col_element">
+                                    <col class="col_physical">
+                                    <col class="col_step">
+                                    <col class="col_step">
+                                    <col class="col_step">
+                                    <col class="col_step">
+                                    <col class="col_persist">
+                                    <col class="col_persist">
+                                    <col class="col_climate">
+                                    <col class="col_internal">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">관측요소 (단위)</th>
+                                        <th rowspan="2">물리한계검사</th>
+                                        <th colspan="4" class="group_header">단계검사</th>
+                                        <th colspan="2" class="group_header">지속성검사</th>
+                                        <th rowspan="2">기후범위검사</th>
+                                        <th rowspan="2">내적일치성검사</th>
+                                    </tr>
+                                    <tr>
+                                        <th>1분</th>
+                                        <th>5분</th>
+                                        <th>10분</th>
+                                        <th>60분</th>
+                                        <th>지속시간</th>
+                                        <th>최소변화량</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>기온 (°C)</td>
+                                        <td>-45 ~ 45</td>
+                                        <td>3</td>
+                                        <td>3</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>180분</td>
+                                        <td>0</td>
+                                        <td>월별 적용</td>
+                                        <td>_</td>
+                                    </tr>
+                                    <tr>
+                                        <td>일누적강수량 (mm)</td>
+                                        <td>0 ~ 1,500</td>
+                                        <td>10</td>
+                                        <td>50</td>
+                                        <td>100</td>
+                                        <td>500</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                    </tr>
+                                    <tr>
+                                        <td>강수유무</td>
+                                        <td>0, 10</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                    </tr>
+                                    <tr>
+                                        <td>풍향 (°)</td>
+                                        <td>0 ~ 360</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>240분</td>
+                                        <td>0</td>
+                                        <td>_</td>
+                                        <td class="note">1분 최대 순간 풍속이 1분 풍속보다 작으면<br>최대 순간 풍속과 1분 풍속 모두 <span
+                                                class="badge badge_red">오류</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>기압 (hPa)</td>
+                                        <td>800 ~ 1,120</td>
+                                        <td>5</td>
+                                        <td>5</td>
+                                        <td>5</td>
+                                        <td>5</td>
+                                        <td>180분</td>
+                                        <td>0</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                    </tr>
+                                    <tr>
+                                        <td>상대습도 (%)</td>
+                                        <td>1 ~ 100</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>20</td>
+                                        <td>60</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                    </tr>
+                                    <tr>
+                                        <td>일누적일사 (MJ/㎡)</td>
+                                        <td>0 ~ 45</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td class="note">일사가 0일 때 일조가 0이면 <span class="badge badge_green">정상</span>, 그렇지
+                                            않으면 <span class="badge badge_red">오류</span> 처리</td>
+                                    </tr>
+                                    <tr>
+                                        <td>일누적일조 (sec)</td>
+                                        <td>0 ~ 54,000</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                        <td>_</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card Climate_range_standard">
+                            <div class="qc_header">
+                                <h2>기상관측데이터 품질관리검사 조건</h2>
+                            </div>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>1월</th>
+                                        <th>2월</th>
+                                        <th>3월</th>
+                                        <th>4월</th>
+                                        <th>5월</th>
+                                        <th>6월</th>
+                                        <th>7월</th>
+                                        <th>8월</th>
+                                        <th>9월</th>
+                                        <th>10월</th>
+                                        <th>11월</th>
+                                        <th>12월</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>-35℃ ~ 30℃</td>
+                                        <td>-35℃ ~ 30℃</td>
+                                        <td>-35℃ ~ 30℃</td>
+                                        <td>-35℃ ~ 30℃</td>
+                                        <td>-35℃ ~ 30℃</td>
+                                        <td>-35℃ ~ 30℃</td>
+                                        <td>-35℃ ~ 30℃</td>
+                                        <td>-35℃ ~ 30℃</td>
+                                        <td>-35℃ ~ 30℃</td>
+                                        <td>-35℃ ~ 30℃</td>
+                                        <td>-35℃ ~ 30℃</td>
+                                        <td>-35℃ ~ 30℃</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card Algorithm_by_classification">
+                            <div class="qc_header">
+                                <h2>검사 분류 별 알고리즘</h2>
+                            </div>
+                            <p class="subtitle">대상 요소는 각 알고리즘 별로 다르며, 검사 대상 외 요소에 대해서는 <span class="badge badge_main">대상
+                                    아님</span> 처리한다.</p>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>검사분류</th>
+                                        <th>검사 대상 요소</th>
+                                        <th>알고리즘 설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>결측검사</td>
+                                        <td>모든 관측 데이터</td>
+                                        <td>에러(-9999)값 혹은 누락값을 확인하여 <span class="badge badge_black">결측</span> 처리</td>
+                                    </tr>
+                                    <tr>
+                                        <td>물리한계 검사</td>
+                                        <td>물리한계값이 설정된 데이터</td>
+                                        <td>물리한계값 테이블에 설정된 기준치범위에 해당하지 않는 값에 대해 <span class="badge badge_red">오류</span>
+                                            처리</td>
+                                    </tr>
+                                    <tr>
+                                        <td>단계 검사</td>
+                                        <td>순간 풍속, 1분 최대 풍속, 기온, 습도, 기압, 일누적강수량</td>
+                                        <td>표준자료 1분 평균 값 기준 이전 1분 평균값 사이의 변동에 기준값 이상 차이가 발생하면 <span
+                                                class="badge badge_red">오류</span> 이며
+                                            이전 1분 자료가 <span class="badge badge_black">결측</span> 인 경우에는 <span
+                                                class="badge badge_main">기준값 누락</span> (풍속의 경우, GUST 여부에 따라 <span
+                                                class="badge badge_yellow">의심</span> )</td>
+                                    </tr>
+                                    <tr>
+                                        <td>지속성 검사</td>
+                                        <td>풍향, 풍속, 습도, 기압</td>
+                                        <td>마지막 수집시각을 기점으로 기준 지속시간 내 수집자료 사이의 변화량을 계산하여 최소변화량 기준에 미달됨이 확인된 경우 <span
+                                                class="badge badge_red">오류</span> 처리</td>
+                                    </tr>
+                                    <tr>
+                                        <td>내적일치성 검사 </td>
+                                        <td>1분 평균 풍속, 1분 최대 풍속</td>
+                                        <td>1분 최대 풍속이 1분 평균 풍속보다 작을 때, 1분 풍속과 1분 최대 풍속은 모두 <span
+                                                class="badge badge_red">오류</span> 처리되며
+                                            비교 대상 요소 관측값이 <span class="badge badge_black">결측</span> 인 경우, 해당 요소는 <span
+                                                class="badge badge_main">기준값 누락</span> 처리</td>
+                                    </tr>
+                                    <tr>
+                                        <td>기후범위 검사</td>
+                                        <td>기온</td>
+                                        <td>월 별 기준치범위에 해당하지 않는 값에 대해 <span class="badge badge_red">오류</span> 처리</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                     <div class="modal_footer">

@@ -1,4 +1,26 @@
 /* ============================================================
+   TOP BUTTON
+   ============================================================ */
+// TOP BUTTON
+const topBtn = document.getElementById('topBtn');
+const scrollTarget = document.getElementById('content_area');
+
+if (topBtn && scrollTarget) {
+    scrollTarget.addEventListener('scroll', () => {
+        if (scrollTarget.scrollTop > 200) {
+            topBtn.classList.add('show');
+        } else {
+            topBtn.classList.remove('show');
+        }
+    });
+
+    topBtn.addEventListener('click', () => {
+        scrollTarget.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+
+/* ============================================================
    02. Sensor Management
    ============================================================ */
 function initModal() {
@@ -42,6 +64,35 @@ function initInstallation() { initModal(); }
 function initUserManagement() { initModal(); }
 function initGW() { initModal(); }
 function initTD() { initModal(); }
+
+
+
+
+/* ============================================================
+   05. SYSTEM SUPPORT
+   ============================================================ */
+// 동적 행인 경우
+document.addEventListener('click', (e) => {
+    if (e.target.closest('.help_icon')) {
+        e.stopPropagation();
+
+        const icon = e.target.closest('.help_icon');
+        const list = icon.nextElementSibling;
+        const isActive = list.style.display === 'block';
+
+        document.querySelectorAll('.help_icon_list').forEach(el => {
+            el.style.display = 'none';
+        });
+
+        if (!isActive) {
+            list.style.display = 'block';
+        }
+    } else if (!e.target.closest('.help_icon_list')) {
+        document.querySelectorAll('.help_icon_list').forEach(el => {
+            el.style.display = 'none';
+        });
+    }
+});
 
 
 

@@ -225,3 +225,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadPage('./page/dashboard.html');
 });
+
+

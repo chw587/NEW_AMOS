@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <main class="QC_PM">
+    <main class="Data_Collection_Rate">
         <div class="main_content">
 
             <!-- 상태 알림 -->
@@ -32,7 +32,11 @@
                     <div>
                         <div class="title">
                             <div class="title_bar"></div>
-                            <span class="title_text">Data Collection Rate</span>
+                            <div>
+                                <span class="title_text">Data Collection Rate</span>
+                                <span class="mobile_hide">Quality Management</span>
+                            </div>
+
                         </div>
                         <span>/ Quality Management</span>
                     </div>
@@ -151,7 +155,7 @@
                         <div class="dataTables_info">
                             <div class="data_count_wrap">
                                 <div class="expect_count">
-                                    <span>Estimated Total Data</span>
+                                    <span>Estimated Data</span>
                                     <span>:</span>
                                     <span>918</span>
                                 </div>
@@ -184,12 +188,15 @@
                             <div class="dataTables_data total_data">
                                 <p>
                                     Collection Rate
-                                    <span class="tooltip_box">
-                                        <span class="tooltip_title">Collection Rate <br><span>(Total Collected /
-                                                Expected)</span></span>
-                                        <span class="tooltip_desc">
-                                            Ratio of actual collected data to expected data based on collection cycle
-                                            for the set query period
+                                    <span class="tooltip_wrap">
+                                        <span class="tooltip_box">
+                                            <span class="tooltip_title">Collection Rate <br><span>(Total Collected /
+                                                    Expected)</span></span>
+                                            <span class="tooltip_desc">
+                                                Ratio of actual collected data to expected data based on collection
+                                                cycle
+                                                for the set query period
+                                            </span>
                                         </span>
                                     </span>
                                 </p>
@@ -280,17 +287,20 @@
                             <span class="material-symbols-outlined search_icon">search</span>
                         </div>
                         <div>
-                            <div class="count">
-                                Total <span class="count_num">10</span>item
+                            <div class="line_count_wrap">
+                                <div class="count">
+                                    Total <span class="count_num">10</span>item
+                                </div>
+                                <div class="line_count">
+                                    <span>Rows per page</span>
+                                    <select name="line_count" id="line_count_select">
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="line_count">
-                                <span>Rows per page</span>
-                                <select name="line_count" id="line_count_select">
-                                    <option value="10">10</option>
-                                    <option value="20">20</option>
-                                    <option value="30">30</option>
-                                </select>
-                            </div>
+
                             <button class="csv_btn">CSV</button>
                             <button class="excel_btn">Excel</button>
                         </div>
@@ -449,12 +459,12 @@
                         <button class="pg_next" type="button">Next</button>
                     </div>
                 </div>
-
-                <footer>
-                    <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
-                    <p>AWIMP v1.0.0</p>
-                </footer>
             </div>
+
+            <footer>
+                <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
+                <p>AWIMP v1.0.0</p>
+            </footer>
 
             <div class="help_modal">
                 <div class="card modal_wrap">

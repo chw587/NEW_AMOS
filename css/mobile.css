@@ -1,0 +1,1376 @@
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 768px) {
+
+    :root {
+        --text_1: #111;
+        --text_2: #333;
+        --text_3: #757575;
+        --wh: #fafafa;
+        --main: #134888;
+        --aside: #092241;
+        --r_text: #CC0000;
+        --y_text: #CC8400;
+        --g_text: #06A04E;
+        --red: #FF3E3E;
+        --yellow: #FF8D28;
+        --green: #08C862;
+        --bg: #F0F0F0;
+        --line: #ddd;
+        --title_1: clamp(16px, 2vw, 24px);
+        --body_0: clamp(16px, 2vw, 20px);
+        --body_1: clamp(14px, 1.2vw, 16px);
+        --body_2: clamp(12px, 1vw, 14px);
+        --caption: clamp(12px, 0.8vw, 12px);
+        --gap_0: 4px;
+        --gap_1: 8px;
+        --gap_2: 20px;
+        --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    /* ============================================================
+       BODY / LAYOUT
+    ============================================================ */
+    body {
+        overflow-x: hidden;
+    }
+
+    .main_wrap {
+        flex-direction: column;
+    }
+
+    .content {
+        gap: var(--gap_1) !important;
+    }
+
+    .mobile_hide {
+        display: flex !important;
+    }
+
+    .footer_wrap,
+    .line_count_wrap,
+    .pagination {
+        display: none !important;
+    }
+
+    .search {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ============================================================
+       HEADER
+    ============================================================ */
+    header {
+        height: 56px;
+        padding: 0 16px;
+        position: sticky;
+        top: 0;
+        z-index: 100000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header_left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .header_left .mobile_menu_btn {
+        display: flex;
+        align-items: center;
+        color: var(--wh);
+        cursor: pointer;
+    }
+
+    .header_left .mobile_menu_btn .material-symbols-outlined {
+        font-size: 24px;
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .logo {
+        height: 20px;
+    }
+
+    .header_right {
+        position: static;
+        display: flex;
+        align-items: center;
+    }
+
+    .header_icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--wh);
+    }
+
+    .quick_menu {
+        display: none;
+    }
+
+    .bell {
+        display: flex;
+        align-items: center;
+    }
+
+    .now_time {
+        position: static;
+        transform: none;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        pointer-events: auto;
+    }
+
+    .now_time span {
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--wh);
+    }
+
+
+    /* ============================================================
+       SIDEBAR — 드로어
+    ============================================================ */
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100dvh;
+        z-index: 200000;
+        padding: 0 10px 20px;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #sidebar.open {
+        transform: translateX(0);
+        width: 280px;
+    }
+
+    #sidebar:hover {
+        width: 280px;
+    }
+
+    #sidebar .section_title span:first-child {
+        display: none;
+    }
+
+    #sidebar .section_title span:last-child {
+        display: block;
+    }
+
+    #sidebar .item_title span:last-child {
+        opacity: 1;
+    }
+
+    #sidebar .nav_item>div:last-child {
+        display: block;
+    }
+
+    #sidebar::before {
+        content: '';
+        display: block;
+        height: 56px;
+        flex-shrink: 0;
+    }
+
+
+    /* ============================================================
+       OVERLAY
+    ============================================================ */
+    body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 190000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    body.sidebar-open::after {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+    /* ============================================================
+       CONTENT AREA
+    ============================================================ */
+    #content_area {
+        width: 100%;
+        min-height: calc(100dvh - 56px);
+    }
+
+    .noti_list {
+        top: 56px;
+        height: calc(100dvh - 56px);
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .search_wrap {
+        gap: var(--gap_1);
+    }
+
+    .header_title .title_bar {
+        height: 45px !important;
+    }
+
+    .header_title>div>span {
+        display: none;
+    }
+
+
+
+    /* ============================================================
+       MODAL
+    ============================================================ */
+    .add_modal .modal_wrap {
+        width: 85%;
+    }
+
+    .add_modal .modal_wrap {
+        transform: translate(-50%, -50%);
+    }
+
+
+
+    /* ===========================================================
+       DASHBOARD - 레이아웃 구조 fix
+    ============================================================ */
+    .dashboard .main_content {
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .dashboard .content {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .dashboard .content>div {
+        width: 100%;
+        height: auto;
+    }
+
+    .data_value {
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .data_value>div {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .real_time {
+        height: auto !important;
+    }
+
+    .data_wrap {
+        height: auto !important;
+    }
+
+    .real_time .card {
+        padding: 8px 6px;
+    }
+
+    .data_by_element {
+        height: auto !important;
+    }
+
+    .qc_wrap {
+        height: auto !important;
+    }
+
+    .qc_wrap>div {
+        height: auto !important;
+    }
+
+    .qc_stauts,
+    .message {
+        height: auto !important;
+    }
+
+    .qc_content,
+    .message_wrap {
+        height: auto !important;
+    }
+
+    .qc_data {
+        height: auto !important;
+    }
+
+    .qc_count {
+        height: auto !important;
+    }
+
+    .qc_event,
+    .recent_qc_event {
+        height: auto !important;
+        max-height: 100% !important;
+    }
+
+    .lastest_message_content {
+        overflow: hidden;
+    }
+
+    .dashboard table {
+        max-height: 100%;
+    }
+
+    .title_text {
+        font-size: 20px !important;
+    }
+
+
+    /* ============================================================
+       DASHBOARD - REAL TIME 카드 그리드
+    ============================================================ */
+    .data_content {
+        gap: 6px;
+    }
+
+    .data_content>div {
+        flex: 0 0 calc((100% - 6px * 2) / 3);
+        height: auto;
+        min-height: 72px;
+        box-sizing: border-box;
+    }
+
+    .graph_content {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .graph_content>div {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 180px;
+        box-sizing: border-box;
+    }
+
+    .rwy_value {
+        font-size: 16px !important;
+        font-weight: 600;
+    }
+
+    .now_state {
+        width: 7px;
+        height: 7px;
+        flex-shrink: 0;
+    }
+
+    .status_title p {
+        font-size: clamp(12px, 2.5vw, 13px);
+    }
+
+    .data_header span {
+        font-size: clamp(12px, 2.5vw, 13px);
+        padding: 1px 4px;
+    }
+
+    .unit {
+        font-size: clamp(12px, 2.5vw, 13px);
+    }
+
+    .wind_data {
+        gap: 2px;
+    }
+
+    .wd_value,
+    .ws_value,
+    .w_value {
+        font-size: 16px !important;
+    }
+
+    .temp_humi {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .temp_humi>div {
+        width: 50%;
+        padding: 4px 0;
+    }
+
+    .rain {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .rain>div {
+        width: 50%;
+        padding: 4px 0;
+    }
+
+    .cloud_data .rwy_value {
+        font-size: clamp(12px, 2.5vw, 13px) !important;
+    }
+
+    .cloud_data>div {
+        width: calc(100% / 3);
+    }
+
+    .runway_num>div>span {
+        font-size: 12px;
+    }
+
+
+    /* ============================================================
+       01. AIRPORT MANAGEMENT
+    ============================================================ */
+    .Runway_altitude {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .Runway_altitude>div,
+    .Runway_altitude select {
+        width: 100%;
+    }
+
+
+    /* ============================================================
+       02. SENSOR MANAGEMENT
+    ============================================================ */
+    /* ============================================================
+       SENSOR INFORMATION - 테이블
+    ============================================================ */
+    .Sensor_Infomation_table .card.content_table {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .Sensor_Infomation_table table {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    .Sensor_Infomation_table thead {
+        display: table-header-group !important;
+    }
+
+    .Sensor_Infomation_table tbody {
+        display: table-row-group !important;
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    .Sensor_Infomation_table thead tr,
+    .Sensor_Infomation_table tbody tr {
+        display: table-row !important;
+        width: auto !important;
+        table-layout: auto !important;
+    }
+
+    .Sensor_Infomation_table th,
+    .Sensor_Infomation_table td {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        padding: 0px 10px !important;
+    }
+
+    .Sensor_Infomation_table th:nth-child(1),
+    .Sensor_Infomation_table td:nth-child(1) {
+        width: 40px !important;
+    }
+
+    .Sensor_Infomation_table th:nth-child(2),
+    .Sensor_Infomation_table td:nth-child(2) {
+        width: 80px !important;
+    }
+
+    .Sensor_Infomation_table th:nth-child(3),
+    .Sensor_Infomation_table td:nth-child(3) {
+        width: 80px !important;
+    }
+
+    .Sensor_Infomation_table th:nth-child(4),
+    .Sensor_Infomation_table td:nth-child(4) {
+        width: 120px !important;
+    }
+
+    .Sensor_Infomation_table th:nth-child(5),
+    .Sensor_Infomation_table td:nth-child(5) {
+        width: 160px !important;
+    }
+
+
+    /* ============================================================
+       INSTALLATION STATUS - 테이블 가로 스크롤
+    ============================================================ */
+
+    .Installation_Status_table .card.content_table {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .Installation_Status_table table {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    .Installation_Status_table thead {
+        display: table-header-group !important;
+    }
+
+    .Installation_Status_table tbody {
+        display: table-row-group !important;
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    .Installation_Status_table thead tr,
+    .Installation_Status_table tbody tr {
+        display: table-row !important;
+        width: auto !important;
+    }
+
+    .Installation_Status_table th,
+    .Installation_Status_table td {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        padding: 0px 10px !important;
+    }
+
+    .Installation_Status_table th:nth-child(1),
+    .Installation_Status_table td:nth-child(1) {
+        width: 40px !important;
+    }
+
+    .Installation_Status_table th:nth-child(2),
+    .Installation_Status_table td:nth-child(2) {
+        width: 80px !important;
+    }
+
+    .Installation_Status_table th:nth-child(3),
+    .Installation_Status_table td:nth-child(3) {
+        width: 60px !important;
+    }
+
+    .Installation_Status_table th:nth-child(4),
+    .Installation_Status_table td:nth-child(4) {
+        width: 80px !important;
+    }
+
+    .Installation_Status_table th:nth-child(5),
+    .Installation_Status_table td:nth-child(5) {
+        width: 80px !important;
+    }
+
+    .Installation_Status_table th:nth-child(6),
+    .Installation_Status_table td:nth-child(6) {
+        width: 120px !important;
+    }
+
+    .Installation_Status_table th:nth-child(7),
+    .Installation_Status_table td:nth-child(7) {
+        width: 120px !important;
+    }
+
+    .Installation_Status_table th:nth-child(8),
+    .Installation_Status_table td:nth-child(8) {
+        width: 80px !important;
+    }
+
+    .Installation_Status_table th:nth-child(9),
+    .Installation_Status_table td:nth-child(9) {
+        width: 80px !important;
+    }
+
+    .Installation_Status_table th:nth-child(10),
+    .Installation_Status_table td:nth-child(10) {
+        width: 100px !important;
+    }
+
+
+    /* ============================================================
+       03. SENSOR SWITCHING
+    ============================================================ */
+    /* ============================================================
+       Sensor_Switch_Configuration
+    ============================================================ */
+    .Sensor_Switch_Configuration_content {
+        height: auto !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap;
+        gap: var(--gap_1);
+    }
+
+    .Sensor_Switch_Configuration_content .card {
+        flex: none !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .rwy_content {
+        height: auto !important;
+    }
+
+    .Switching_History .content_page_header>div {
+        flex-direction: column;
+    }
+
+    .Switching_History .content_page_header>div>div {
+        display: flex;
+        gap: var(--gap_1);
+    }
+
+    .Switching_History .content_page_header>div>div>select {
+        width: calc((100% - var(--gap_1)*2)/3);
+    }
+
+    /* ============================================================
+       SWITCHING HISTORY - 테이블 가로 스크롤 
+    ============================================================ */
+    .Switching_History_content .card.content_table {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .Switching_History_content table {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    .Switching_History_content thead {
+        display: table-header-group !important;
+    }
+
+    .Switching_History_content tbody {
+        display: table-row-group !important;
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    .Switching_History_content thead tr,
+    .Switching_History_content tbody tr {
+        display: table-row !important;
+        width: auto !important;
+    }
+
+    .Switching_History_content th,
+    .Switching_History_content td {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        padding: 0px 10px !important;
+    }
+
+    .Switching_History_content th:nth-child(1),
+    .Switching_History_content td:nth-child(1) {
+        width: 120px !important;
+    }
+
+    .Switching_History_content th:nth-child(2),
+    .Switching_History_content td:nth-child(2) {
+        width: 80px !important;
+    }
+
+    .Switching_History_content th:nth-child(3),
+    .Switching_History_content td:nth-child(3) {
+        width: 80px !important;
+    }
+
+    .Switching_History_content th:nth-child(4),
+    .Switching_History_content td:nth-child(4) {
+        width: 100px !important;
+    }
+
+    .Switching_History_content th:nth-child(5),
+    .Switching_History_content td:nth-child(5) {
+        width: 80px !important;
+    }
+
+    .Switching_History_content th:nth-child(6),
+    .Switching_History_content td:nth-child(6) {
+        width: 120px !important;
+    }
+
+    .Switching_History_content th:nth-child(7),
+    .Switching_History_content td:nth-child(7) {
+        width: 80px !important;
+    }
+
+
+    /* ============================================================
+       DATA RESET
+    ============================================================ */
+    .reset_content>div>div {
+        flex-direction: column;
+        /* align-items: start; */
+    }
+
+    .snow_value_wrap>div {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--gap_1);
+    }
+
+    .snow_value_wrap>div>select {
+        width: 100%;
+    }
+
+    .rwy_content p {
+        min-width: 100px;
+    }
+
+    .Switching_History .submin_btn {
+        display: flex;
+        justify-content: end;
+    }
+
+
+    /* ============================================================
+   04. USER MANAGEMENT - User_Management.html
+   ============================================================ */
+    .User_Management .title_bar {
+        height: 24px !important;
+    }
+
+    /* ============================================================
+       USER MANAGEMENT - 테이블 가로 스크롤 
+    ============================================================ */
+
+    .User_Management_content .card.content_table {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .User_Management_content table {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    .User_Management_content thead {
+        display: table-header-group !important;
+    }
+
+    .User_Management_content tbody {
+        display: table-row-group !important;
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    .User_Management_content thead tr,
+    .User_Management_content tbody tr {
+        display: table-row !important;
+        width: auto !important;
+    }
+
+    .User_Management_content th,
+    .User_Management_content td {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        padding: 0px 10px !important;
+    }
+
+    .User_Management_content th:nth-child(1),
+    .User_Management_content td:nth-child(1) {
+        width: 80px !important;
+    }
+
+    .User_Management_content th:nth-child(2),
+    .User_Management_content td:nth-child(2) {
+        width: 80px !important;
+    }
+
+    .User_Management_content th:nth-child(3),
+    .User_Management_content td:nth-child(3) {
+        width: 80px !important;
+    }
+
+    .User_Management_content th:nth-child(4),
+    .User_Management_content td:nth-child(4) {
+        width: 80px !important;
+    }
+
+    .User_Management_content th:nth-child(5),
+    .User_Management_content td:nth-child(5) {
+        width: 80px !important;
+    }
+
+    .User_Management_content th:nth-child(6),
+    .User_Management_content td:nth-child(6) {
+        width: 150px !important;
+    }
+
+    .User_Management_content th:nth-child(7),
+    .User_Management_content td:nth-child(7) {
+        width: 80px !important;
+    }
+
+
+
+    /* ============================================================
+   05. SYSTEM SUPPORT
+   - GW.html
+   - TD.html
+   ============================================================ */
+    .GW_Monitoring_content .card.content_table,
+    .TD_Monitoring_content .card.content_table {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .GW_Monitoring_content table,
+    .TD_Monitoring_content table {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    .GW_Monitoring_content thead,
+    .TD_Monitoring_content thead {
+        display: table-header-group !important;
+    }
+
+    .GW_Monitoring_content tbody,
+    .TD_Monitoring_content tbody {
+        display: table-row-group !important;
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    .GW_Monitoring_content thead tr,
+    .GW_Monitoring_content tbody tr,
+    .TD_Monitoring_content thead tr,
+    .TD_Monitoring_content tbody tr {
+        display: table-row !important;
+        width: auto !important;
+    }
+
+    .GW_Monitoring_content th,
+    .GW_Monitoring_content td,
+    .TD_Monitoring_content th,
+    .TD_Monitoring_content td {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        padding: 0px 10px !important;
+    }
+
+    .GW_Monitoring_content th:nth-child(1),
+    .GW_Monitoring_content td:nth-child(1),
+    .TD_Monitoring_content th:nth-child(1),
+    .TD_Monitoring_content td:nth-child(1) {
+        width: 70px !important;
+    }
+
+    .GW_Monitoring_content th:nth-child(2),
+    .GW_Monitoring_content td:nth-child(2),
+    .TD_Monitoring_content th:nth-child(2),
+    .TD_Monitoring_content td:nth-child(2) {
+        width: 80px !important;
+    }
+
+    .GW_Monitoring_content th:nth-child(3),
+    .GW_Monitoring_content td:nth-child(3),
+    .TD_Monitoring_content th:nth-child(3),
+    .TD_Monitoring_content td:nth-child(3) {
+        width: 160px !important;
+    }
+
+    .GW_Monitoring_content th:nth-child(4),
+    .GW_Monitoring_content td:nth-child(4),
+    .TD_Monitoring_content th:nth-child(4),
+    .TD_Monitoring_content td:nth-child(4) {
+        width: 120px !important;
+    }
+
+    .GW_Monitoring_content th:nth-child(5),
+    .GW_Monitoring_content td:nth-child(5),
+    .TD_Monitoring_content th:nth-child(5),
+    .TD_Monitoring_content td:nth-child(5) {
+        width: 120px !important;
+    }
+
+    .GW_Monitoring_content th:nth-child(6),
+    .GW_Monitoring_content td:nth-child(6),
+    .TD_Monitoring_content th:nth-child(6),
+    .TD_Monitoring_content td:nth-child(6) {
+        width: 80px !important;
+    }
+
+
+    /* ============================================================
+   06. DATA INQUIRY - Data_Comparison_&_Inquiry.html
+   ============================================================ */
+    /* single */
+    .Data_Comparison_Inquiry .header_title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(var(--gap_1) * 2);
+    }
+
+    .data_select_wrap {
+        flex-wrap: wrap;
+    }
+
+    .data_select_wrap>select {
+        width: calc((100% - var(--gap_1)*2) / 3);
+    }
+
+    .Data_Comparison_Inquiry .data_select_wrap>input {
+        max-width: 100% !important;
+    }
+
+    .division_label {
+        display: none;
+    }
+
+    .division_wrap {
+        flex-wrap: wrap;
+        gap: var(--gap_1);
+    }
+
+    .division_item {
+        width: calc((100% - var(--gap_1))/2);
+    }
+
+    .division_color {
+        width: 20px;
+        height: 20px;
+    }
+
+    .Data_Comparison_Inquiry_value {
+        flex-direction: column;
+    }
+
+    .Data_Comparison_Inquiry_value>div {
+        width: 100%;
+    }
+
+    /* 수정 - 차트 높이 고정: 부모 height:90%가 모바일에서 0이 되어 차트 미렌더링 */
+    .Data_Comparison_Inquiry_value .card.graph {
+        height: 300px !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #chart-container,
+    #chart-container-comparison {
+        height: 100% !important;
+        min-height: 240px !important;
+        flex: 1;
+    }
+
+    .Data_Comparison_Inquiry_value .table .card.content_table {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .Data_Comparison_Inquiry_value .table table {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+        min-width: 360px !important;
+    }
+
+    .Data_Comparison_Inquiry_value .table thead {
+        display: table-header-group !important;
+    }
+
+    .Data_Comparison_Inquiry_value .table tbody {
+        display: table-row-group !important;
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    .Data_Comparison_Inquiry_value .table thead tr,
+    .Data_Comparison_Inquiry_value .table tbody tr {
+        display: table-row !important;
+        width: auto !important;
+    }
+
+    .Data_Comparison_Inquiry_value .table th,
+    .Data_Comparison_Inquiry_value .table td {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        padding: 0px 10px !important;
+    }
+
+    .Data_Comparison_Inquiry_value .table th:nth-child(1),
+    .Data_Comparison_Inquiry_value .table td:nth-child(1) {
+        width: 80px !important;
+    }
+
+    .Data_Comparison_Inquiry_value .table th:nth-child(2),
+    .Data_Comparison_Inquiry_value .table td:nth-child(2) {
+        width: 100px !important;
+    }
+
+    .Data_Comparison_Inquiry_value .table th:nth-child(3),
+    .Data_Comparison_Inquiry_value .table td:nth-child(3) {
+        width: 80px !important;
+    }
+
+    .Data_Comparison_Inquiry_value .table th:nth-child(4),
+    .Data_Comparison_Inquiry_value .table td:nth-child(4) {
+        width: 80px !important;
+    }
+
+    .Data_Comparison_Inquiry_content .content_page_header,
+    .Data_Comparison_Inquiry_content .content_page_header div:last-child {
+        gap: var(--gap_0);
+    }
+
+    /* comparison */
+    .top_filter_wrap {
+        flex-direction: column;
+    }
+
+    .datetime_wrap {
+        display: flex;
+        align-items: center;
+        gap: var(--gap_1);
+    }
+
+    .Data_Comparison_Inquiry_content .filter_wrap select {
+        min-width: 0px
+    }
+
+
+
+    /* ============================================================
+   07. QUALITY MANAGEMENT
+   - QC_Performance_M.html
+   - Data_Collection_Rate.html
+   - QC_Statistical_Report.html
+   - Reference_Values.html
+   ============================================================ */
+    /* QC_Performance_M.html */
+    .QC_PM_content .submin_btn,
+    .date_collection_rate_content .submin_btn {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .date_collection_rate_content .help_btn,
+    .QC_PM_content .help_btn {
+        position: fixed;
+        bottom: 70px;
+        left: 20px;
+        z-index: 200;
+    }
+
+    .QC_PM_content .data_select_wrap>input {
+        max-width: calc((100% -8px) / 10 * 7);
+    }
+
+    .QC_PM_content .content_page_header div:last-child,
+    .date_collection_rate_content .content_page_header div:last-child {
+        gap: var(--gap_0);
+    }
+
+
+    /* Data_Collection_Rate.html */
+    .date_collection_rate_content .date_setting {
+        display: none;
+    }
+
+    .data_count_wrap {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    .dataTables_info_divison {
+        flex-wrap: wrap;
+        gap: var(--gap_1);
+    }
+
+    .dataTables_info_divison>div {
+        width: calc((100% - var(--gap_1))/2);
+        height: auto;
+        flex-direction: column;
+        min-width: 0px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .tooltip_wrap {
+        display: none;
+    }
+
+
+    /* ============================================================
+       07. DATA COLLECTION RATE - 테이블 가로 스크롤 
+    ============================================================*/
+    .date_collection_rate_content .card.content_table {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .date_collection_rate_content table {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    .date_collection_rate_content thead {
+        display: table-header-group !important;
+    }
+
+    .date_collection_rate_content tbody {
+        display: table-row-group !important;
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    .date_collection_rate_content thead tr,
+    .date_collection_rate_content tbody tr {
+        display: table-row !important;
+        width: auto !important;
+    }
+
+    .date_collection_rate_content th,
+    .date_collection_rate_content td {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        padding: 0px 10px !important;
+    }
+
+    .date_collection_rate_content th:nth-child(1),
+    .date_collection_rate_content td:nth-child(1) {
+        width: 40px !important;
+    }
+
+    .date_collection_rate_content th:nth-child(2),
+    .date_collection_rate_content td:nth-child(2) {
+        width: 80px !important;
+    }
+
+    .date_collection_rate_content th:nth-child(3),
+    .date_collection_rate_content td:nth-child(3) {
+        width: 80px !important;
+    }
+
+    .date_collection_rate_content th:nth-child(4),
+    .date_collection_rate_content td:nth-child(4) {
+        width: 60px !important;
+    }
+
+    .date_collection_rate_content th:nth-child(5),
+    .date_collection_rate_content td:nth-child(5) {
+        width: 130px !important;
+    }
+
+    .date_collection_rate_content th:nth-child(6),
+    .date_collection_rate_content td:nth-child(6) {
+        width: 120px !important;
+    }
+
+    .date_collection_rate_content th:nth-child(7),
+    .date_collection_rate_content td:nth-child(7) {
+        width: 120px !important;
+    }
+
+    .date_collection_rate_content th:nth-child(8),
+    .date_collection_rate_content td:nth-child(8) {
+        width: 60px !important;
+    }
+
+    .date_collection_rate_content th:nth-child(9),
+    .date_collection_rate_content td:nth-child(9) {
+        width: 60px !important;
+    }
+
+    .date_collection_rate_content th:nth-child(10),
+    .date_collection_rate_content td:nth-child(10) {
+        width: 100px !important;
+    }
+
+
+    /* QC_Statistical_Report.html */
+    .QC_Statistical_Report_content .elemenet_list label {
+        min-width: 190px;
+    }
+
+    .elemenet_wrap.open .elemenet_body {
+        max-height: 100%;
+    }
+
+    .QC_Statistical_Report_content .content_page_header div:last-child {
+        gap: var(--gap_0) !important;
+    }
+
+    /* ============================================================
+       QC STATISTICAL REPORT - 테이블 가로 스크롤 
+    ============================================================*/
+    .QC_Statistical_Report_table .card.content_table {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .QC_Statistical_Report_table table {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    .QC_Statistical_Report_table thead {
+        display: table-header-group !important;
+    }
+
+    .QC_Statistical_Report_table tbody {
+        display: table-row-group !important;
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    .QC_Statistical_Report_table thead tr,
+    .QC_Statistical_Report_table tbody tr {
+        display: table-row !important;
+        width: auto !important;
+    }
+
+    .QC_Statistical_Report_table th,
+    .QC_Statistical_Report_table td {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        padding: 0px 10px !important;
+    }
+
+    .QC_Statistical_Report_table th:nth-child(1),
+    .QC_Statistical_Report_table td:nth-child(1) {
+        width: 120px !important;
+    }
+
+    .QC_Statistical_Report_table th:nth-child(2),
+    .QC_Statistical_Report_table td:nth-child(2) {
+        width: 100px !important;
+    }
+
+    .QC_Statistical_Report_table th:nth-child(3),
+    .QC_Statistical_Report_table td:nth-child(3),
+    .QC_Statistical_Report_table th:nth-child(4),
+    .QC_Statistical_Report_table td:nth-child(4),
+    .QC_Statistical_Report_table th:nth-child(5),
+    .QC_Statistical_Report_table td:nth-child(5),
+    .QC_Statistical_Report_table th:nth-child(6),
+    .QC_Statistical_Report_table td:nth-child(6),
+    .QC_Statistical_Report_table th:nth-child(7),
+    .QC_Statistical_Report_table td:nth-child(7) {
+        width: 180px !important;
+    }
+
+    .QC_Statistical_Report_table th:nth-child(8),
+    .QC_Statistical_Report_table td:nth-child(8) {
+        width: 120px !important;
+    }
+
+    .QC_Statistical_Report_table td>div {
+        width: 100px;
+    }
+
+    /* ============================================================
+       REFERENCE VALUES - 테이블 가로 스크롤
+    ============================================================*/ 
+    .Reference_Values_content .card.content_table {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .Reference_Values_content table {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    .Reference_Values_content thead {
+        display: table-header-group !important;
+    }
+
+    .Reference_Values_content tbody {
+        display: table-row-group !important;
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    .Reference_Values_content thead tr,
+    .Reference_Values_content tbody tr {
+        display: table-row !important;
+        width: auto !important;
+    }
+
+    .Reference_Values_content th,
+    .Reference_Values_content td {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        padding: 0px 10px !important;
+    }
+
+    .Reference_Values_content th:nth-child(1),
+    .Reference_Values_content td:nth-child(1) {
+        width: 40px !important;
+    }
+
+    .Reference_Values_content th:nth-child(2),
+    .Reference_Values_content td:nth-child(2) {
+        width: 120px !important;
+    }
+
+    .Reference_Values_content th:nth-child(3),
+    .Reference_Values_content td:nth-child(3) {
+        width: 120px !important;
+    }
+
+    .Reference_Values_content th:nth-child(4),
+    .Reference_Values_content td:nth-child(4) {
+        width: 80px !important;
+    }
+
+    .Reference_Values_content th:nth-child(5),
+    .Reference_Values_content td:nth-child(5) {
+        width: 80px !important;
+    }
+}

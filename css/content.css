@@ -603,8 +603,7 @@ table .error {
    ============================================================ */
 
 /* 1단계: 공통 기본 스타일 */
-.header_title .add_btn,
-.footer_wrap .add_btn,
+.add_btn,
 .submin_btn,
 .help_btn,
 .search_btn,
@@ -632,8 +631,7 @@ table .error {
 }
 
 /* 2단계: main 계열 배경 */
-.header_title .add_btn,
-.footer_wrap .add_btn,
+.add_btn,
 .submin_btn,
 .filter_wrap button,
 .Server_Status button,
@@ -641,8 +639,7 @@ table .error {
    background: linear-gradient(180deg, rgba(19, 72, 136, 0.8) 0%, var(--main) 100%) !important;
 }
 
-.header_title .add_btn:hover,
-.footer_wrap .add_btn:hover,
+.add_btn:hover,
 .submin_btn:hover,
 .filter_wrap button:hover,
 .Server_Status button:hover {
@@ -770,6 +767,10 @@ table .error {
 
 .header_title>div>span {
    margin-bottom: 5px;
+}
+
+.mobile_hide {
+   display: none !important;
 }
 
 
@@ -2196,6 +2197,14 @@ table .error {
    display: flex;
    flex-direction: column;
    gap: 4px;
+}
+
+.date_collection_rate_content .line_count_wrap,
+.QC_PM_content .line_count_wrap,
+.QC_Statistical_Report_table .line_count_wrap {
+   display: flex;
+   gap: var(--gap_1);
+   align-items: center;
 }
 
 .QC_PM_content .table {

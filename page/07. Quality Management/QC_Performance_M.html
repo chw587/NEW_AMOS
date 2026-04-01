@@ -32,7 +32,11 @@
                     <div>
                         <div class="title">
                             <div class="title_bar"></div>
-                            <span class="title_text">QC Performance Monitoring</span>
+                            <div>
+                                <span class="title_text">QC Performance Monitoring</span>
+                                <span class="mobile_hide">Quality Management</span>
+                            </div>
+
                         </div>
                         <span>/ Quality Management</span>
                     </div>
@@ -81,7 +85,8 @@
                             <span class="material-symbols-outlined search_icon">search</span>
                         </div>
                         <div>
-                            <div class="count">
+                            <div class="line_count_wrap">
+                                <div class="count">
                                 Total <span class="count_num">10</span>item
                             </div>
                             <div class="line_count">
@@ -92,6 +97,8 @@
                                     <option value="30">30</option>
                                 </select>
                             </div>
+                            </div>
+                            
                             <button class="csv_btn">CSV</button>
                             <button class="excel_btn">Excel</button>
                         </div>
@@ -275,12 +282,11 @@
                         <button class="pg_next" type="button">Next</button>
                     </div>
                 </div>
-
-                <footer>
-                    <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
-                    <p>AWIMP v1.0.0</p>
-                </footer>
             </div>
+            <footer>
+                <p>ⓒ Aviation Weather Integrated Management Platform.v</p>
+                <p>AWIMP v1.0.0</p>
+            </footer>
 
             <div class="help_modal">
                 <div class="card modal_wrap">
@@ -501,19 +507,25 @@
                                     <tr>
                                         <td>단계 검사</td>
                                         <td>순간 풍속, 1분 최대 풍속, 기온, 습도, 기압, 일누적강수량</td>
-                                        <td>표준자료 1분 평균 값 기준 이전 1분 평균값 사이의 변동에 기준값 이상 차이가 발생하면 <span class="badge badge_red">오류</span> 이며
-                                            이전 1분 자료가 <span class="badge badge_black">결측</span> 인 경우에는 <span class="badge badge_main">기준값 누락</span> (풍속의 경우, GUST 여부에 따라 <span class="badge badge_yellow">의심</span> )</td>
+                                        <td>표준자료 1분 평균 값 기준 이전 1분 평균값 사이의 변동에 기준값 이상 차이가 발생하면 <span
+                                                class="badge badge_red">오류</span> 이며
+                                            이전 1분 자료가 <span class="badge badge_black">결측</span> 인 경우에는 <span
+                                                class="badge badge_main">기준값 누락</span> (풍속의 경우, GUST 여부에 따라 <span
+                                                class="badge badge_yellow">의심</span> )</td>
                                     </tr>
                                     <tr>
                                         <td>지속성 검사</td>
                                         <td>풍향, 풍속, 습도, 기압</td>
-                                        <td>마지막 수집시각을 기점으로 기준 지속시간 내 수집자료 사이의 변화량을 계산하여 최소변화량 기준에 미달됨이 확인된 경우 <span class="badge badge_red">오류</span> 처리</td>
+                                        <td>마지막 수집시각을 기점으로 기준 지속시간 내 수집자료 사이의 변화량을 계산하여 최소변화량 기준에 미달됨이 확인된 경우 <span
+                                                class="badge badge_red">오류</span> 처리</td>
                                     </tr>
                                     <tr>
                                         <td>내적일치성 검사 </td>
                                         <td>1분 평균 풍속, 1분 최대 풍속</td>
-                                        <td>1분 최대 풍속이 1분 평균 풍속보다 작을 때, 1분 풍속과 1분 최대 풍속은 모두 <span class="badge badge_red">오류</span> 처리되며
-                                        비교 대상 요소 관측값이 <span class="badge badge_black">결측</span> 인 경우, 해당 요소는 <span class="badge badge_main">기준값 누락</span> 처리</td>
+                                        <td>1분 최대 풍속이 1분 평균 풍속보다 작을 때, 1분 풍속과 1분 최대 풍속은 모두 <span
+                                                class="badge badge_red">오류</span> 처리되며
+                                            비교 대상 요소 관측값이 <span class="badge badge_black">결측</span> 인 경우, 해당 요소는 <span
+                                                class="badge badge_main">기준값 누락</span> 처리</td>
                                     </tr>
                                     <tr>
                                         <td>기후범위 검사</td>

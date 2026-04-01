@@ -31,7 +31,11 @@
                     <div>
                         <div class="title">
                             <div class="title_bar"></div>
-                            <span class="title_text">QC Statistical Report</span>
+                            <div>
+                                <span class="title_text">QC Statistical Report</span>
+                                <span class="mobile_hide">Quality Management</span>
+                            </div>
+                            
                         </div>
                         <span>/ Quality Management</span>
                     </div>
@@ -181,28 +185,28 @@
                         <div class="content_page_header">
 
                             <div class="search_wrap">
+
                                 <div class="search">
                                     <input type="text" class="search_input" placeholder="Search">
                                     <span class="material-symbols-outlined search_icon">search</span>
                                 </div>
-
                                 <div>
-                                    <div class="count">
-                                        Total <span class="count_num">10</span>item
+                                    <div class="line_count_wrap">
+                                        <div class="count">
+                                            Total <span class="count_num">10</span>item
+                                        </div>
+                                        <div class="line_count">
+                                            <span>Rows per page</span>
+                                            <select name="line_count" id="line_count_select">
+                                                <option value="10">10</option>
+                                                <option value="20">20</option>
+                                                <option value="30">30</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="line_count">
-                                        <span>Rows per page</span>
-                                        <select name="line_count" id="line_count_select">
-                                            <option value="10">10</option>
-                                            <option value="20">20</option>
-                                            <option value="30">30</option>
-                                        </select>
 
-                                    </div>
-                                    <div class="btn_wrap">
-                                        <button class="csv_btn">CSV</button>
-                                        <button class="excel_btn">Excel</button>
-                                    </div>
+                                    <button class="csv_btn">CSV</button>
+                                    <button class="excel_btn">Excel</button>
                                 </div>
 
                             </div>

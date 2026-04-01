@@ -33,7 +33,11 @@
                     <div>
                         <div class="title">
                             <div class="title_bar"></div>
-                            <span class="title_text">Switching History</span>
+                            <div>
+                                <span class="title_text">Switching History</span>
+                                <span class="mobile_hide">Sensor Switching</span>
+                            </div>
+
                         </div>
                         <span>/ Sensor Switching</span>
                     </div>
@@ -42,36 +46,39 @@
                 <div class="page Switching_History_content">
                     <div class="content_page_header">
                         <div>
-                            <select name="rwy" id="rwy_select">
-                                <option value="rwy_1">RWY 1</option>
-                                <option value="rwy_2">RWY 2</option>
-                            </select>
-                            <select name="rwy_num" id="rwy_num">
-                                <option value="18">18</option>
-                                <option value="36">36</option>
-                            </select>
-                            <select name="select" id="elements_select">
-                                <option value="all">ALL</option>
-                                <option value="wind">Wind Direction & Speed</option>
-                                <option value="temp_humi">Temperature & Humidity</option>
-                                <option value="Pressure">Pressure</option>
-                                <option value="rvr">Runway Visual Range</option>
-                                <option value="weighing_rain">Weighing Rain Gauge</option>
-                                <option value="snow_depth">Snow Depth (Laser Multi-focus)</option>
-                                <option value="precip">Precipitation Detector</option>
-                                <option value="ceil">Ceilometer</option>
-                                <option value="ceil_power">Ceilometer Power (Power Line)</option>
-                                <option value="dcp_power">DCP Power (Power Line)</option>
-                                <option value="boltek">Boltek Lightning Sensor</option>
-                                <option value="biral">Biral Lightning Sensor</option>
-                                <option value="afls">afls</option>
-                                <option value="icing">Icing Detector</option>
-                                <option value="pws">Present Weather Sensor</option>
-                                <option value="tipping_rain">Tipping Bucket Rain Gauge</option>
-                            </select>
-
-                            <input type="date">
-                            <button class="search_btn">SEARCH</button>
+                            <div>
+                                <select name="rwy" id="rwy_select">
+                                    <option value="rwy_1">RWY 1</option>
+                                    <option value="rwy_2">RWY 2</option>
+                                </select>
+                                <select name="rwy_num" id="rwy_num">
+                                    <option value="18">18</option>
+                                    <option value="36">36</option>
+                                </select>
+                                <select name="select" id="elements_select">
+                                    <option value="all">ALL</option>
+                                    <option value="wind">Wind Direction & Speed</option>
+                                    <option value="temp_humi">Temperature & Humidity</option>
+                                    <option value="Pressure">Pressure</option>
+                                    <option value="rvr">Runway Visual Range</option>
+                                    <option value="weighing_rain">Weighing Rain Gauge</option>
+                                    <option value="snow_depth">Snow Depth (Laser Multi-focus)</option>
+                                    <option value="precip">Precipitation Detector</option>
+                                    <option value="ceil">Ceilometer</option>
+                                    <option value="ceil_power">Ceilometer Power (Power Line)</option>
+                                    <option value="dcp_power">DCP Power (Power Line)</option>
+                                    <option value="boltek">Boltek Lightning Sensor</option>
+                                    <option value="biral">Biral Lightning Sensor</option>
+                                    <option value="afls">afls</option>
+                                    <option value="icing">Icing Detector</option>
+                                    <option value="pws">Present Weather Sensor</option>
+                                    <option value="tipping_rain">Tipping Bucket Rain Gauge</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input type="date">
+                                <button class="search_btn">SEARCH</button>
+                            </div>
                         </div>
 
                         <div class="search_wrap">
@@ -80,7 +87,7 @@
                                 <span class="material-symbols-outlined search_icon">search</span>
                             </div>
 
-                            <div>
+                            <div class="line_count_wrap">
                                 <div class="count">
                                     Total <span class="count_num">10</span>item
                                 </div>
@@ -110,7 +117,6 @@
                             </tr>
                         </thead>
                         <tbody>
-
                         </tbody>
                     </table>
 

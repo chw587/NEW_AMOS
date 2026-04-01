@@ -22,9 +22,15 @@ function initChart(id, data, type = 'line', color = getCSSVar('--main')) {
     if (!dom) return;
 
     const isLine = type === 'line';
+
+    // 높이가 0이면 강제로 높이 지정
+    if (dom.offsetHeight === 0) {
+        dom.style.height = '160px';
+    }
+
     const chart = echarts.init(dom, null, { renderer: 'canvas', useDirtyRect: false });
 
-    chart.setOption({
+    const option = {
         tooltip: {
             trigger: 'item',
             formatter: ({ value }) => `${value}`,
@@ -52,7 +58,19 @@ function initChart(id, data, type = 'line', color = getCSSVar('--main')) {
             } : {},
             emphasis: !isLine ? { focus: 'none', itemStyle: { color: getCSSVar('--main') } } : {}
         }]
-    });
+    };
+
+    chart.setOption(option);
+
+    // ResizeObserver로 DOM 크기 변화 감지 → 자동 리사이즈
+    if (window.ResizeObserver) {
+        const ro = new ResizeObserver(() => {
+            if (dom.offsetWidth > 0 && dom.offsetHeight > 0) {
+                chart.resize();
+            }
+        });
+        ro.observe(dom);
+    }
 
     requestAnimationFrame(() => chart.resize());
     return chart;
@@ -95,7 +113,7 @@ function initInquiryChart() {
     inquiryChart.setOption({
         tooltip: { trigger: 'axis' },
         legend: { data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine'] },
-        grid: { top: 40, left: '3%', right: '4%', bottom: '10%', containLabel: true },
+        grid: { left: '3%', right: '4%', bottom: '10%', containLabel: true },
         xAxis: { type: 'category', boundaryGap: false, data: getTimeLabels(30, 7) },
         yAxis: { type: 'value' },
         series: [
@@ -112,9 +130,7 @@ function initInquiryChart() {
 
 
 /* ============================================================
-   희원 - 06. DATA INQUIRY - COMPARISON VIEW CHART
-   id: chart-container-comparison (single_view chart-container와 분리)
-   Base Data: --red, Compare Data: --g_text 컬러 사용
+   06. DATA INQUIRY - COMPARISON VIEW CHART
    ============================================================ */
 let inquiryComparisonChart = null;
 
@@ -124,9 +140,7 @@ function initComparisonChart() {
 
     if (inquiryComparisonChart) inquiryComparisonChart.dispose();
 
-    // 희원 - display:none 상태에서 초기화하면 크기를 못 잡으므로 높이 강제 지정
     dom.style.height = '300px';
-
 
     inquiryComparisonChart = echarts.init(dom, null, { renderer: 'canvas', useDirtyRect: false });
 

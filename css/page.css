@@ -64,6 +64,10 @@ header {
     align-items: center;
 }
 
+.header_left .mobile_menu_btn {
+    display: none;
+}
+
 .logo {
     height: 24px;
     cursor: pointer;

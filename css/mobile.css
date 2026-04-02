@@ -244,6 +244,23 @@
         transform: translate(-50%, -50%);
     }
 
+    .help_modal .modal_wrap {
+        transform: translate(-50%, -48%);
+    }
+
+    .help_modal .modal_content {
+        overflow-x: auto !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .help_modal .modal_content>div {
+        min-width: 600px !important;
+        box-sizing: border-box;
+    }
+
+
+
 
 
     /* ===========================================================
@@ -430,6 +447,86 @@
     .runway_num>div>span {
         font-size: 12px;
     }
+
+
+    /* ============================================================
+       DASHBOARD - RECENT QC EVENTS 테이블
+    ============================================================ */
+
+    .qc_event .card,
+    .recent_qc_event .card {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .recent_qc {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    .recent_qc_event {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+    }
+
+    .recent_qc thead {
+        display: table-header-group !important;
+    }
+
+    .recent_qc tbody {
+        display: table-row-group !important;
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    .recent_qc thead tr,
+    .recent_qc tbody tr {
+        display: table-row !important;
+        width: auto !important;
+    }
+
+    .recent_qc th,
+    .recent_qc td {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        padding: 0px 10px !important;
+    }
+
+    .recent_qc th:nth-child(1),
+    .recent_qc td:nth-child(1) {
+        width: 60px !important;
+    }
+
+    .recent_qc th:nth-child(2),
+    .recent_qc td:nth-child(2) {
+        width: 80px !important;
+    }
+
+    .recent_qc th:nth-child(3),
+    .recent_qc td:nth-child(3) {
+        width: 60px !important;
+    }
+
+    .recent_qc th:nth-child(4),
+    .recent_qc td:nth-child(4) {
+        width: 70px !important;
+    }
+
+    .recent_qc_event .recent_qc th:nth-child(5),
+    .recent_qc_event .recent_qc td:nth-child(5) {
+        width: 480px !important;
+    }
+
+    .recent_qc_event .sub_title {
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
 
 
     /* ============================================================
@@ -1311,7 +1408,7 @@
 
     /* ============================================================
        REFERENCE VALUES - 테이블 가로 스크롤
-    ============================================================*/ 
+    ============================================================*/
     .Reference_Values_content .card.content_table {
         overflow-x: auto !important;
         overflow-y: visible !important;
@@ -1372,5 +1469,137 @@
     .Reference_Values_content th:nth-child(5),
     .Reference_Values_content td:nth-child(5) {
         width: 80px !important;
+    }
+
+
+
+    /* ============================================================
+   08. SYSTEM MONITORING
+   - A_S_M.html
+   - Server_Status.html
+   - PM.html
+   - Log_m.html
+   ============================================================ */
+    /* A_S_M.html */
+    .server_wrap,
+    .server_wrap_content {
+        flex-direction: column;
+        gap: var(--gap_1);
+    }
+
+    .status_grid {
+        gap: var(--gap_1);
+    }
+
+    .status_item {
+        padding: 10px;
+        gap: var(--gap_1);
+        flex-direction: column;
+    }
+
+    .icon_box {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .info_label {
+        text-align: center;
+    }
+
+    .server_wrap_content>table {
+        width: 100%;
+    }
+
+    /* ============================================================
+       AMOS & SENSOR MONITORING - server_wrap 테이블 가로 스크롤
+    ============================================================ */
+
+    .main_status .card {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .main_status table {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    .main_status thead {
+        display: table-header-group !important;
+    }
+
+    .main_status tbody {
+        display: table-row-group !important;
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    .main_status thead tr,
+    .main_status tbody tr {
+        display: table-row !important;
+        width: auto !important;
+    }
+
+    .main_status th,
+    .main_status td {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        padding: 0px 10px !important;
+        font-size: 12px !important;
+    }
+
+    .main_status th:nth-child(1),
+    .main_status td:nth-child(1) {
+        width: 80px !important;
+    }
+
+    .main_status th:nth-child(2),
+    .main_status td:nth-child(2) {
+        width: 60px !important;
+    }
+
+    .main_status th:nth-child(3),
+    .main_status td:nth-child(3) {
+        width: 110px !important;
+    }
+
+    .main_status th:nth-child(4),
+    .main_status td:nth-child(4) {
+        width: 70px !important;
+    }
+
+    .main_status th:nth-child(5),
+    .main_status td:nth-child(5) {
+        width: 120px !important;
+    }
+
+    .main_status th:nth-child(6),
+    .main_status td:nth-child(6) {
+        width: 80px !important;
+    }
+
+    /* PM.html */
+    .reset_btn {
+        position: fixed;
+        bottom: 70px;
+        left: 20px;
+        z-index: 200;
+    }
+
+    /* Log_m.html */
+    .log_item {
+        margin-bottom: 4px;
+    }
+
+    .log_content {
+        display: flex;
+    }
+
+    .log_content>span {
+        white-space: nowrap;
     }
 }

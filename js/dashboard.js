@@ -9,32 +9,34 @@ function initDashboard() {
             document.querySelector('.status_alarm').style.display = 'none';
         });
 
-    // 전문 전체보기 (테이블 행 확장)
-    document.querySelectorAll('.message_wrap table tbody tr td:last-child')
-        .forEach(td => {
-            td.addEventListener('click', () => {
-                const tr = td.closest('tr');
-                const table = tr.closest('table');
-                const thead = table.querySelector('thead tr');
-                const isExpanded = tr.classList.contains('expanded');
+    // 전문 전체보기 (테이블 행 확장) - 모바일 제외
+    if (window.innerWidth > 768) {
+        document.querySelectorAll('.message_wrap table tbody tr td:last-child')
+            .forEach(td => {
+                td.addEventListener('click', () => {
+                    const tr = td.closest('tr');
+                    const table = tr.closest('table');
+                    const thead = table.querySelector('thead tr');
+                    const isExpanded = tr.classList.contains('expanded');
 
-                table.querySelectorAll('tbody tr.expanded').forEach(r => r.classList.remove('expanded'));
-                thead.classList.remove('expanded');
+                    table.querySelectorAll('tbody tr.expanded').forEach(r => r.classList.remove('expanded'));
+                    thead.classList.remove('expanded');
 
-                if (!isExpanded) {
-                    tr.classList.add('expanded');
-                    thead.classList.add('expanded');
-                }
+                    if (!isExpanded) {
+                        tr.classList.add('expanded');
+                        thead.classList.add('expanded');
+                    }
+                });
             });
-        });
 
-    // 외부 클릭 시 expanded 초기화
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.message_wrap table')) {
-            document.querySelectorAll('.message_wrap table tbody tr.expanded, .message_wrap table thead tr.expanded')
-                .forEach(r => r.classList.remove('expanded'));
-        }
-    });
+        // 외부 클릭 시 expanded 초기화
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.message_wrap table')) {
+                document.querySelectorAll('.message_wrap table tbody tr.expanded, .message_wrap table thead tr.expanded')
+                    .forEach(r => r.classList.remove('expanded'));
+            }
+        });
+    }
 
     // RWY 토글
     const rwyBtns = document.querySelectorAll('.real_time .toggle_btn button');

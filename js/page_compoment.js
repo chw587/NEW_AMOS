@@ -1,23 +1,4 @@
-/* ============================================================
-   TOP BUTTON
-   ============================================================ */
-// TOP BUTTON
-const topBtn = document.getElementById('topBtn');
-const scrollTarget = document.getElementById('content_area');
 
-if (topBtn && scrollTarget) {
-    scrollTarget.addEventListener('scroll', () => {
-        if (scrollTarget.scrollTop > 200) {
-            topBtn.classList.add('show');
-        } else {
-            topBtn.classList.remove('show');
-        }
-    });
-
-    topBtn.addEventListener('click', () => {
-        scrollTarget.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
 
 
 /* ============================================================
@@ -27,8 +8,9 @@ function initModal() {
     const modal = document.querySelector('.add_modal');
     const modalWrap = document.querySelector('.modal_wrap');
 
-    document.querySelector('.add_btn')
-        ?.addEventListener('click', () => modal.classList.add('active'));
+    // 희원 - add_btn이 여러 개일 수 있으므로 querySelectorAll로 변경
+    document.querySelectorAll('.add_btn')
+        .forEach(btn => btn.addEventListener('click', () => modal.classList.add('active')));
 
     document.querySelectorAll('.close')
         .forEach(el => el.addEventListener('click', () => modal.classList.remove('active')));

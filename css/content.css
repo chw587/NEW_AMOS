@@ -1496,7 +1496,7 @@ table .error {
    justify-content: center;
 }
 
-.qc_data h2 {
+.qc_data p:first-child {
    font-size: var(--title_1);
    font-weight: 700;
 }
@@ -1506,23 +1506,23 @@ table .error {
    color: var(--text_3);
 }
 
-.qc_data .total h2 {
+.qc_data .total p:first-child {
    color: var(--main);
 }
 
-.qc_data .normal h2 {
+.qc_data .normal p:first-child {
    color: var(--g_text);
 }
 
-.qc_data .doubt h2 {
+.qc_data .doubt p:first-child {
    color: var(--y_text);
 }
 
-.qc_data .error h2 {
+.qc_data .error p:first-child {
    color: var(--r_text);
 }
 
-.qc_data .missing h2 {
+.qc_data .missing p:first-child {
    color: var(--text_2);
 }
 

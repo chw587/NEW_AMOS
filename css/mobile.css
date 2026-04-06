@@ -1591,6 +1591,14 @@
     }
 
     /* Log_m.html */
+    .Log_Monitoring_content .search_wrap {
+        gap:  var(--gap_0);
+    }
+
+    .Log_Monitoring_content .search_wrap > * {
+        width: calc((100% - var(--gap_0)*2) / 3);
+    }
+
     .log_item {
         margin-bottom: 4px;
     }
